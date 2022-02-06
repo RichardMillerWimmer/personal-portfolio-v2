@@ -1,26 +1,19 @@
 ---
 // Component Imports
-import BaseHead from '../components/BaseHead.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
 
 // Component Script:
 
 let title = 'My Astro Site';
 
 ---
-<html lang="en">
-	<head>
-		<BaseHead title={title}/>
-	</head>
-<body>
-	<main>
-		<header>
-			<div>
-				<h1>Richard Miller Wimmer</h1>
-			</div>
-		</header>
-		<section>
-			<p>Some content about me.</p>
-		</section>
-	</main>
-</body>
-</html>
+<BaseLayout title={title}>
+	<header>
+		<h1>Richard Miller Wimmer</h1>
+	</header>
+	<body>
+		<article>
+			<p>This is content all about me.</p>
+		</article>
+	</body>
+</BaseLayout>
