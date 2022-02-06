@@ -1,6 +1,6 @@
 ---
 // Component Imports
-
+import BaseHead from '../components/BaseHead.astro'
 
 // Component Script:
 
@@ -8,14 +8,9 @@ let title = 'My Astro Site';
 
 ---
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<title>{title}</title>
-
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
-</head>
+	<head>
+		<BaseHead title={title}/>
+	</head>
 <body>
 	<main>
 		<header>
@@ -23,6 +18,9 @@ let title = 'My Astro Site';
 				<h1>Richard Miller Wimmer</h1>
 			</div>
 		</header>
+		<section>
+			<p>Some content about me.</p>
+		</section>
 	</main>
 </body>
 </html>
