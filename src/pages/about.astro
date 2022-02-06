@@ -1,0 +1,34 @@
+---
+// Component Imports
+import BaseLayout from '../layouts/BaseLayout.astro'
+
+// Component Script:
+
+let title = 'About - Richard';
+
+---
+<BaseLayout title={title}>
+	<header>
+		<h1>About</h1>
+	</header>
+	<body>
+		<article>
+			 <p>
+          Allow me to introduce myself, My name is Richard, and I'm a software engineer/developer. Cincinnati Northern Kentucky area is home to my family and I.
+        </p>
+        <br></br>
+        <p>
+            My development focus has been on front-end enginnering using popular frameworks creating reusable dynamic componenets to create the best user expereince possible.   
+        </p>
+        <br></br>
+        <p>
+          As a life long learner I have gathered skills in development/engineering and many complementary skills. Some of these include leadership, mentoring, music, graphic design, video, social media content and strategy. 
+        </p>
+        <br></br>
+        <p>
+          I would love to connect with you, find me on <a className='linkedInLink' href='https://www.linkedin.com/in/richard-miller-wimmer/' target='_blank' rel="noreferrer">LinkedIn</a> and shoot
+          me a message. You can also <a href="">contact</a> me.
+        </p>
+		</article>
+	</body>
+</BaseLayout>
