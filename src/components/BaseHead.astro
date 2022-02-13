@@ -7,10 +7,8 @@ export interface Props {
   permalink: string;
   publishDate: string;
   ogImageUrl: string;
-  canonicalURL?: URL;
-  articleSchema?: boolean;
 }
-const { title, description, permalink, publishDate, ogImageUrl, canonicalURL, articleSchema } = Astro.props;
+const { title, description, permalink, publishDate, ogImageUrl } = Astro.props;
 ---
 
 <meta charset="utf-8" />
