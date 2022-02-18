@@ -1,13 +1,15 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
+import BaseHead from '../components/BaseHead.astro'
 import Footer from '../components/footer.astro'
 
-const {title} = Astro.props
+import HeadProps from '../components/BaseHead.astro'
+
+const {title, description, permalink, publishDate } = Astro.props
 ---
 
 <html lang="en">
 <head>
-	<BaseHead title={title}/>
+	<BaseHead title={title} description={description} permalink={permalink} publishDate={publishDate} />
 </head>
 <body>
 	<main>

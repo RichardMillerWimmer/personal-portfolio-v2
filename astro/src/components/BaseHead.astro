@@ -1,14 +1,14 @@
 ---
 import site from "../data/site.js";
 
-export interface Props {
+export type HeadProps = {
   title: string;
   description: string;
   permalink: string;
   publishDate: string;
-  ogImageUrl: string;
+  ogImageUrl?: string;
 }
-const { title, description, permalink, publishDate, ogImageUrl } = Astro.props;
+const { title, description, permalink, publishDate, ogImageUrl }: HeadProps = Astro.props; 
 ---
 
 <meta charset="utf-8" />
