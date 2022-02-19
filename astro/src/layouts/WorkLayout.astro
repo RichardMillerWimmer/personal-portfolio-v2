@@ -1,0 +1,22 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import Footer from '../components/Footer.astro'
+
+---
+
+<html lang="en">
+    <head>
+	    <BaseHead title={title}/>
+    </head>
+    <body>
+        <!-- <ul>
+            {allCategories.map((elem) => (
+                <li><a href={`/blog/categories/${elem.slug}`}>{elem.name}</a></li>
+            ))}
+        </ul> -->
+        <article>
+            <slot />
+        </article>
+        <Footer />
+    </body>
+</html>
