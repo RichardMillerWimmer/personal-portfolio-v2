@@ -12,9 +12,7 @@ const {title, description, permalink, publishDate } = Astro.props
 	<BaseHead title={title} description={description} permalink={permalink} publishDate={publishDate} />
 </head>
 <body>
-	<main>
-        <slot />
-	</main>
+    <slot />
     <Footer />
 </body>
 </html>
