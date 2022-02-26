@@ -4,7 +4,10 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 
 // Component Script:
 
-let title = 'Home - Richard';
+const title = 'Home - Richard'
+const description = "Welcome to Richard's portfolio."
+const permalink = ''
+const publishDate = ''
 
 ---
 <BaseLayout title={title}>
@@ -13,7 +16,8 @@ let title = 'Home - Richard';
 	</header>
 	<body>
 		<article>
-			<p>This is content all about me.</p>
+			<p>Thanks for visiting my site.</p>
+			<p>I am a developer/engineer based in the Greater Cincinnati Area. Feel free to take a look around. You can find some of my work <a href='/work'>here</a>, get in tourch with me <a href='/contact'>here</a>, and learn mor about me <a href='/about'>here</a>.</p>
 		</article>
 	</body>
 </BaseLayout>
