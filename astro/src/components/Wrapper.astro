@@ -1,0 +1,20 @@
+---
+// Component Imports:
+import '../styles/_variables.scss'
+// Component Script:
+
+---
+
+<style lang='scss'>
+    @import '../styles/_variables.scss';
+    .wrapper-content{
+        background-color: $color-sublte;
+        margin: 10px auto;
+        width: 90vw;
+        padding: 25px;
+    }
+</style>
+
+<div class="wrapper-content">
+    <slot />
+</div>
