@@ -14,7 +14,7 @@ body {
   color: $color-black;
   padding: 30px;
   margin: 0;
-  // font-family: $font-body;
+  font-family: $font-body;
   line-height: 1.5;
 }
 
@@ -34,6 +34,7 @@ h4,
 h5,
 h6 {
   text-align: center;
+  font-family: $font-header;
 }
 
 h1 {

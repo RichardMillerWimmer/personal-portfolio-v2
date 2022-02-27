@@ -1,6 +1,7 @@
 ---
 // Component Imports
 import BaseLayout from '../layouts/BaseLayout.astro'
+import '_variables.scss'
 
 // Component Script:
 
@@ -10,6 +11,13 @@ const permalink = ''
 const publishDate = ''
 
 ---
+
+<style lang='scss'>
+	@import '../styles/_variables.scss';
+	#title{
+		font-family: $font-accent;
+	}
+</style>
 <BaseLayout title={title}>
 	<header>
 		<h1>Hi, I'm Richard Miller Wimmer</h1>
