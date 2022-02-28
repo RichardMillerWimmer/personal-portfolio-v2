@@ -1,7 +1,7 @@
 ---
 // Component Imports
 import BaseLayout from '../layouts/BaseLayout.astro'
-import '../styles/_variables.scss'
+import Hero from '../components/Hero.astro'
 
 // Component Script:
 
@@ -13,33 +13,18 @@ const publishDate = ''
 ---
 
 <style lang='scss'>
-	@import '../styles/_variables.scss';
-	#title{
-		font-family: $font-accent;
-		font-weight: 700;
+	.main-content{
+		width: 70%;
 	}
 </style>
+
 <BaseLayout title={title}>
-	<header>
-		<h1 id='title'>Hi, I'm Richard Miller Wimmer</h1>
-		<h3>And I like solving problems, fixing stuff, and creating things people enjoy.</h3>
-	</header>
+	<Hero />
 	<body>
-		<article>
+		<article class="main-content">
 			<p>Thanks for visiting my site.</p>
 			<p>I am a developer/engineer based in the Greater Cincinnati Area. Feel free to take a look around. You can find some of my <a href='/work'>work</a>, get in <a href='/contact'>touch</a> with me, and learn more <a href='/about'>about me</a>.</p>
 			<p>I currently work at Insight as an Associate Software Engineer in consulting. In this role I focus on frontend technologies to provide the best possible user experience.</p>
 		</article>
-		<div>
-            <a href="https://github.com/RichardMillerWimmer" target="_blank" rel="noreferrer">
-                github
-                <!-- <image src='/public/github.svg'/> -->
-            </a>
-            <a href="https://www.linkedin.com/in/richard-miller-wimmer/"
-                target="_blank" rel="noreferrer">
-                linkedin
-                <!-- <image src='/public/linkedin.svg'/> -->
-            </a>
-        </div>
 	</body>
 </BaseLayout>
