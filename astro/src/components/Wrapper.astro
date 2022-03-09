@@ -3,6 +3,8 @@
 import NavList from '../components/Nav/NavList.tsx'
 import '../styles/_variables.scss'
 // Component Script:
+const page = new URL(Astro.request.url).pathname;
+console.log(page)
 
 ---
 
@@ -17,6 +19,6 @@ import '../styles/_variables.scss'
 </style>
 
 <div class="wrapper-content">
-    <NavList client:load/>
+    <NavList client:only page={page}/>
     <slot />
 </div>

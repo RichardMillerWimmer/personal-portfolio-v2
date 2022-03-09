@@ -39,8 +39,10 @@ import NavLink from './NavLink';
 // }
 // `
 
-const NavList = (): JSX.Element => {
+const NavList = (props: { page: any; }): JSX.Element => {
     // const router = useRouter();
+    console.log(props.page)
+    console.log(window.location.pathname)
 
     return (
         <ul>
