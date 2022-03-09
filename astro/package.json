@@ -9,7 +9,14 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^0.22.20",
-    "@astrojs/renderer-react": "^0.4.1"
+    "@astrojs/renderer-react": "^0.4.1",
+    "@types/react": "^17.0.39",
+    "@types/styled-components": "^5.1.24",
+    "astro": "^0.22.20"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-router-dom": "^6.2.2",
+    "styled-components": "^5.3.3"
   }
 }

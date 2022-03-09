@@ -1,5 +1,6 @@
 import React from 'react';
-import { useRouter, Link } from 'react-router-dom'
+import styled from 'styled-components'
+import { useRoutes, Link } from 'react-router-dom'
 interface NavProps {
     open: boolean,
     setOpen: React.Dispatch<React.SetStateAction<boolean>>
@@ -36,7 +37,7 @@ li {
 }
 `
 
-const NavList: React.FC = ({ open, setOpen }: NavProps): any => {
+const NavList: React.FC = ({ open, setOpen }: NavProps) => {
     const router = useRouter();
 
     return (

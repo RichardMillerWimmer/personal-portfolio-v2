@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import styled from 'styled-components'
 import NavList from './NavList';
 
 
 type StyledBurgerType = {
-    open: boolean
+  open: boolean
 }
 
 const StyledBurger = styled.div<StyledBurgerType>`
@@ -42,20 +43,20 @@ const StyledBurger = styled.div<StyledBurgerType>`
   `
 
 const Burger: React.FC = () => {
-    const [open, setOpen] = useState<boolean>(false)
+  const [open, setOpen] = useState<boolean>(false)
 
-    return (
-        <>
-            <div className={styles.burgerContainer}>
-                <div open={open} onClick={() => setOpen(!open)}>
-                    <div />
-                    <div />
-                    <div />
-                </div>
-            </div>
-            <NavList open={open} setOpen={setOpen} />
-        </>
-    )
+  return (
+    <>
+      <div className={styles.burgerContainer}>
+        <StyledBurger open={open} onClick={() => setOpen(!open)}>
+          <div />
+          <div />
+          <div />
+        </StyledBurger>
+      </div>
+      <NavList open={open} setOpen={setOpen} />
+    </>
+  )
 }
 
 export default Burger
