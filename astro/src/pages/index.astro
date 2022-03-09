@@ -2,7 +2,7 @@
 // Component Imports
 import BaseLayout from '../layouts/BaseLayout.astro'
 import Hero from '../components/Hero.astro'
-import Nav from '../components/Nav/Nav.astro'
+import NavList from '../components/Nav/NavList.tsx'
 
 // Component Script:
 
@@ -21,12 +21,12 @@ const publishDate = ''
 </style>
 
 <BaseLayout title={title}>
-	<Nav />
+	<NavList />
 	<Hero />
 	<body>
 		<article class="main-content">
 			<p>Thanks for visiting my site.</p>
-			<p>I am a developer/engineer based in the Greater Cincinnati Area. Feel free to take a look around. You can find some of my <a href='/work'>work</a>, get in <a href='/contact'>touch</a> with me, and learn more <a href='/about'>about me</a>.</p>
+			<p>I am a developer/engineer based in the Greater Cincinnati Area. Feel free to take a look around. You can find some of my <a href='/work'>work</a>, get in <a href='/contact'>touch</a> with me, and learn more <a href='/about'>about</a>me.</p>
 			<p>I currently work at Insight as an Associate Software Engineer in consulting. In this role I focus on frontend technologies to provide the best possible user experience.</p>
 		</article>
 	</body>
