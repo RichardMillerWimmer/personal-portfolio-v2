@@ -1,6 +1,6 @@
 ---
 // Component Imports:
-import NavList from '../components/Nav/NavList.tsx'
+import NavList from '../components/Nav/NavList.astro'
 import '../styles/_variables.scss'
 // Component Script:
 const page = new URL(Astro.request.url).pathname;
@@ -19,6 +19,6 @@ console.log(page)
 </style>
 
 <div class="wrapper-content">
-    <NavList client:only page={page}/>
+    <NavList />
     <slot />
 </div>

@@ -41,8 +41,8 @@ import NavLink from './NavLink';
 
 const NavList = (props: { page: any; }): JSX.Element => {
     // const router = useRouter();
-    console.log(props.page)
-    console.log(window.location.pathname)
+    // console.log(props.page)
+    // console.log(window.location.pathname)
 
     return (
         <ul>

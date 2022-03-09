@@ -1,0 +1,21 @@
+---
+import NavLink from './NavLink'
+
+console.log(Astro.request.url.pathname)
+---
+
+<style>
+    .is-active {
+        color: red;
+    }
+</style>
+
+<nav>
+    <ul>
+        <NavLink class={` ${Astro.request.url.pathname === '/home' ? 'is-active' : ''}`} text='home' href='/' />
+        <NavLink class={` ${Astro.request.url.pathname === '/work' ? 'is-active' : ''}`} text='work' href='/work' />
+        <NavLink class={` ${Astro.request.url.pathname === '/about' ? 'is-active' : ''}`} text='about' href='/about' />
+        <NavLink class={` ${Astro.request.url.pathname === '/blog' ? 'is-active' : ''}`} text='blog' href='/blog' />
+        <NavLink class={` ${Astro.request.url.pathname === '/contact' ? 'is-active' : ''}`} text='contact' href='/contact' />
+    </ul>
+</nav>
