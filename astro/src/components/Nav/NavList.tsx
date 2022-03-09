@@ -50,13 +50,6 @@ const NavList = (): JSX.Element => {
             <NavLink text='blog' href='/blog' />
             <NavLink text='contact' href='/contact' />
         </ul>
-        // <Ul open={open}>
-        //     <li onClick={() => setOpen(!open)}><Link to='/' >Home</Link></li>
-        //     <li onClick={() => setOpen(!open)}><Link to='/work'><a>Work</a></Link></li>
-        //     {/* <li className={router.pathname === "/about" ? styles.active : ""} onClick={() => setOpen(!open)}><Link to='/about'>About</Link></li>
-        //     <li className={router.pathname === "/contact" ? styles.active : ""} onClick={() => setOpen(!open)}><Link to='/contact'>Contact</Link></li>
-        //     <li className={router.pathname === "/blog" ? styles.active : ""} onClick={() => setOpen(!open)}><Link to='/blog'>Blog</Link></li> */}
-        // </Ul>
     )
 }
 

@@ -1,5 +1,6 @@
 ---
 // Component Imports:
+import NavList from '../components/Nav/NavList.tsx'
 import '../styles/_variables.scss'
 // Component Script:
 
@@ -16,5 +17,6 @@ import '../styles/_variables.scss'
 </style>
 
 <div class="wrapper-content">
+    <NavList client:load/>
     <slot />
 </div>
