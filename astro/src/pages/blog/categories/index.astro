@@ -1,0 +1,32 @@
+---
+// Component Imports
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+import { generateCategoriesData } from '../../../utils/helper.ts';
+const allPosts = Astro.fetchContent('../*.md');
+
+const categoriesSet = new Set<string>();
+allPosts.forEach((elem) => {
+    elem.categories && elem.categories.forEach((elem) => {
+        categoriesSet.add(elem)
+    })
+})
+const categoriesArray = Array.from(categoriesSet)
+
+const categoriesData = generateCategoriesData(categoriesArray)
+
+const { page } = Astro.props;
+const title = 'Blog Categories ';
+
+---
+	
+<BaseLayout title={title}>
+    <div>
+        <h1>{title}</h1>
+        <ul>
+            {categoriesData.map(elem => (
+                <li><a href={`/blog/categories/${elem.slug}`}>{elem.name}</a></li>
+            ))}
+        </ul>
+    </div>
+</BaseLayout>
