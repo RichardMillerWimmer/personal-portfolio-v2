@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
-import { useRoutes, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
 interface NavProps {
     open: boolean,
     setOpen: React.Dispatch<React.SetStateAction<boolean>>
@@ -37,17 +38,18 @@ li {
 }
 `
 
-const NavList: React.FC = ({ open, setOpen }: NavProps) => {
-    const router = useRouter();
+const NavList = ({ open, setOpen }: NavProps): JSX.Element => {
+    // const router = useRouter();
 
     return (
-        <ul open={open}>
-            <li className={router.pathname === "/" ? styles.active : ""} onClick={() => setOpen(!open)}><Link to='/' >Home</Link></li>
-            <li className={router.pathname === "/work" ? styles.active : ""} onClick={() => setOpen(!open)}><Link to='/work'><a>Work</a></Link></li>
-            <li className={router.pathname === "/about" ? styles.active : ""} onClick={() => setOpen(!open)}><Link to='/about'>About</Link></li>
-            <li className={router.pathname === "/contact" ? styles.active : ""} onClick={() => setOpen(!open)}><Link to='/contact'>Contact</Link></li>
-            <li className={router.pathname === "/blog" ? styles.active : ""} onClick={() => setOpen(!open)}><Link to='/blog'>Blog</Link></li>
-        </ul>
+        <div></div>
+        // <Ul open={open}>
+        //     <li onClick={() => setOpen(!open)}><Link to='/' >Home</Link></li>
+        //     <li onClick={() => setOpen(!open)}><Link to='/work'><a>Work</a></Link></li>
+        //     {/* <li className={router.pathname === "/about" ? styles.active : ""} onClick={() => setOpen(!open)}><Link to='/about'>About</Link></li>
+        //     <li className={router.pathname === "/contact" ? styles.active : ""} onClick={() => setOpen(!open)}><Link to='/contact'>Contact</Link></li>
+        //     <li className={router.pathname === "/blog" ? styles.active : ""} onClick={() => setOpen(!open)}><Link to='/blog'>Blog</Link></li> */}
+        // </Ul>
     )
 }
 

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components'
 import NavList from './NavList';
 
@@ -47,7 +47,7 @@ const Burger: React.FC = () => {
 
   return (
     <>
-      <div className={styles.burgerContainer}>
+      <div>
         <StyledBurger open={open} onClick={() => setOpen(!open)}>
           <div />
           <div />
