@@ -1,4 +1,5 @@
 import React from 'react';
+import NavLink from './NavLink';
 // import styled from 'styled-components'
 // import { Link } from 'react-router-dom'
 
@@ -43,11 +44,11 @@ const NavList = (): JSX.Element => {
 
     return (
         <ul>
-            <li><a href='/'>home</a></li>
-            <li><a href='/work'>work</a></li>
-            <li><a href='/about'>about</a></li>
-            <li><a href='/blog'>blog</a></li>
-            <li><a href='/contact'>contact</a></li>
+            <NavLink text='home' href='/' />
+            <NavLink text='work' href='/work' />
+            <NavLink text='about' href='/about' />
+            <NavLink text='blog' href='/blog' />
+            <NavLink text='contact' href='/contact' />
         </ul>
         // <Ul open={open}>
         //     <li onClick={() => setOpen(!open)}><Link to='/' >Home</Link></li>
