@@ -81,11 +81,11 @@ li {
   }
 }
 
-.is-active {
-  color: "red";
+a {
   text-decoration: none;
 }
 
-// li:active {
-//   color: red;
-// }
+.isActive {
+  color: "red";
+  text-decoration: none;
+}
