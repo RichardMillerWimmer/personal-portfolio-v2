@@ -2,8 +2,12 @@
 import BaseHead from '../components/BaseHead.astro'
 import Footer from '../components/footer.astro'
 import Wrapper from '../components/Wrapper.astro'
+import NavList from '../components/Nav/NavList.astro'
 
 import HeadProps from '../components/BaseHead.astro'
+
+const page = new URL(Astro.request.url).pathname;
+console.log('wrapper', page)
 
 const {title, description, permalink, publishDate } = Astro.props
 ---
@@ -13,6 +17,7 @@ const {title, description, permalink, publishDate } = Astro.props
 	<BaseHead title={title} description={description} permalink={permalink} publishDate={publishDate} />
 </head>
 <body>
+    <NavList {page}/>
     <Wrapper>
         <slot />
         <Footer />
