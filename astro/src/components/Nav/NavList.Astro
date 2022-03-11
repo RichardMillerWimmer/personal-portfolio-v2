@@ -2,14 +2,22 @@
 import NavLink from './NavLink'
 
 // console.log(Astro.request.url.pathname)
+// const page = new URL(Astro.request.url).pathname;
+// console.log(page)
+const {page} = Astro.props
+console.log('navlist', page)
 ---
+
+<script>
+    
+</script>
 
 <nav>
     <ul>
-        <NavLink class=`${Astro.request.url.pathname === '/' ? 'is-active' : ''}` text='home' href='/' />
-        <NavLink class=`${Astro.request.url.pathname === '/work' ? 'is-active' : ''}` text='work' href='/work' />
-        <NavLink class=`${Astro.request.url.pathname === '/about' ? 'is-active' : ''}` text='about' href='/about' />
-        <NavLink class=`${Astro.request.url.pathname === '/blog' ? 'is-active' : ''}` text='blog' href='/blog' />
-        <NavLink class=`${Astro.request.url.pathname === '/contact' ? 'is-active' : ''}` text='contact' href='/contact' />
+        <NavLink page={page} text='home' href='/' />
+        <NavLink page={page} text='work' href='/work' />
+        <NavLink page={page} text='about' href='/about' />
+        <NavLink page={page} text='blog' href='/blog' />
+        <NavLink page={page} text='contact' href='/contact' />
     </ul>
 </nav>

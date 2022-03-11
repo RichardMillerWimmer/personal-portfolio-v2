@@ -4,12 +4,17 @@ import '../../styles/global.scss'
 type NavLinkType = {
     text: string
     href: string
+    page: string;
 }
 
-const NavLink = ({ text, href }: NavLinkType): JSX.Element => {
+const NavLink = ({ text, href, page }: NavLinkType): JSX.Element => {
+    if (page === '/') {
+        page = '/home'
+    }
+    console.log('react', page)
 
     return (
-        <li><a href={href}>{text}</a></li>)
+        <li><a className={`${page === `/${text}` ? 'isActive' : ''}`} href={href}>{text}</a></li>)
 }
 
 export default NavLink

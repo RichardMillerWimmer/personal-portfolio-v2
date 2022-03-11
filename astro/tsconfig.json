@@ -6,6 +6,7 @@
     "noImplicitAny": false,
     "removeComments": true,
     "preserveConstEnums": true,
+    "esModuleInterop": true,
     "outFile": "../../built/local/tsc.js",
     "sourceMap": true
   },
