@@ -1,14 +1,11 @@
 ---
+// Component Imports:
 import BaseHead from '../components/BaseHead.astro'
 import Footer from '../components/footer.astro'
 import Wrapper from '../components/Wrapper.astro'
 import NavList from '../components/Nav/NavList.astro'
 
-import HeadProps from '../components/BaseHead.astro'
-
-// const page = new URL(Astro.request.url).pathname;
-// console.log('wrapper', page)
-
+// Component Script:
 const {title, description, permalink, publishDate } = Astro.props
 ---
 
