@@ -12,7 +12,8 @@
     "@astrojs/renderer-react": "^0.4.1",
     "@types/react": "^17.0.39",
     "@types/styled-components": "^5.1.24",
-    "astro": "^0.22.20"
+    "astro": "^0.24.0",
+    "sass": "^1.49.9"
   },
   "dependencies": {
     "react": "^17.0.2",
