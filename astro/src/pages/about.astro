@@ -1,6 +1,7 @@
 ---
 // Component Imports
 import BaseLayout from '../layouts/BaseLayout.astro'
+import styles from '../styles/about.module.scss'
 
 // Component Script:
 
@@ -33,7 +34,7 @@ const publishDate = ''
           I would love to connect with you, find me on <a className='linkedInLink' href='https://www.linkedin.com/in/richard-miller-wimmer/' target='_blank' rel="noreferrer">LinkedIn</a> and shoot
           me a message. You can also <a href="">contact</a> me.
         </p>
-        <p>Feel free to take a look at my <a href='https://docs.google.com/document/d/1_gpG0nhrPrHhr04xQLNj1Yf3b2En5tP3-XkwiF19gP0/export?format=pdf'>résumé</a>.</p>
+        <p>Feel free to take a look at my <a class={styles.resumeLink} href='https://docs.google.com/document/d/1_gpG0nhrPrHhr04xQLNj1Yf3b2En5tP3-XkwiF19gP0/export?format=pdf'>résumé</a>.</p>
 		</article>
 	</body>
 </BaseLayout>
