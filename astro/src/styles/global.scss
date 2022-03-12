@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@import "./_variables.scss";
 
 * {
   box-sizing: border-box;
@@ -11,7 +11,7 @@ html {
 
 html,
 body {
-  color: $color-black;
+  color: $color-test;
   margin: 0;
   font-family: $font-body;
   line-height: 1.5;
