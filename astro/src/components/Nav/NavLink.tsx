@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/global.scss'
+import styles from '../../styles/NavLink.module.scss'
 
 type NavLinkType = {
     text: string
@@ -13,7 +13,7 @@ const NavLink = ({ text, href, page }: NavLinkType): JSX.Element => {
     }
 
     return (
-        <li><a className={`${page === `/${text}` ? 'is-active' : ''}`} href={href}>{text}</a></li>)
+        <li><a className={`${page === `/${text}` ? { styles.isActive } : ''}`} href={href}>{text}</a></li>)
 }
 
 export default NavLink
