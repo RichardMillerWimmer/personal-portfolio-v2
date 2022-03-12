@@ -11,7 +11,6 @@ const NavLink = ({ text, href, page }: NavLinkType): JSX.Element => {
     if (page === '/') {
         page = '/home'
     }
-    console.log('react', page)
 
     return (
         <li><a className={`${page === `/${text}` ? 'isActive' : ''}`} href={href}>{text}</a></li>)

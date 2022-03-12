@@ -4,7 +4,8 @@ import NavLink from './NavLink'
 // console.log(Astro.request.url.pathname)
 // const page = new URL(Astro.request.url).pathname;
 // console.log(page)
-const {page} = Astro.props
+// const {page} = Astro.props
+const page = new URL(Astro.request.url).pathname;
 console.log('navlist', page)
 ---
 
