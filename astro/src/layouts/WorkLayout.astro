@@ -1,7 +1,10 @@
 ---
 import BaseHead from '../components/BaseHead.astro'
 import Footer from '../components/Footer.astro'
+import NavList from '../components/Nav/NavList.astro'
+import Wrapper from '../components/Wrapper.astro'
 
+const {title, description, permalink, publishDate } = Astro.props
 ---
 
 <html lang="en">
@@ -14,9 +17,10 @@ import Footer from '../components/Footer.astro'
                 <li><a href={`/blog/categories/${elem.slug}`}>{elem.name}</a></li>
             ))}
         </ul> -->
-        <article>
+        <NavList />
+        <Wrapper>
             <slot />
-        </article>
         <Footer />
+        </Wrapper>
     </body>
 </html>
