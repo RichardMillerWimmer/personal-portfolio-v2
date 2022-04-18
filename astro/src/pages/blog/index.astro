@@ -10,9 +10,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 //     return allPosts.map(post => ({props: {post}}))
 // }
 const allPosts = (await Astro.glob('/*.md')).sort(
-  (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf(),)
+  (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
 
-console.log(allPosts)
+const posts = (await Astro.glob('./*.md')).sort(
+  (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
+)
+
+console.log(posts)
 const title = 'Blog'
 
 ---
@@ -20,9 +24,9 @@ const title = 'Blog'
 <BaseLayout title={title}>
     <div>
         <h1>{title}</h1>
-        {allPosts.map((post) => (
+        {posts.map((post) => (
             <div>
-                <a href={'/test'}>{post.frontmatter.title}</a>
+                <a href={post.url}>{post.frontmatter.title}</a>
             </div>
         ))}
     </div>
