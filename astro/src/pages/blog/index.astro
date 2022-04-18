@@ -1,0 +1,29 @@
+---
+// Component Imports
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// import generateSlug from '../../utils/helpers.ts'
+
+// export async function getStaticPaths() {
+//     console.log('allPost', allPosts)
+//     const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.data).valueOf() - new Date(a.frontmatter.date).valueOf())
+//     return allPosts.map(post => ({props: {post}}))
+// }
+const allPosts = (await Astro.glob('/*.md')).sort(
+  (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf(),)
+
+console.log(allPosts)
+const title = 'Blog'
+
+---
+	
+<BaseLayout title={title}>
+    <div>
+        <h1>{title}</h1>
+        {allPosts.map((post) => (
+            <div>
+                <a href={'/test'}>{post.frontmatter.title}</a>
+            </div>
+        ))}
+    </div>
+</BaseLayout>

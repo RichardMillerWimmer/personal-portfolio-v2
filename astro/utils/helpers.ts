@@ -3,7 +3,7 @@ type slugObj = {
     slug: string;
 }
 
-function generateSlug(category: string): string {
+export function generateSlug(category: string): string {
     return category
     .toString()
     .trim()
