@@ -16,7 +16,7 @@ const posts = (await Astro.glob('./*.md')).sort(
   (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
 )
 
-console.log(posts)
+// console.log(posts)
 const title = 'Blog'
 
 ---

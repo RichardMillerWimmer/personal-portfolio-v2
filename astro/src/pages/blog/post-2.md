@@ -1,9 +1,10 @@
 ---
 setup: import Layout from '../../layouts/BlogLayout.astro';
-title: Example Blog Post
-description: This is an example blog post using Markdown and BlogLayout.
-date: 2022-4-12
+title: 6 Easy GitHub Suggestions To Improve Your Branding
+description: 6 Easy GitHub Suggestions To Improve Your Branding
+date: 2022-4-11
 author: Richard Miller Wimmer
+keywords: github, branding 
 categories:
   - GitHub
   - Branding
