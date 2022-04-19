@@ -1,7 +1,7 @@
 ---
 setup: import Layout from '../../layouts/BlogLayout.astro';
 title: 6 Easy GitHub Suggestions To Improve Your Branding
-description: 6 Easy GitHub Suggestions To Improve Your Branding
+description: Branding can feel fake, just be yourself and put your best forward with a few tips on your GitHib profile.
 date: 2022-4-11
 author: Richard Miller Wimmer
 readTime: '4 min'
