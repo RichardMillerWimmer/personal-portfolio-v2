@@ -4,6 +4,7 @@ title: 6 Easy GitHub Suggestions To Improve Your Branding
 description: 6 Easy GitHub Suggestions To Improve Your Branding
 date: 2022-4-11
 author: Richard Miller Wimmer
+readTime: '4 min'
 keywords: github, branding
 categories:
   - GitHub

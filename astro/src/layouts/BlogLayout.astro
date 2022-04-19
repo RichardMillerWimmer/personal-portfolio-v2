@@ -3,7 +3,8 @@ import BaseLayout from './BaseLayout.astro'
 
 const { content } = Astro.props
 // console.log(content)
-const { title, date, Keywords } = content
+const { title, date, keywords, readTime } = content
+const dateFormat = { year: 'numeric', month: 'long', day: '2-digit' } as Intl.DateTimeFormatOptions
 ---
 
 <BaseLayout>
@@ -11,7 +12,7 @@ const { title, date, Keywords } = content
         <article>
             <h1>{title}</h1>
             <div>
-                <time></time>
+                <h4 datetime={date}>{new Intl.DateTimeFormat('en', dateFormat).format(new Date(date))}, {readTime} read</h4>
             </div>
             <div>
                 <!-- Tags/Keywords -->
