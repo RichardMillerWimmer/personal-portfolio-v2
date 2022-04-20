@@ -26,12 +26,21 @@ const title = 'Blog'
     <div>
         <h1>{title}</h1>
         {posts.map((post) => (
-            <div>
-                <a href={post.url}>{post.frontmatter.title}</a>
+          <div>
+            <div datetime={post.frontmatter.publishedAt}>
+              <time>{new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit' }).format(
+              new Date(post.frontmatter.date),
+              )}</time>
             </div>
-            <div>
-              <Tags tags={post.frontmatter.keywords.split(',')}/>
-            </div>
+            <a href={post.url}><h3>{post.frontmatter.title}</h3></a>
+            <p >{post.frontmatter.description}</p>
+          </div>
+          <div>
+            <Tags tags={post.frontmatter.keywords.split(',')}/>
+          </div>
+          <a href={post.url} class="inline-block mt-2 cta">
+              Read more
+          </a>
         ))}
     </div>
 </BaseLayout>

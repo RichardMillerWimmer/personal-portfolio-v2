@@ -12,7 +12,7 @@ const dateFormat = { year: 'numeric', month: 'long', day: '2-digit' } as Intl.Da
         <article>
             <h1>{title}</h1>
             <div>
-                <h4 datetime={date}>{new Intl.DateTimeFormat('en', dateFormat).format(new Date(date))}, {readTime} read</h4>
+                <time datetime={date}>{new Intl.DateTimeFormat('en', dateFormat).format(new Date(date))}, {readTime} read</time>
             </div>
             <div>
                 <!-- Tags/Keywords -->
