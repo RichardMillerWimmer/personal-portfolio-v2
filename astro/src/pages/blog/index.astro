@@ -3,13 +3,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Tags from '../../components/Tags.astro';
 
-// import generateSlug from '../../utils/helpers.ts'
-
-// export async function getStaticPaths() {
-//     console.log('allPost', allPosts)
-//     const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.data).valueOf() - new Date(a.frontmatter.date).valueOf())
-//     return allPosts.map(post => ({props: {post}}))
-// }
 const allPosts = (await Astro.glob('/*.md')).sort(
   (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
 
