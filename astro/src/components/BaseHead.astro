@@ -4,14 +4,14 @@ import '../styles/reset.scss'
 import '../styles/global.scss'
 import '../styles/_variables.scss'
 
-export type HeadProps = {
-  title: string;
-  description: string;
-  permalink: string;
-  publishDate: string;
-  ogImageUrl?: string;
+interface HeadProps {
+  title: string
+  description: string
+  permalink: string
+  publishDate: string
+  ogImageUrl?: string
 }
-const { title, description, permalink, publishDate, ogImageUrl }: HeadProps = Astro.props; 
+const { title, description, permalink, publishDate, ogImageUrl } = Astro.props as HeadProps; 
 ---
 
 <meta charset="utf-8" />
