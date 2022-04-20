@@ -1,6 +1,7 @@
 ---
 // Component Imports
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Tags from '../../components/Tags.astro';
 
 // import generateSlug from '../../utils/helpers.ts'
 
@@ -27,6 +28,9 @@ const title = 'Blog'
         {posts.map((post) => (
             <div>
                 <a href={post.url}>{post.frontmatter.title}</a>
+            </div>
+            <div>
+              <Tags tags={post.frontmatter.keywords.split(',')}/>
             </div>
         ))}
     </div>

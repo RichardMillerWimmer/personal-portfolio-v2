@@ -1,0 +1,13 @@
+---
+interface Props {
+  tags: string[]
+  class?: string
+}
+const { tags, class: styles } = Astro.props as Props
+---
+
+<div>
+  {tags.map((keyword: string) => (
+    <span class={styles}>{keyword}</span>
+  ))}
+</div>
