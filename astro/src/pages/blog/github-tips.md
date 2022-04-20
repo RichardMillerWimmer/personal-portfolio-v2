@@ -5,7 +5,6 @@ description: Branding can feel fake, just be yourself and put your best forward 
 date: 2022-4-11
 author: Richard Miller Wimmer
 readTime: "4 min"
-keywords: github, branding
 categories:
   - GitHub
   - Branding

@@ -1,9 +1,10 @@
 ---
 import BaseLayout from './BaseLayout.astro'
+import Tags from '../components/Tags.astro'
 
 const { content } = Astro.props
 // console.log(content)
-const { title, date, keywords, readTime } = content
+const { title, date, readTime, categories } = content
 const dateFormat = { year: 'numeric', month: 'long', day: '2-digit' } as Intl.DateTimeFormatOptions
 ---
 
@@ -15,7 +16,7 @@ const dateFormat = { year: 'numeric', month: 'long', day: '2-digit' } as Intl.Da
                 <time datetime={date}>{new Intl.DateTimeFormat('en', dateFormat).format(new Date(date))}, {readTime} read</time>
             </div>
             <div>
-                <!-- Tags/Keywords -->
+                <Tags tags={categories} />
             </div>
             <slot />
         </article>
