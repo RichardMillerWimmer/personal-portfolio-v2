@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components'
 import NavList from './NavList';
+import styles from '../../styles/Burger.module.scss'
 
 
 type StyledBurgerType = {
-  open: boolean
+  open: boolean;
 }
 
 const StyledBurger = styled.div<StyledBurgerType>`
@@ -47,7 +48,7 @@ const Burger: React.FC = () => {
 
   return (
     <>
-      <div>
+      <div className={styles.burgerContainer}>
         <StyledBurger open={open} onClick={() => setOpen(!open)}>
           <div />
           <div />

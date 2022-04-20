@@ -2,8 +2,8 @@ import React from 'react'
 import styles from '../../styles/NavLink.module.scss'
 
 type NavLinkType = {
-    text: string
-    href: string
+    text: string;
+    href: string;
     page: string;
 }
 

@@ -1,0 +1,16 @@
+@import './variables';
+
+.burgerContainer {
+    background-color: #0d3052a6;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 55px;
+    z-index: 20;
+  }
+
+@media screen and (min-width: $bp-tablet) {
+    .burgerContainer {
+      display: none;
+    }
+  }
