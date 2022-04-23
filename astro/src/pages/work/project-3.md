@@ -1,11 +1,11 @@
 ---
-setup: import Layout from '../../layouts/BlogLayout.astro';
+setup: import Layout from '../../layouts/WorkLayout.astro';
 title: Valerie Miller PhD Academic Portfolio
-description: 
+description:
 technologies:
-  - Next.js 
+  - Next.js
   - Typescript
-  - Styled Components 
+  - Styled Components
   - SCSS
   - Nodemailer
   - Contentful

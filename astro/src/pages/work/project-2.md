@@ -1,5 +1,5 @@
 ---
-setup: import Layout from '../../layouts/BlogLayout.astro';
+setup: import Layout from '../../layouts/WorkLayout.astro';
 title: Top Table Games
 description: 
 technologies:

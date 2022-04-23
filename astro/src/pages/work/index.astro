@@ -4,11 +4,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 
 // Component Script:
 
-// export async function getStaticPaths() {
-//     return allPosts = Astro.fetchContent('./*.md')
-// }
+const allWork = await Astro.glob('./*.md')
+console.log('allwork', allWork)
 
-// const { sortedPosts } = Astro.props
+const { props } = Astro.props
+const { params } = Astro.params
+// console.log(props)
 
 
 const title = 'Work - Richard';
@@ -24,7 +25,10 @@ const publishDate = ''
 	</header>
 	<body>
 		<section>
-            A list of my work and projects. 
+            {allWork.map((work) => 
+			<div>
+				<a href={work.url}><h3>{work.frontmatter.title}</h3></a>
+			</div>)}
         </section>
 	</body>
 </BaseLayout>
