@@ -1,7 +1,7 @@
 ---
 setup: import Layout from '../../layouts/BlogLayout.astro';
 title: Polymath Visuals Store
-description: Branding can feel fake, just be yourself and put your best forward with a few tips on your GitHub profile.
+description: 
 technologies:
   - React
   - Redux
