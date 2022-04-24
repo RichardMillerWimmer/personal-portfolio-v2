@@ -29,11 +29,11 @@ const title = 'Blog'
               <p >{post.frontmatter.description}</p>
             </div>
             <div>
+              <LinkButton href={post.url} >
+                  Read more
+              </LinkButton>
               <Tags tags={post.frontmatter.categories}/>
             </div>
-            <LinkButton href={post.url} >
-                Read more
-            </LinkButton>
           </div>
         ))}
     </div>

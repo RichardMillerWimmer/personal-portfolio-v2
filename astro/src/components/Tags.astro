@@ -6,8 +6,21 @@ interface Props {
 const { tags, class: styles } = Astro.props as Props
 ---
 
-<div>
+<style>
+  .tagContainter{
+    display: inline-block;
+  }
+  .tag{
+    display: inline-block;
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+</style>
+
+<div class='tagContainter'>
   {tags.map((keyword: string) => (
-    <span class={styles}>{keyword}</span>
+    <span class='tag'>{keyword}</span>
   ))}
 </div>
