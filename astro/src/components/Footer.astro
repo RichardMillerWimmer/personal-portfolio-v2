@@ -1,5 +1,7 @@
 ---
-// Component Imports
+// Component Imports:
+import GitHub from '/assets/github-original.svg'
+import LinkedIn from '/assets/linkedin-plain.svg'
 
 // Component Script:
 
@@ -10,19 +12,21 @@
         text-align: center;
         padding-top: 30px;
     }
+    img{
+        margin: 5px;
+        height: 40px;
+    }
 </style>
 
 <footer>
     	<h5>&copy; 2021 Richard Miller Wimmer</h5>
         <div>
             <a href="https://github.com/RichardMillerWimmer" target="_blank" rel="noreferrer">
-                github
-                <!-- <image src='/public/github.svg'/> -->
+                <img src={GitHub} alt="github"/>
             </a>
             <a href="https://www.linkedin.com/in/richard-miller-wimmer/"
                 target="_blank" rel="noreferrer">
-                linkedin
-                <!-- <image src='/public/linkedin.svg'/> -->
+                <img src={LinkedIn} alt="linkedin" />
             </a>
         </div>
 </footer>
