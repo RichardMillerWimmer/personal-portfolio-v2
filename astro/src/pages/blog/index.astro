@@ -13,23 +13,27 @@ const title = 'Blog'
 	
 <BaseLayout title={title}>
     <div>
-        <h1>{title}</h1>
+        <header>
+          <h1>{title}</h1>
+        </header>
         {posts.map((post) => (
           <div>
-            <div datetime={post.frontmatter.publishedAt}>
-              <time>{new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit' }).format(
-              new Date(post.frontmatter.date),
-              )}</time>
+            <div>
+              <div datetime={post.frontmatter.publishedAt}>
+                <time>{new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit' }).format(
+                new Date(post.frontmatter.date),
+                )}</time>
+              </div>
+              <a href={post.url}><h3>{post.frontmatter.title}</h3></a>
+              <p >{post.frontmatter.description}</p>
             </div>
-            <a href={post.url}><h3>{post.frontmatter.title}</h3></a>
-            <p >{post.frontmatter.description}</p>
+            <div>
+              <Tags tags={post.frontmatter.categories}/>
+            </div>
+            <a href={post.url} >
+                Read more
+            </a>
           </div>
-          <div>
-            <Tags tags={post.frontmatter.categories}/>
-          </div>
-          <a href={post.url} >
-              Read more
-          </a>
         ))}
     </div>
 </BaseLayout>

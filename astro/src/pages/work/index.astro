@@ -1,6 +1,7 @@
 ---
 // Component Imports
 import BaseLayout from '../../layouts/BaseLayout.astro'
+import Tags from '../../components/Tags.astro'
 
 // Component Script:
 
@@ -25,10 +26,13 @@ const publishDate = ''
 	</header>
 	<body>
 		<section>
-            {allWork.map((work) => 
+            {allWork.map((work) => (
 			<div>
 				<a href={work.url}><h3>{work.frontmatter.title}</h3></a>
-			</div>)}
+			</div>
+			<p>{work.frontmatter.description}</p>
+			<a href={work.url}>See more</a>
+			))}
         </section>
 	</body>
 </BaseLayout>
