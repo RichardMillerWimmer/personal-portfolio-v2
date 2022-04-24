@@ -1,7 +1,9 @@
 ---
 setup: import Layout from '../../layouts/WorkLayout.astro';
 title: Top Table Games
-description: A React app built as a platform for tracking and reviewing table top games. Technologies include Redux, Typescript, Nodejs with Express along with more.  
+description: A React app built as a platform for tracking and reviewing table top games. Technologies include Redux, Typescript, Nodejs with Express along with more.
+url: https://toptablegames.net/#/
+repo: https://github.com/boardgame-project/boardgame-project
 technologies:
   - React
   - Redux

@@ -1,7 +1,9 @@
 ---
 setup: import Layout from '../../layouts/WorkLayout.astro';
 title: Valerie Miller PhD Academic Portfolio
-description: An academic portfolio for a University of Cincinnat professor and researcher. This app is built using Nextjs and Contentful along with other technologies.
+description: An academic portfolio for a University of Cincinnati professor and researcher. This app is built using Nextjs and Contentful along with other technologies.
+url: not found
+repo: https://github.com/RichardMillerWimmer/portfolio-valerie
 technologies:
   - Next.js
   - Typescript

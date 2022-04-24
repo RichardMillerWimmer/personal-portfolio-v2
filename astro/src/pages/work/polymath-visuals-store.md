@@ -1,7 +1,9 @@
 ---
 setup: import Layout from '../../layouts/WorkLayout.astro';
 title: Polymath Visuals Store
-description: An e-commerce React app designed to showcase Cinema 4D texture packages. Some highlight technologies include Redux, Typescript, Nodejs with Express
+description: An e-commerce React app designed to showcase Cinema 4D texture packages. Some highlight technologies include Redux, Typescript, Nodejs with Express.
+url: https://polymathvisualsstore.com/#/
+repo: https://github.com/RichardMillerWimmer/personal_project
 technologies:
   - React
   - Redux
