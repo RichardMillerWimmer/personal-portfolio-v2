@@ -11,6 +11,7 @@ technologies:
   - Massive
   - Emotion
   - SASS
+index: 0
 ---
 
 The purpose of this project was to demonstrate building a React app from the ground up. The timeline for this project was just under three weeks, but has been revisited for various refactors and updates.

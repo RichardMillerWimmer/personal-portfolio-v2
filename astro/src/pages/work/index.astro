@@ -4,8 +4,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 
 // Component Script:
 
-const allWork = await Astro.glob('./*.md')
-console.log('allwork', allWork)
+const allWork = (await Astro.glob('./*.md')).sort((a, b) => a.frontmatter.index - b.frontmatter.index)
+// console.log('allwork', allWork)
 
 const { props } = Astro.props
 const { params } = Astro.params

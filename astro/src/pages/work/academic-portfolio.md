@@ -9,6 +9,7 @@ technologies:
   - SCSS
   - Nodemailer
   - Contentful
+index: 2
 ---
 
 A professional academic portfolio page Valerie Miller PhD OTL/R. Built using Next.js.
