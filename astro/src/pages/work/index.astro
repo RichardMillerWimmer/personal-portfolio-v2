@@ -1,7 +1,7 @@
 ---
-// Component Imports
+	// Component Imports
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import Tags from '../../components/Tags.astro'
+import LinkButton from '../../components/LinkButton.astro';
 
 // Component Script:
 
@@ -32,7 +32,7 @@ const publishDate = ''
 				<a href={work.url}><h3>{work.frontmatter.title}</h3></a>
 			</div>
 			<p>{work.frontmatter.description}</p>
-			<a href={work.url}>See more</a>
+			<LinkButton href={work.url}>See more</LinkButton>
 			))}
         </section>
 	</body>

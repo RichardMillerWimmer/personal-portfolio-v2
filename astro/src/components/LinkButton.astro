@@ -1,0 +1,15 @@
+---
+
+const {href, noreferrer} = Astro.props
+---
+
+<style>
+    .linkBtn{
+        display: inline-block;
+        padding: 10px;
+        margin: 5px 0;
+        border: 2px solid black;
+    }
+</style>
+
+<a href={href} rel={noreferrer} class='linkBtn'><slot /></a>
