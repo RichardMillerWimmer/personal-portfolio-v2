@@ -1,5 +1,7 @@
 ---
 import '../styles/_variables.scss'
+import styles from '../styles/Hero.module.scss'
+import Avatar from '/assets/CartoonLarge.svg'
 
 ---
 
@@ -12,6 +14,9 @@ import '../styles/_variables.scss'
 </style>
 
 <header>
-	<h1 id='title'>Hi, I'm Richard Miller Wimmer</h1>
-	<h3>And I like solving problems, fixing stuff, and creating things people enjoy.</h3>
+	<img class={styles.heroImg} src={Avatar} />
+	<div>
+		<h1 id='title'>Hi, I'm Richard Miller Wimmer</h1>
+		<h3>And I like solving problems, fixing stuff, and creating things people enjoy.</h3>
+	</div>
 </header>

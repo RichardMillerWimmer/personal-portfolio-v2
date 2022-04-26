@@ -1,0 +1,19 @@
+@import './variables';
+
+.heroImg {
+    display: inline-block;
+    height: 440px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: $bp-tablet) {
+    .heroImg {
+        height: 340px; 
+    }
+}
+@media screen and (max-width: $bp-mobile) {
+    .heroImg {
+       height: 240px; 
+    }
+  }
