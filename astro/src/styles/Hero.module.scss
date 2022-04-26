@@ -1,9 +1,10 @@
 @import './variables';
 
 .heroImg {
-    display: inline-block;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     height: 440px;
-    text-align: center;
 }
 
 
@@ -16,4 +17,10 @@
     .heroImg {
        height: 240px; 
     }
-  }
+}
+// accounts for galaxy fold
+@media screen and (max-width: 325px) {
+    .heroImg {
+       height: 200px; 
+    }
+}
