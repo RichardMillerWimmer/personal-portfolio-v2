@@ -14,9 +14,11 @@ import Avatar from '/assets/AvatarLarge.svg'
 </style>
 
 <header>
-	<img class={styles.heroImg} src={Avatar} />
+	<div class={styles.heroFlexContainer}>
+		<h1 id='title' class={styles.heroIntroduction}>Hi, I'm Richard Miller Wimmer</h1>
+		<img class={styles.heroImg} src={Avatar} />
+	</div>
 	<div>
-		<h1 id='title'>Hi, I'm Richard Miller Wimmer</h1>
 		<h3>And I like solving problems, fixing stuff, and creating things people enjoy.</h3>
 	</div>
 </header>
