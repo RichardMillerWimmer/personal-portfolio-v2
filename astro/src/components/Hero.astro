@@ -1,6 +1,7 @@
 ---
 import '../styles/_variables.scss'
 import styles from '../styles/Hero.module.scss'
+import '../styles/animation.scss'
 import Avatar from '/assets/AvatarLarge.svg'
 
 ---
@@ -15,8 +16,16 @@ import Avatar from '/assets/AvatarLarge.svg'
 
 <header>
 	<div class={styles.heroFlexContainer}>
-		<h1 id='title' class={styles.heroIntroduction}>Hi, I'm Richard Miller Wimmer</h1>
-		<img class={styles.heroImg} src={Avatar} />
+		<h1 id='title' class={styles.heroIntroduction}>Hi, I'm Richard</h1>
+		<div class={styles.imageContainer}>
+			<div>
+				<div class="steam steam-one"></div>
+				<div class="steam steam-two"></div>
+				<div class="steam steam-three"></div>
+				<div class="steam steam-four"></div>
+			</div>
+			<img class={styles.heroImg} src={Avatar} />
+		</div>
 	</div>
 	<div>
 		<h3>And I like solving problems, fixing stuff, and creating things people enjoy.</h3>
