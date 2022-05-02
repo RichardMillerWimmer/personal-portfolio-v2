@@ -11,6 +11,7 @@ html {
 
 html,
 body {
+  min-height: 100vh;
   color: $color-black;
   margin: 0;
   font-family: $font-body;

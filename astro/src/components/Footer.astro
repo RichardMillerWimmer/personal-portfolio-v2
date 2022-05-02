@@ -8,19 +8,25 @@ import LinkedIn from '/assets/linkedin-plain.svg'
 ---
 
 <style>
-    footer{
-        text-align: center;
-        padding-top: 30px;
+    footer {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
     }
     img{
         margin: 5px;
         height: 40px;
     }
+    .linkContainer {
+        width: 100%;
+        margin: 0 auto;
+    }
 </style>
 
 <footer>
     	<h5>&copy; 2021 Richard Miller Wimmer</h5>
-        <div>
+        <div class="linkContainer">
             <a href="https://github.com/RichardMillerWimmer" target="_blank" rel="noreferrer">
                 <img src={GitHub} alt="github"/>
             </a>
