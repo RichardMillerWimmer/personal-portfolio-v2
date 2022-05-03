@@ -11,11 +11,12 @@ import Avatar from '/assets/AvatarLarge.svg'
 	#title{
 		font-family: $font-accent;
 		font-weight: 700;
+		line-height: 1;
 	}
 </style>
 
 <header>
-	<div class={styles.heroFlexContainer}>
+	<div class={styles.heroGridContainer}>
 		<h1 id='title' class={styles.heroIntroduction}>Hi, I'm Richard</h1>
 		<div class={styles.imageContainer}>
 			<div>
@@ -26,8 +27,8 @@ import Avatar from '/assets/AvatarLarge.svg'
 			</div>
 			<img class={styles.heroImg} src={Avatar} />
 		</div>
+		<h3 class={styles.heroTagLine}>And I like solving problems, fixing stuff, and creating things people enjoy.</h3>
 	</div>
 	<div>
-		<h3>And I like solving problems, fixing stuff, and creating things people enjoy.</h3>
 	</div>
 </header>

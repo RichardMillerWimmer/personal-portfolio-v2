@@ -7,9 +7,13 @@
     height: 240px;
 }
 
-.heroFlexContainer {
-    display: flex;
-    flex-flow: column nowrap;
+// .heroFlexContainer {
+//     display: flex;
+//     flex-flow: column nowrap;
+// }
+.heroGridContainer {
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .imageContainer {
@@ -28,21 +32,28 @@
 }
 @media screen and (min-width: $bp-tablet) {
     .heroImg {
-        height: 440px; 
+        height: 440px;
+        grid-area: 1 / 1 / 5 / 3; 
     }
     .imageContainer {
         height: 440px;
-        margin-left: -50px;
+        margin-left: -100px;
     }
-    .heroFlexContainer {
-        margin: 0 auto;
-        display: flex;
-        flex-flow: row-reverse nowrap;
-        justify-content: center;
-        max-width: 880px;
+    .heroGridContainer {
+        height: 440px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 110px);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    .heroTagLine {
+        grid-area: 3 / 3 / 5 / 5;
+        font-size: 1.7rem;
     }
     .heroIntroduction {
-        padding: 130px 0 0 0 ;
+        padding: 70px 0 0 0;
+        grid-area: 1 / 3 / 3 / 5;
     }
 }
 // accounts for galaxy fold
