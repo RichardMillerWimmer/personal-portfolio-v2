@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro'
 import Tags from '../components/Tags.astro'
+import LinkButton from '../components/LinkButton.astro';
 
 const {title, technologies, url, repo} = Astro.props.content
 ---
@@ -9,8 +10,10 @@ const {title, technologies, url, repo} = Astro.props.content
     <main>
         <section>
             <h3>{title}</h3>
-            <a href={url} rel="noreferrer">Site</a>
-            <a href={repo} rel="noreferrer">Repo</a>
+            <div>
+                <LinkButton href={url} rel="noreferrer">Site</LinkButton>
+                <LinkButton href={repo} rel="noreferrer">Repo</LinkButton>
+            </div>
             <div>
                 <Tags tags={technologies}/>
             </div>
