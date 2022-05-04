@@ -7,10 +7,6 @@
     height: 240px;
 }
 
-// .heroFlexContainer {
-//     display: flex;
-//     flex-flow: column nowrap;
-// }
 .heroGridContainer {
     display: grid;
     grid-template-columns: 1fr;
@@ -28,6 +24,10 @@
     }
     .imageContainer {
         height: 340px;
+    }
+    .heroTagLine {
+        max-width: 460px;
+        margin: 0 auto;
     }
 }
 @media screen and (min-width: $bp-tablet) {

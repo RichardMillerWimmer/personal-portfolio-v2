@@ -1,0 +1,10 @@
+@import '../styles/_variables.scss';
+
+.mainContent {
+    margin: 25px auto 0 auto;
+}
+@media screen and (min-width: $bp-tablet) {
+    .mainContent {
+        margin: 0 auto;
+    }
+}
