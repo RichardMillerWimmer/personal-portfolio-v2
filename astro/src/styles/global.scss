@@ -17,6 +17,9 @@ body {
   font-family: $font-body;
   line-height: 1.5;
 }
+input, textarea {
+  font-family: $font-body;
+}
 
 b {
   font-weight: 700;
@@ -68,7 +71,7 @@ p, time {
   h4 {
     font-size: 1.2rem;
   }
-  p, time {
+  p, time, input, textarea {
     font-size: 1.1rem;
   }
 }
@@ -86,7 +89,7 @@ p, time {
   h4 {
     font-size: 1.4rem;
   }
-  p, time {
+  p, time, input, textarea {
     font-size: 1.2rem;
   }
 }

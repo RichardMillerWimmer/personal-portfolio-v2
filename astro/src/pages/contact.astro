@@ -1,6 +1,7 @@
 ---
 // Component Imports
 import BaseLayout from '../layouts/BaseLayout.astro'
+import styles from '../styles/Contact.module.scss'
 
 // Component Script:
 
@@ -16,7 +17,7 @@ const publishDate = ''
 		<p>If you have any questions for me or would like to get connected I would love to hear from you.</p>
 	</header>
 	<main>
-		<form name="contact" method="POST" data-netlify="true">
+		<form class={styles.form} name="contact" method="POST" data-netlify="true">
   			<p>
     			<label>Your Name: <input type="text" name="name" /></label>   
   			</p>
