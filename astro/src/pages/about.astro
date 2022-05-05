@@ -12,11 +12,79 @@ const publishDate = ''
 
 
 ---
+
+<style>
+  svg {
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: 0; 
+    width: 50%; 
+  }
+  rect {
+    fill: none;
+    stroke: rgb(0, 0, 0);
+    stroke-width: 2;
+    stroke-dasharray: 422, 0;
+    transition: all 0.35s linear;
+  }
+  a {
+    background: rgba($white, 0);
+    border-bottom: 1px solid;
+    color: $white;
+    line-height: 1.4;
+    padding: .25em;
+    text-decoration: none;
+  }
+   a:hover {
+      background: rgba(white, 1);
+      color: $red;
+    }
+
+.btn {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  display: block;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 0 2em;
+  max-width: 160px; 
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;   
+}
+.btn:hover {
+  text-decoration: none;
+}
+.btn-1 {
+  background: darken(white, 1.5%);
+  font-weight: 100;
+}
+.btn-1:hover {
+  background: rgba(white, 0);
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+rect:hover {
+    stroke-width: 5;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+</style>
 <BaseLayout title={title} description={description} permalink={permalink} publishDate={publishDate}>
 	<header>
 		<h1>About</h1>
 	</header>
 	<body>
+  <a class="btn btn-1">
+    <svg class="">
+      <rect x="0" y="0" fill="none" width="100%" height="100%" />
+    </svg> Button
+  </a>  
 		<article>
 			 <p>
           Allow me to introduce myself, My name is Richard, and I'm a software engineer/developer. The Cincinnati Northern Kentucky area is home to my family and I. Along with development I enjoy spending time with my family, going to the Cincinnati museum, zoo, woodworking, and working out.
