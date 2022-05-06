@@ -19,7 +19,7 @@ const publishDate = ''
     left: 0;
     position: absolute;
     top: 0; 
-    width: 50%; 
+    width: 100%; 
   }
   rect {
     fill: none;
@@ -30,16 +30,16 @@ const publishDate = ''
   }
   a {
     background: rgba($white, 0);
-    border-bottom: 1px solid;
+    /* border-bottom: 1px solid; */
     color: $white;
     line-height: 1.4;
     padding: .25em;
-    text-decoration: none;
+    text-align: center;
   }
-   a:hover {
+  a:hover {
       background: rgba(white, 1);
       color: $red;
-    }
+  }
 
 .btn {
   color: rgb(0, 0, 0);
@@ -63,11 +63,11 @@ const publishDate = ''
   font-weight: 100;
 }
 .btn-1:hover {
-  background: rgba(white, 0);
+  background: rgba(green, 0);
   font-weight: 900;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
 }
-rect:hover {
+.btn:hover rect {
     stroke-width: 5;
     stroke-dasharray: 15, 310;
     stroke-dashoffset: 48;
