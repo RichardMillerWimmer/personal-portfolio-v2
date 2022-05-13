@@ -1,51 +1,53 @@
-.steam {
-    position: absolute;
-    bottom: 29.5%;
-    right: 27%;
-    height: 20%;
-    width: 20%;
-    border-radius: 50%;
-    background-image: radial-gradient(rgb(160, 160, 160), transparent) ;
-    z-index: 10;
-    opacity: 0;
-  }
-  
-.steam-one {
-    -webkit-animation: steam-one 4s ease-out infinite;
-    animation: steam-one 4s ease-out infinite;
+@media screen and (prefers-reduced-motion: no-preference) { 
+    .steam {
+        position: absolute;
+        bottom: 29.5%;
+        right: 27%;
+        height: 20%;
+        width: 20%;
+        border-radius: 50%;
+        background-image: radial-gradient(rgb(160, 160, 160), transparent) ;
+        z-index: 10;
+        opacity: 0;
+    }
+    
+    .steam-one {
+        -webkit-animation: steam-one 4s ease-out infinite;
+        animation: steam-one 4s ease-out infinite;
+    }
+    
+    .steam-three {
+        -webkit-animation: steam-one 4s ease-out 1s infinite;
+        animation: steam-one 4s ease-out 1s infinite;
+    }
+    
+    @-webkit-keyframes steam-one {
+        0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.5;}
+        100% {transform: translateY(-200%) translateX(30px) scale(1); opacity: 0;}
+    }
+    
+    @keyframes steam-one {
+        0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.5;}
+        100% {transform: translateY(-200%) translateX(30px) scale(1); opacity: 0;}
+    }
+    
+    .steam-two {
+        -webkit-animation: steam-two 4s ease-out 0.5s infinite;
+        animation: steam-two 4s ease-out 0.5s infinite;
+    }
+    
+    .steam-four {
+        -webkit-animation: steam-two 4s ease-out 1.5s infinite;
+        animation: steam-two 4s ease-out 1.5s infinite;
+    }
+    
+    @-webkit-keyframes steam-two {
+        0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.5;}
+        100% {transform: translateY(-200%) translateX(70px) scale(1); opacity: 0;}
+    }
+    
+    @keyframes steam-two {
+        0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.5;}
+        100% {transform: translateY(-200%) translateX(70px) scale(1); opacity: 0;}
 }
-  
-.steam-three {
-    -webkit-animation: steam-one 4s ease-out 1s infinite;
-    animation: steam-one 4s ease-out 1s infinite;
-}
-  
-@-webkit-keyframes steam-one {
-    0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.5;}
-    100% {transform: translateY(-200%) translateX(30px) scale(1); opacity: 0;}
-}
-  
-@keyframes steam-one {
-    0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.5;}
-    100% {transform: translateY(-200%) translateX(30px) scale(1); opacity: 0;}
-}
-  
-.steam-two {
-    -webkit-animation: steam-two 4s ease-out 0.5s infinite;
-    animation: steam-two 4s ease-out 0.5s infinite;
-}
-  
-.steam-four {
-    -webkit-animation: steam-two 4s ease-out 1.5s infinite;
-    animation: steam-two 4s ease-out 1.5s infinite;
-}
-  
-@-webkit-keyframes steam-two {
-    0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.5;}
-    100% {transform: translateY(-200%) translateX(70px) scale(1); opacity: 0;}
-}
-  
-@keyframes steam-two {
-    0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.5;}
-    100% {transform: translateY(-200%) translateX(70px) scale(1); opacity: 0;}
 }
