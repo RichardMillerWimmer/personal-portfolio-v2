@@ -1,0 +1,23 @@
+.btn {
+    display: inline-block; 
+    color: rgb(0, 0, 0);   
+    cursor: pointer;
+    font-size:16px;
+    font-weight: 400;
+    line-height: 45px !important;
+    max-width: 160px; 
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;   
+}
+
+.btn:hover {
+    font-weight: 900;
+}
+.btn:hover rect {
+    stroke-width: 5;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
