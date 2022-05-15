@@ -4,9 +4,10 @@ import styles from '../styles/LinkButton.module.scss'
 interface LinkButtonProps {
   href: string
   noreferrer?: string
+  target?: string
 }
 
-const {href, noreferrer} = Astro.props as LinkButtonProps
+const {href, noreferrer, target} = Astro.props as LinkButtonProps
 
 ---
 
@@ -32,7 +33,7 @@ const {href, noreferrer} = Astro.props as LinkButtonProps
 
 </style>
 
-<a class={styles.btn} href={href} rel={noreferrer}>
+<a class={styles.btn} href={href} rel={noreferrer} target={target}>
     <svg class="">
       <rect x="0" y="0" fill="none" width="100%" height="100%" />
     </svg> <slot />

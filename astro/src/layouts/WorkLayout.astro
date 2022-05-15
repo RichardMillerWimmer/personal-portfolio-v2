@@ -11,8 +11,8 @@ const {title, technologies, url, repo} = Astro.props.content
         <section>
             <h3>{title}</h3>
             <div>
-                <LinkButton href={url} rel="noreferrer">Site</LinkButton>
-                <LinkButton href={repo} rel="noreferrer">Repo</LinkButton>
+                <LinkButton href={url} rel="noreferrer" target='_blank'>Site</LinkButton>
+                <LinkButton href={repo} rel="noreferrer" target='_blank'>Repo</LinkButton>
             </div>
             <div>
                 <Tags tags={technologies}/>
