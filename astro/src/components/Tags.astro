@@ -1,9 +1,9 @@
 ---
-interface Props {
+interface TagsProps {
   tags: string[]
   class?: string
 }
-const { tags, class: styles } = Astro.props as Props
+const { tags, class: styles } = Astro.props as TagsProps
 ---
 
 <style>
@@ -12,7 +12,7 @@ const { tags, class: styles } = Astro.props as Props
   }
   .tag{
     display: inline-block;
-    padding: 5px;
+    padding: 2px 5px;
     margin-right: 5px;
     border: 1px solid black;
     border-radius: 20px;
