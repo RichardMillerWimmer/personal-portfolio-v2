@@ -1,41 +1,58 @@
 ---
-// Component Imports
-import BaseLayout from '../layouts/BaseLayout.astro'
-import styles from '../styles/About.module.scss'
+  // Component Imports
+  import BaseLayout from '../layouts/BaseLayout.astro'
+  import styles from '../styles/About.module.scss'
 
-// Component Script:
+  // Component Script:
 
-const title = 'About - Richard'
-const description = 'Read more about Richard and his experience.'
-const permalink = ''
-const publishDate = ''
+  const title = 'About - Richard'
+  const description = 'Read more about Richard and his experience.'
+  const permalink = ''
+  const publishDate = ''
 
 
 ---
 
+<style>
+  a {
+    text-decoration: underline;
+  }
+</style>
+
 <BaseLayout title={title} description={description} permalink={permalink} publishDate={publishDate}>
-	<header>
-		<h1>About</h1>
-	</header>
-	<body>
-		<article>
-			 <p>
-          Allow me to introduce myself, My name is Richard, and I'm a software engineer/developer. The Cincinnati Northern Kentucky area is home to my family and I. Along with development I enjoy spending time with my family, going to the Cincinnati museum, zoo, woodworking, and working out.
-        </p>
-        <br>
-        <p>
-            My development focus has been on frontend engineering using popular frameworks creating reusable dynamic components to create the best user experience possible. With an eye for design I love bringing concepts and wireframes to life. I have a passion for web accessibility and providing the best possible experience and use for all.    
-        </p>
-        <br>
-        <p>
-          As a life long learner I have gathered skills in development/engineering and many complementary skills. Some of these include German language, leadership, mentoring, music, graphic design, video, social media content and strategy. 
-        </p>
-        <br>
-        <p>
-          I would love to connect with you, find me on <a href='https://www.linkedin.com/in/richard-miller-wimmer/' target='_blank' rel="noreferrer">LinkedIn</a> and shoot
-          me a message. You can also <a href="">contact</a> me.
-        </p>
-        <p>Feel free to take a look at my <a class={styles.resumeLink} href='https://docs.google.com/document/d/1_gpG0nhrPrHhr04xQLNj1Yf3b2En5tP3-XkwiF19gP0/export?format=pdf'>résumé</a>.</p>
-		</article>
-	</body>
+  <header>
+    <h1>About</h1>
+  </header>
+
+  <body>
+    <article>
+      <p>
+        Allow me to introduce myself, My name is Richard, and I'm a software engineer/developer. The Cincinnati Northern
+        Kentucky area is home to my family and I. Along with development I enjoy spending time with my family, going to
+        the Cincinnati museum, zoo, woodworking, and working out.
+      </p>
+      <br>
+      <p>
+        My development focus has been on frontend engineering using popular frameworks creating reusable dynamic
+        components to create the best user experience possible. With an eye for design I love bringing concepts and
+        wireframes to life. I have a passion for web accessibility and providing the best possible experience and use
+        for all.
+      </p>
+      <br>
+      <p>
+        As a life long learner I have gathered skills in development/engineering and many complementary skills. Some of
+        these include German language, leadership, mentoring, music, graphic design, video, social media content and
+        strategy.
+      </p>
+      <br>
+      <p>
+        I would love to connect with you, find me on <a href='https://www.linkedin.com/in/richard-miller-wimmer/'
+          target='_blank' rel="noreferrer">LinkedIn</a> and shoot
+        me a message. You can also <a href="">contact</a> me.
+      </p>
+      <p>Feel free to take a look at my <a class={styles.resumeLink}
+          href='https://docs.google.com/document/d/1_gpG0nhrPrHhr04xQLNj1Yf3b2En5tP3-XkwiF19gP0/export?format=pdf'>résumé</a>.
+      </p>
+    </article>
+  </body>
 </BaseLayout>
