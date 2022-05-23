@@ -12,7 +12,7 @@
 <style>
     .container {
         position: relative;
-        margin: 0 auto;
+        margin: 0 auto 50px;
         height: 300px;
         width: 566px;
     }
@@ -34,6 +34,10 @@
         opacity: 1;
     }
 
+    .seeMoreCenter {
+        text-align: center;
+    }
+
     .thumbnailContent {
         position: absolute;
         padding: 20px 40px;
@@ -49,7 +53,7 @@
     }
 
     .container:hover .workImg {
-        opacity: .15;
+        opacity: .10;
     }
 </style>
 
@@ -59,6 +63,7 @@
         <div class="thumbnailContent">
             <h3>{title}</h3>
             <p>{description}</p>
+            <p class="seeMoreCenter">see more</p>
         </div>
     </a>
 </div>
