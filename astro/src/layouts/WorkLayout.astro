@@ -3,7 +3,15 @@ import BaseLayout from './BaseLayout.astro'
 import Tags from '../components/Tags.astro'
 import LinkButton from '../components/LinkButton.astro';
 
-const {title, technologies, url, repo} = Astro.props.content
+interface WorkLayoutProps {
+    title: string
+    technologies: string[]
+    url: string
+    repo: string
+
+}
+
+const {title, technologies, url, repo} = Astro.props.content as WorkLayoutProps
 ---
 
 <BaseLayout>
