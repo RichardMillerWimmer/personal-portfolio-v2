@@ -12,25 +12,32 @@
 <style>
     .container {
         position: relative;
+        margin: 0 auto;
+        height: 300px;
+        width: 566px;
     }
 
-    img {
+    .workImg {
         height: 300px;
-        display: block;
-        margin: 0 auto;
     }
 
     .thumbnailContent {
         position: absolute;
+        width: 100%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+
+    .container:hover .thumbnailContent {
+        opacity: 1;
     }
 </style>
 
 <div class='container'>
     <a href={url}>
-        <img src={src} />
+        <img class="workImg" src={src} />
         <div class="thumbnailContent">
             <h3>{title}</h3>
             <p>{description}</p>

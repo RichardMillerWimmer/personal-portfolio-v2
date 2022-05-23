@@ -23,15 +23,8 @@
 	<body>
 		<section>
 			{allWork.map((work) => (
-			// <div>
-				// <a href={work.url}>
-					// <h3>{work.frontmatter.title}</h3>
-					// </a>
-				// </div>
 			<Thumbnail src={work.frontmatter.thumbnail} title={work.frontmatter.title}
 				description={work.frontmatter.description} url={work.url} />
-			// <p>{work.frontmatter.description}</p>
-			// <LinkButton href={work.url}>See more</LinkButton>
 			))}
 		</section>
 	</body>
