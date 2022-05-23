@@ -15,12 +15,23 @@
         margin: 0 auto;
         height: 300px;
         width: 566px;
-        transition: .5 ease-in-out;
+    }
 
+    .container .thumbnailContent {
+        opacity: 0;
+        -webkit-transition: .5s ease-in-out;
+        transition: .5 ease-in-out;
+    }
+
+    .container .workImg {
+        opacity: 1;
+        -webkit-transition: .5s ease-in-out;
+        transition: .5 ease-in-out;
     }
 
     .workImg {
         height: 300px;
+        opacity: 1;
     }
 
     .thumbnailContent {
@@ -38,7 +49,7 @@
     }
 
     .container:hover .workImg {
-        opacity: .25;
+        opacity: .15;
     }
 </style>
 
