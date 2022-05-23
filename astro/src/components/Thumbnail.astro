@@ -15,6 +15,8 @@
         margin: 0 auto;
         height: 300px;
         width: 566px;
+        transition: .5 ease-in-out;
+
     }
 
     .workImg {
@@ -23,6 +25,7 @@
 
     .thumbnailContent {
         position: absolute;
+        padding: 20px 40px;
         width: 100%;
         top: 50%;
         left: 50%;
@@ -32,6 +35,10 @@
 
     .container:hover .thumbnailContent {
         opacity: 1;
+    }
+
+    .container:hover .workImg {
+        opacity: .25;
     }
 </style>
 
