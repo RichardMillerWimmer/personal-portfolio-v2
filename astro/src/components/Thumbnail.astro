@@ -1,0 +1,15 @@
+---
+interface ThumbnailProps {
+    src: string
+}
+
+const {src} = Astro.props as ThumbnailProps
+---
+
+<style>
+    img {
+        height: 300px;
+    }
+</style>
+
+<img src={src}/>

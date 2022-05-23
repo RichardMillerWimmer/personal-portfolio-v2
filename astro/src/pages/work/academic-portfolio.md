@@ -12,6 +12,7 @@ technologies:
   - Nodemailer
   - Contentful
 index: 2
+thumbnail: "assets/work/ValeriePortfolioThumbnail.png"
 ---
 
 A professional academic portfolio page Valerie Miller PhD OTL/R. Built using Next.js.

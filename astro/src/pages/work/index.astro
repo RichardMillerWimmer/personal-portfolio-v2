@@ -2,23 +2,16 @@
 	// Component Imports
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import LinkButton from '../../components/LinkButton.astro';
+import Thumbnail from '../../components/Thumbnail.astro';
 
 // Component Script:
 
 const allWork = (await Astro.glob('./*.md')).sort((a, b) => a.frontmatter.index - b.frontmatter.index)
-// console.log('allwork', allWork)
-
-const { props } = Astro.props
-const { params } = Astro.params
-// console.log(props)
-
-
 
 const title = 'Work - Richard';
 const description = 'Explore some of the work Richard has done.'
 const permalink = ''
 const publishDate = ''
-
 
 ---
 <BaseLayout title={title}>
@@ -31,6 +24,7 @@ const publishDate = ''
 			<div>
 				<a href={work.url}><h3>{work.frontmatter.title}</h3></a>
 			</div>
+			<Thumbnail src={work.frontmatter.thumbnail} alt={}/>
 			<p>{work.frontmatter.description}</p>
 			<LinkButton href={work.url}>See more</LinkButton>
 			))}
