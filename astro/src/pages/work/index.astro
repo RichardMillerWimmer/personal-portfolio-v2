@@ -24,7 +24,7 @@ const publishDate = ''
 			<div>
 				<a href={work.url}><h3>{work.frontmatter.title}</h3></a>
 			</div>
-			<Thumbnail src={work.frontmatter.thumbnail} alt={}/>
+			<Thumbnail src={work.frontmatter.thumbnail} title={work.frontmatter.title} description={work.frontmatter.description}/>
 			<p>{work.frontmatter.description}</p>
 			<LinkButton href={work.url}>See more</LinkButton>
 			))}

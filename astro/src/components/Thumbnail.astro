@@ -1,15 +1,32 @@
 ---
 interface ThumbnailProps {
     src: string
+    title: string
+    description: string
 }
 
-const {src} = Astro.props as ThumbnailProps
+const {src, title, description} = Astro.props as ThumbnailProps
 ---
 
 <style>
+    .container {
+        position: relative;
+    }
     img {
         height: 300px;
     }
+    .thumbnailContent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 </style>
 
-<img src={src}/>
+<div class='container'>
+    <img src={src}/>
+    <div class="thumbnailContent">
+        <h3>{title}</h3>
+        <p>{description}</p>
+    </div>
+</div>
