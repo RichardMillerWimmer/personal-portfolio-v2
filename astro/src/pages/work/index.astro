@@ -1,33 +1,38 @@
 ---
 	// Component Imports
-import BaseLayout from '../../layouts/BaseLayout.astro'
-import LinkButton from '../../components/LinkButton.astro';
-import Thumbnail from '../../components/Thumbnail.astro';
+	import BaseLayout from '../../layouts/BaseLayout.astro'
+	import LinkButton from '../../components/LinkButton.astro';
+	import Thumbnail from '../../components/Thumbnail.astro';
 
-// Component Script:
+	// Component Script:
 
-const allWork = (await Astro.glob('./*.md')).sort((a, b) => a.frontmatter.index - b.frontmatter.index)
+	const allWork = (await Astro.glob('./*.md')).sort((a, b) => a.frontmatter.index - b.frontmatter.index)
 
-const title = 'Work - Richard';
-const description = 'Explore some of the work Richard has done.'
-const permalink = ''
-const publishDate = ''
+	const title = 'Work - Richard';
+	const description = 'Explore some of the work Richard has done.'
+	const permalink = ''
+	const publishDate = ''
 
 ---
+
 <BaseLayout title={title}>
 	<header>
 		<h1>Work</h1>
 	</header>
+
 	<body>
 		<section>
-            {allWork.map((work) => (
-			<div>
-				<a href={work.url}><h3>{work.frontmatter.title}</h3></a>
-			</div>
-			<Thumbnail src={work.frontmatter.thumbnail} title={work.frontmatter.title} description={work.frontmatter.description}/>
-			<p>{work.frontmatter.description}</p>
-			<LinkButton href={work.url}>See more</LinkButton>
+			{allWork.map((work) => (
+			// <div>
+				// <a href={work.url}>
+					// <h3>{work.frontmatter.title}</h3>
+					// </a>
+				// </div>
+			<Thumbnail src={work.frontmatter.thumbnail} title={work.frontmatter.title}
+				description={work.frontmatter.description} url={work.url} />
+			// <p>{work.frontmatter.description}</p>
+			// <LinkButton href={work.url}>See more</LinkButton>
 			))}
-        </section>
+		</section>
 	</body>
 </BaseLayout>
