@@ -1,40 +1,52 @@
 ---
-// Component Imports
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Tags from '../../components/Tags.astro';
-import LinkButton from '../../components/LinkButton.astro'
+  // Component Imports
+  import BaseLayout from '../../layouts/BaseLayout.astro';
+  import Tags from '../../components/Tags.astro';
+  import LinkButton from '../../components/LinkButton.astro'
 
-const posts = (await Astro.glob('./*.md')).sort(
-  (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
-)
+  const posts = (await Astro.glob('./*.md')).sort(
+    (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
+  )
 
-const title = 'Blog'
+  const title = 'Blog'
 
 ---
-	
+
+<style>
+  h3 {
+    text-align: left;
+  }
+
+  .blogContainer {
+    margin: 0 0 50px 0;
+  }
+</style>
+
 <BaseLayout title={title}>
-    <div>
-        <header>
-          <h1>{title}</h1>
-        </header>
-        {posts.map((post) => (
-          <div>
-            <div>
-              <div datetime={post.frontmatter.publishedAt}>
-                <time>{new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit' }).format(
-                new Date(post.frontmatter.date),
-                )}</time>
-              </div>
-              <a href={post.url}><h3>{post.frontmatter.title}</h3></a>
-              <p >{post.frontmatter.description}</p>
-            </div>
-            <div>
-              <LinkButton href={post.url} >
-                  Read more
-              </LinkButton>
-              <Tags tags={post.frontmatter.categories}/>
-            </div>
-          </div>
-        ))}
+  <div>
+    <header>
+      <h1>{title}</h1>
+    </header>
+    {posts.map((post) => (
+    <div class="blogContainer">
+      <div>
+        <div datetime={post.frontmatter.publishedAt}>
+          <time>{new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit' }).format(
+            new Date(post.frontmatter.date),
+            )}</time>
+        </div>
+        <a href={post.url}>
+          <h3>{post.frontmatter.title}</h3>
+        </a>
+        <p>{post.frontmatter.description}</p>
+      </div>
+      <div>
+        <LinkButton href={post.url}>
+          Read more
+        </LinkButton>
+        <Tags tags={post.frontmatter.categories} />
+      </div>
     </div>
+    ))}
+  </div>
 </BaseLayout>
