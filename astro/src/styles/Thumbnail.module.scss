@@ -1,0 +1,47 @@
+@import './variables';
+
+.container {
+    position: relative;
+    margin: 0 auto 50px;
+    height: 300px;
+    width: 566px;
+}
+
+.container .thumbnailContent {
+    opacity: 0;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5 ease-in-out;
+}
+
+.container .workImg {
+    opacity: 1;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5 ease-in-out;
+}
+
+.workImg {
+    height: 300px;
+    opacity: 1;
+}
+
+.seeMoreCenter {
+    text-align: center;
+}
+
+.thumbnailContent {
+    position: absolute;
+    padding: 20px 40px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.container:hover .thumbnailContent {
+    opacity: 1;
+}
+
+.container:hover .workImg {
+    opacity: .10;
+}
