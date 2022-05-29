@@ -1,0 +1,40 @@
+---
+    import LinkButton from "./LinkButton.astro";
+    import Tags from './Tags.astro'
+
+    const { post } = Astro.props
+---
+
+<style lang="scss">
+    @import '../styles/_variables.scss';
+
+    h4 {
+        text-align: left;
+    }
+
+    .blogContainer {
+        margin: 0 0 50px 0;
+        padding: 20px;
+        background-color: $color-white;
+    }
+</style>
+
+<div class="blogContainer">
+    <div>
+        <div datetime={post.frontmatter.publishedAt}>
+            <time>{new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit' }).format(
+                new Date(post.frontmatter.date),
+                )}</time>
+        </div>
+        <a href={post.url}>
+            <h4>{post.frontmatter.title}</h4>
+        </a>
+        <p>{post.frontmatter.description}</p>
+    </div>
+    <div>
+        <LinkButton href={post.url}>
+            Read more
+        </LinkButton>
+        <Tags tags={post.frontmatter.categories} />
+    </div>
+</div>
