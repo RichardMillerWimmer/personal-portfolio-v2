@@ -13,7 +13,7 @@ const NavLink = ({ text, href, page }: NavLinkType): JSX.Element => {
     }
 
     return (
-        <li><a className={`${page === `/${text}` ? styles.isActive : ''}`} href={href}>{text}</a></li>)
+        <li><a className={`${page === `/${text}` ? styles.isActive : styles.navLink}`} href={href}>{text}</a></li>)
 }
 
 export default NavLink
