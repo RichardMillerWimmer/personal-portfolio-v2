@@ -3,8 +3,8 @@
 .container {
     position: relative;
     margin: 0 auto 50px;
-    padding: 20px;
-    background-color: $color-white;
+    // padding: 20px;
+    // background-color: $color-white;
 }
 
 .flexContainer {
@@ -29,11 +29,31 @@
 @media screen and (min-width: $bp-tablet) {
     .container{
         // height: 325px;
-        width: 613px;
+        // width: 613px;
+    }
+
+    .flexContainer {
+        flex-flow: row;
+    }
+
+    .imageContainer {
+        position: relative;
+        width: auto;
     }
 
     .workImg {
-        height: 325px;
+        height: 225px;
+    }
+
+    .titleContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 424px;
+    }
+
+    .titleContainer h3 {
+        vertical-align: middle;
     }
 
     .container .thumbnailContent {

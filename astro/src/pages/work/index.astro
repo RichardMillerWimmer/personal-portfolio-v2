@@ -1,6 +1,6 @@
 ---
 	// Component Imports
-	import BaseLayout from '../../layouts/BaseLayout.astro'
+	import NonWrapperLayout from '../../layouts/NonWrapperLayout.astro'
 	import LinkButton from '../../components/LinkButton.astro';
 	import Thumbnail from '../../components/Thumbnail.astro';
 
@@ -21,7 +21,7 @@
 	}
 </style>
 
-<BaseLayout title={title}>
+<NonWrapperLayout title={title}>
 	<header>
 		<h1>Work</h1>
 	</header>
@@ -34,4 +34,4 @@
 			))}
 		</section>
 	</body>
-</BaseLayout>
+</NonWrapperLayout>

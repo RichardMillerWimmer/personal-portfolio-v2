@@ -1,0 +1,23 @@
+---
+    // Component Imports:
+    import BaseHead from '../components/BaseHead.astro'
+    import Footer from '../components/footer.astro'
+    import NavList from '../components/Nav/NavList.astro'
+
+    // Component Script:
+    const { title, description, permalink, publishDate } = Astro.props
+---
+
+<html lang="en">
+
+<head>
+    <BaseHead title={title} description={description} permalink={permalink} publishDate={publishDate} />
+</head>
+
+<body>
+    <NavList />
+    <slot />
+    <Footer />
+</body>
+
+</html>

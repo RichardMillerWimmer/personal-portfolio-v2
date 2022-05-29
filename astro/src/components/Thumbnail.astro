@@ -13,11 +13,15 @@
 <div class={styles.container}>
     <a href={url}>
         <div class={styles.flexContainer}>
-            <img class={styles.workImg} src={src} />
-            <div class={styles.thumbnailContent}>
+            <div class={styles.imageContainer}>
+                <img class={styles.workImg} src={src} />
+                <div class={styles.thumbnailContent}>
+                    <p>{description}</p>
+                    <p class={styles.seeMoreCenter}>see more</p>
+                </div>
+            </div>
+            <div class={styles.titleContainer}>
                 <h3>{title}</h3>
-                <p>{description}</p>
-                <p class={styles.seeMoreCenter}>see more</p>
             </div>
         </div>
     </a>
