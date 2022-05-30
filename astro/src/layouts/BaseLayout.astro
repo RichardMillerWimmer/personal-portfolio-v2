@@ -19,6 +19,17 @@ interface BaseLayoutProps {
 const { title, description, permalink, publishDate, wrapper } = Astro.props as BaseLayoutProps
 ---
 
+<style lang='scss'>
+    .content {
+        position: relative;
+        min-height: calc(100vh - 105px);
+        margin: 5px auto 50px;
+        width: 90vw;
+        padding: 25px 0 120px 0;
+        max-width: 848px;
+    }
+</style>
+
 <html lang="en">
 
 <head>
@@ -33,7 +44,7 @@ const { title, description, permalink, publishDate, wrapper } = Astro.props as B
         <Footer />
     </Wrapper>
     :
-    <div>
+    <div class="content">
         <slot />
         <Footer />
     </div>

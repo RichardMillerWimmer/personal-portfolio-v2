@@ -28,12 +28,12 @@
 
 @media screen and (min-width: $bp-tablet) {
     .container{
-        // height: 325px;
-        // width: 613px;
+        width: 100%;
     }
 
     .flexContainer {
         flex-flow: row;
+        margin: 0 auto;
     }
 
     .imageContainer {
@@ -46,15 +46,16 @@
     }
 
     .titleContainer {
+        padding: 0 15px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         width: 424px;
     }
 
-    .titleContainer h3 {
-        vertical-align: middle;
-    }
+    // .titleContainer h3 {
+    //     vertical-align: middle;
+    // }
 
     .container .thumbnailContent {
         opacity: 0;
