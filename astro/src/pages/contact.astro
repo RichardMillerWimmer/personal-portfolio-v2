@@ -12,25 +12,26 @@ const permalink = ''
 const publishDate = ''
 
 ---
-<BaseLayout title={title}>
+
+<BaseLayout title={title} wrapper>
 	<header>
 		<h1>Contact</h1>
 		<p>If you have any questions for me or would like to get connected I would love to hear from you.</p>
 	</header>
 	<main>
 		<form class={styles.form} name="contact" method="POST" data-netlify="true">
-  			<p>
-    			<label>Your Name: <input type="text" name="name" /></label>   
-  			</p>
-  			<p>
-    			<label>Your Email: <input type="email" name="email" /></label>
-  			</p>
-  			<p>
-    			<label>Message: <textarea name="message"></textarea></label>
-  			</p>
-  			<p>
-    			<LinkButton type="submit">Send</LinkButton>
-  			</p>
+			<p>
+				<label>Your Name: <input type="text" name="name" /></label>
+			</p>
+			<p>
+				<label>Your Email: <input type="email" name="email" /></label>
+			</p>
+			<p>
+				<label>Message: <textarea name="message"></textarea></label>
+			</p>
+			<p>
+				<LinkButton type="submit">Send</LinkButton>
+			</p>
 		</form>
 	</main>
 </BaseLayout>

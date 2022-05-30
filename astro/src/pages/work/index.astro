@@ -1,17 +1,17 @@
 ---
-	// Component Imports
-	import NonWrapperLayout from '../../layouts/NonWrapperLayout.astro'
-	import LinkButton from '../../components/LinkButton.astro';
-	import Thumbnail from '../../components/Thumbnail.astro';
+// Component Imports
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LinkButton from '../../components/LinkButton.astro';
+import Thumbnail from '../../components/Thumbnail.astro';
 
-	// Component Script:
+// Component Script:
 
-	const allWork = (await Astro.glob('./*.md')).sort((a, b) => a.frontmatter.index - b.frontmatter.index)
+const allWork = (await Astro.glob('./*.md')).sort((a, b) => a.frontmatter.index - b.frontmatter.index)
 
-	const title = 'Work - Richard';
-	const description = 'Explore some of the work Richard has done.'
-	const permalink = ''
-	const publishDate = ''
+const title = 'Work - Richard';
+const description = 'Explore some of the work Richard has done.'
+const permalink = ''
+const publishDate = ''
 
 ---
 
@@ -21,7 +21,7 @@
 	}
 </style>
 
-<NonWrapperLayout title={title}>
+<BaseLayout title={title} wrapper={false}>
 	<header>
 		<h1>Work</h1>
 	</header>
@@ -34,4 +34,4 @@
 			))}
 		</section>
 	</body>
-</NonWrapperLayout>
+</BaseLayout>

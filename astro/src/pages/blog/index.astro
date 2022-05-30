@@ -1,13 +1,13 @@
 ---
-  // Component Imports
-  import BaseLayout from '../../layouts/BaseLayout.astro';
-  import BlogCard from '../../components/BlogCard.astro'
+// Component Imports
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogCard from '../../components/BlogCard.astro'
 
-  const posts = (await Astro.glob('./*.md')).sort(
-    (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
-  )
+const posts = (await Astro.glob('./*.md')).sort(
+  (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
+)
 
-  const title = 'Blog'
+const title = 'Blog'
 
 ---
 
@@ -17,7 +17,7 @@
   }
 </style>
 
-<BaseLayout title={title}>
+<BaseLayout title={title} wrapper>
   <div>
     <header>
       <h1>{title}</h1>

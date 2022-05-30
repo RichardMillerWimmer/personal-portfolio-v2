@@ -7,18 +7,37 @@ import Wrapper from '../components/Wrapper.astro'
 import NavList from '../components/Nav/NavList.astro'
 
 // Component Script:
-const {title, description, permalink, publishDate } = Astro.props
+
+interface BaseLayoutProps {
+    title: string
+    description?: string
+    permalink?: string
+    publishDate?: string
+    wrapper: boolean
+}
+
+const { title, description, permalink, publishDate, wrapper } = Astro.props as BaseLayoutProps
 ---
 
 <html lang="en">
+
 <head>
-	<BaseHead title={title} description={description} permalink={permalink} publishDate={publishDate} />
+    <BaseHead title={title} description={description} permalink={permalink} publishDate={publishDate} />
 </head>
+
 <body>
     <NavList />
+    {wrapper ?
     <Wrapper>
         <slot />
         <Footer />
     </Wrapper>
+    :
+    <div>
+        <slot />
+        <Footer />
+    </div>
+    }
 </body>
+
 </html>
