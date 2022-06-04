@@ -29,6 +29,8 @@
 @media screen and (min-width: $bp-tablet) {
     .container{
         width: 100%;
+        padding: 30px;
+        background-color: $color-subtle;
     }
 
     .flexContainer {
@@ -39,13 +41,17 @@
     .imageContainer {
         position: relative;
         width: auto;
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.5); 
+        box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.5);
     }
 
     .workImg {
         height: 225px;
+        order: 1;
     }
 
     .titleContainer {
+        order: 2;
         padding: 0 15px;
         display: flex;
         flex-direction: column;
@@ -64,6 +70,7 @@
     }
     
     .container .workImg {
+        order: 3;
         opacity: 1;
         -webkit-transition: .5s ease-in-out;
         transition: .5 ease-in-out;
