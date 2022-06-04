@@ -3,7 +3,6 @@ import BaseLayout from './BaseLayout.astro'
 import Tags from '../components/Tags.astro'
 
 const { content } = Astro.props
-// console.log(content)
 const { title, date, readTime, categories } = content
 const dateFormat = { year: 'numeric', month: 'long', day: '2-digit' } as Intl.DateTimeFormatOptions
 ---
