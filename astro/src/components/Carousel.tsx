@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Img1 from '/assets/work/PolymathVisualsThumbnail.png'
 import Img2 from '/assets/work/TopTableGamesThumbnail.png'
 import Img3 from '/assets/work/ValeriePortfolioThumbnail.png'
 import styles from '../styles/Carousel.module.scss'
 
-const Carousel = () => {
+const Carousel = ({ imgArray }) => {
+    const [active, setActive] = useState(0)
+    const length = imgArray.length
+
+    const nextSlide = () => {
+        
+    }
+    const prevSlide = () => {
+
+    }
+
     return (
         <div>
             <div className={styles.slideshowContainer}>
