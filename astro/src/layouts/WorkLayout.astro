@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro'
 import Tags from '../components/Tags.astro'
 import LinkButton from '../components/LinkButton.astro';
+import Carousel from '../components/Carousel';
 
 interface WorkLayoutProps {
     title: string
@@ -11,19 +12,20 @@ interface WorkLayoutProps {
 
 }
 
-const {title, technologies, url, repo} = Astro.props.content as WorkLayoutProps
+const { title, technologies, url, repo } = Astro.props.content as WorkLayoutProps
 ---
 
 <BaseLayout>
     <main>
         <section>
             <h3>{title}</h3>
+            <Carousel />
             <div>
                 <LinkButton href={url} rel="noreferrer" target='_blank'>Site</LinkButton>
                 <LinkButton href={repo} rel="noreferrer" target='_blank'>Repo</LinkButton>
             </div>
             <div>
-                <Tags tags={technologies}/>
+                <Tags tags={technologies} />
             </div>
             <slot />
         </section>
