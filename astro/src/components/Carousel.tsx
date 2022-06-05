@@ -2,36 +2,37 @@ import React from 'react'
 import Img1 from '/assets/work/PolymathVisualsThumbnail.png'
 import Img2 from '/assets/work/TopTableGamesThumbnail.png'
 import Img3 from '/assets/work/ValeriePortfolioThumbnail.png'
+import styles from '../styles/Carousel.module.scss'
 
 const Carousel = () => {
     return (
         <div>
-            <div className="slideshowContainer">
+            <div className={styles.slideshowContainer}>
 
-                <div className="slides fade">
-                    <div className="numbertext">1 / 3</div>
-                    <img src={Img1} />
+                <div className={styles.slides}>
+                    <div className={styles.numberText}>1 / 3</div>
+                    <img className={styles.slideImg} src={Img1} />
                 </div>
 
-                <div className="slides fade">
-                    <div className="numbertext">2 / 3</div>
-                    <img src={Img2} />
+                <div className={styles.slides}>
+                    <div className={styles.numberText}>2 / 3</div>
+                    <img className={styles.slideImg} src={Img2} />
                 </div>
 
-                <div className="slides fade">
-                    <div className="numbertext">3 / 3</div>
-                    <img src={Img3} />
+                <div className={styles.slides}>
+                    <div className={styles.numberText}>3 / 3</div>
+                    <img className={styles.slideImg} src={Img3} />
                 </div>
 
-                <a className="prev" onClick="plusSlides(-1)">&#10094;</a>
-                <a className="next" onClick="plusSlides(1)">&#10095;</a>
+                <a className={styles.prev} onClick={() => { }}>&#10094;</a>
+                <a className={styles.next} onClick={() => { }}>&#10095;</a>
             </div>
             <br />
 
             <div>
-                <span className="dot" onClick="currentSlide(1)"></span>
-                <span className="dot" onClick="currentSlide(2)"></span>
-                <span className="dot" onClick="currentSlide(3)"></span>
+                <span className={styles.dot} onClick={() => { }}></span>
+                <span className={styles.dot} onClick={() => { }}></span>
+                <span className={styles.dot} onClick={() => { }}></span>
             </div>
         </div>
     )
