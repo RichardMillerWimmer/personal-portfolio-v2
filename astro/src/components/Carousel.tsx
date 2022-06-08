@@ -7,8 +7,17 @@ import styles from '../styles/Carousel.module.scss'
 const testArr = [Img1, Img2, Img3]
 
 const Carousel = ({ }) => {
-    const [active, setActive] = useState(0)
+    const [active, setActive] = useState<number>(0)
     // const length = imgArray.length
+
+
+    const renderDotSet = (length) => {
+        let dots = []
+        for (let i = 0; i < length; i++) {
+            dots.push(<span key={i} className={styles.dot} onClick={() => { setActive(i) }}></span>)
+        }
+        return dots
+    }
 
     const nextSlide = () => {
 
@@ -32,9 +41,7 @@ const Carousel = ({ }) => {
             <br />
 
             <div>
-                <span className={styles.dot} onClick={() => { }}></span>
-                <span className={styles.dot} onClick={() => { }}></span>
-                <span className={styles.dot} onClick={() => { }}></span>
+                {renderDotSet(testArr.length)}
             </div>
         </div>
     )
