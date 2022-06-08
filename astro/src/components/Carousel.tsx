@@ -20,10 +20,16 @@ const Carousel = ({ }) => {
     }
 
     const nextSlide = () => {
-
+        if (active === testArr.length - 1) {
+            setActive(0)
+        }
+        setActive(active + 1)
     }
     const prevSlide = () => {
-
+        if (active === 0) {
+            setActive(testArr.length - 1)
+        }
+        setActive(active - 1)
     }
 
     return (
@@ -35,8 +41,8 @@ const Carousel = ({ }) => {
                         <img className={styles.slideImg} src={img} />
                     </div>
                 })}
-                <a className={styles.prev} onClick={() => { }}>&#10094;</a>
-                <a className={styles.next} onClick={() => { }}>&#10095;</a>
+                <a className={styles.prev} onClick={() => { prevSlide() }}>&#10094;</a>
+                <a className={styles.next} onClick={() => { nextSlide() }}>&#10095;</a>
             </div>
             <br />
 
