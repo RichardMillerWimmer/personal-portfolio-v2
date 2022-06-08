@@ -20,8 +20,8 @@ const Carousel = ({ }) => {
     return (
         <div>
             <div className={styles.slideshowContainer}>
-                {testArr.map((img) => {
-                    return <div className={styles.slides}>
+                {testArr.map((img, index) => {
+                    return <div className={styles.slides} key={index}>
                         <div className={styles.numberText}>1 / 3</div>
                         <img className={styles.slideImg} src={img} />
                     </div>
