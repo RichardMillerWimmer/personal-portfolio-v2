@@ -8,7 +8,7 @@ const testArr = [Img1, Img2, Img3]
 
 const Carousel = ({ }) => {
     const [active, setActive] = useState<number>(0)
-    // const length = imgArray.length
+    const length = testArr.length
 
 
     const renderDotSet = (length) => {
@@ -22,14 +22,16 @@ const Carousel = ({ }) => {
     const nextSlide = () => {
         if (active === testArr.length - 1) {
             setActive(0)
+        } else {
+            setActive(active + 1)
         }
-        setActive(active + 1)
     }
     const prevSlide = () => {
         if (active === 0) {
             setActive(testArr.length - 1)
+        } else {
+            setActive(active - 1)
         }
-        setActive(active - 1)
     }
 
     return (
@@ -37,7 +39,7 @@ const Carousel = ({ }) => {
             <div className={styles.slideshowContainer}>
                 {testArr.map((img, index) => {
                     return <div className={styles.slides} key={index}>
-                        <div className={styles.numberText}>1 / 3</div>
+                        <div className={styles.numberText}>{active + 1} / {length}</div>
                         <img className={styles.slideImg} src={img} />
                     </div>
                 })}
