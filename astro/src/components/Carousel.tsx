@@ -6,9 +6,11 @@ import styles from '../styles/Carousel.module.scss'
 
 const testArr = [Img1, Img2, Img3]
 
-const Carousel = ({ }) => {
+const Carousel = () => {
     const [active, setActive] = useState<number>(0)
     const length = testArr.length
+    console.log(active)
+    console.log(testArr[active])
 
 
     const renderDotSet = (length) => {
@@ -26,17 +28,22 @@ const Carousel = ({ }) => {
         setActive(active === 0 ? testArr.length - 1 : active - 1)
     }
 
+    const renderSlide = testArr.map((img, index) => {
+        return (
+            <div className={index === active ? styles.slides : styles.active} key={index}>
+                <div className={styles.numberText}>{active + 1} / {length}</div>
+                <img className={styles.slideImg} src={img} />
+            </div>
+        )
+    })
+
+
     return (
         <div>
             <div className={styles.slideshowContainer}>
-                {testArr.map((img, index) => {
-                    return <div className={index === active ? styles.slides : styles.active} key={index}>
-                        <div className={styles.numberText}>{active + 1} / {length}</div>
-                        <img className={styles.slideImg} src={img} />
-                    </div>
-                })}
-                <a className={styles.prev} onClick={() => { prevSlide() }}>&#10094;</a>
-                <a className={styles.next} onClick={() => { nextSlide() }}>&#10095;</a>
+                {renderSlide}
+                <a className={styles.prev} onClick={prevSlide}>&#10094;</a>
+                <a className={styles.next} onClick={nextSlide}>&#10095;</a>
             </div>
             <br />
 
