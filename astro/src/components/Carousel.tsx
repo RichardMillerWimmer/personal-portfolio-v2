@@ -20,25 +20,17 @@ const Carousel = ({ }) => {
     }
 
     const nextSlide = () => {
-        if (active === testArr.length - 1) {
-            setActive(0)
-        } else {
-            setActive(active + 1)
-        }
+        setActive(active === testArr.length - 1 ? 0 : active + 1)
     }
     const prevSlide = () => {
-        if (active === 0) {
-            setActive(testArr.length - 1)
-        } else {
-            setActive(active - 1)
-        }
+        setActive(active === 0 ? testArr.length - 1 : active - 1)
     }
 
     return (
         <div>
             <div className={styles.slideshowContainer}>
                 {testArr.map((img, index) => {
-                    return <div className={styles.slides} key={index}>
+                    return <div className={index === active ? styles.slides : styles.active} key={index}>
                         <div className={styles.numberText}>{active + 1} / {length}</div>
                         <img className={styles.slideImg} src={img} />
                     </div>
