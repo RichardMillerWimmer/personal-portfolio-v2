@@ -9,9 +9,6 @@ const testArr = [Img1, Img2, Img3]
 const Carousel = () => {
     const [current, setCurrent] = useState<number>(0)
     const length = testArr.length
-    console.log(current)
-    console.log(testArr[current])
-
 
     const renderDotSet = (length) => {
         let dots = []
@@ -31,13 +28,10 @@ const Carousel = () => {
     const renderSlide = testArr.map((img, index) => {
         return (
             <div className={index === current ? styles.active : styles.slides} key={index}>
-                <div className={styles.numberText}>{current + 1} / {length}</div>
                 <img className={styles.slideImg} src={img} />
             </div>
         )
     })
-    console.log(renderSlide)
-
 
     return (
         <div>
@@ -45,12 +39,11 @@ const Carousel = () => {
                 {renderSlide}
                 <a className={styles.prev} onClick={prevSlide}>&#10094;</a>
                 <a className={styles.next} onClick={nextSlide}>&#10095;</a>
+                <div className={styles.dotContainer}>
+                    {renderDotSet(testArr.length)}
+                </div>
             </div>
             <br />
-
-            <div>
-                {renderDotSet(testArr.length)}
-            </div>
         </div>
     )
 }
