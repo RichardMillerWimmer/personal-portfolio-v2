@@ -13,7 +13,7 @@ const Carousel = () => {
     const renderDotSet = (length) => {
         let dots = []
         for (let i = 0; i < length; i++) {
-            dots.push(<span key={i} className={styles.dot} onClick={() => { setCurrent(i) }}></span>)
+            dots.push(<span key={i} className={i === current ? `${styles.dot} ${styles.activeDot}` : styles.dot} onClick={() => { setCurrent(i) }}></span>)
         }
         return dots
     }
