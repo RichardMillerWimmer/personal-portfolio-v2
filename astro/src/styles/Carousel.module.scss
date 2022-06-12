@@ -1,7 +1,7 @@
 @import '../styles/_variables.scss';
 
 .slideshowContainer {
-  width: 424.5px;
+  width: 300px;
   position: relative;
   margin: auto;
 }
@@ -18,7 +18,7 @@
 }
 
 .slideImg {
-    height: 225px;
+  width: 300px;
 }
 
 .prev, .next {
@@ -33,6 +33,7 @@
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
+  border: none;
   background-color: #717171;
 }
 
@@ -46,7 +47,7 @@
 }
 
 .dotContainer {
-    text-align: center;
+  text-align: center;
 }
 
 .dot {
@@ -61,7 +62,7 @@
 }
 
 .activeDot {
-    background-color: #717171;  
+  background-color: #717171;  
 }
 
 .dot:hover {
@@ -74,6 +75,33 @@
 }
 
 @keyframes fadeOut {
-    from {opacity: 1}
-    to {opacity: 2}
-  }
+  from {opacity: 1}
+  to {opacity: 2}
+}
+
+@media screen and (min-width: $bp-mobile) {
+    .slideshowContainer {
+        width: 410px; 
+     }
+     .slideImg {
+         width: 410px;
+     }
+}
+@media screen and (min-width: $bp-tablet) {
+    .slideshowContainer {
+        width: 630px; 
+     }
+     .slideImg {
+         width: 630px;
+     }
+}
+
+  // accounts for galaxy fold
+  @media screen and (max-width: 325px) {
+    .slideshowContainer {
+       width: 230px; 
+    }
+    .slideImg {
+        width: 230px;
+    }
+}

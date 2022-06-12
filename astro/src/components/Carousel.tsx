@@ -41,8 +41,8 @@ const Carousel = () => {
         <div>
             <div className={styles.slideshowContainer}>
                 {renderSlide}
-                <a className={styles.prev} onClick={prevSlide}>&#10094;</a>
-                <a className={styles.next} onClick={nextSlide}>&#10095;</a>
+                <button className={styles.prev} onClick={prevSlide}>&#10094;</button>
+                <button className={styles.next} onClick={nextSlide}>&#10095;</button>
                 <div className={styles.dotContainer}>
                     {renderDotSet(testArr.length)}
                 </div>
