@@ -57,7 +57,7 @@
     }
 }
 // accounts for galaxy fold
-@media screen and (max-width: 325px) {
+@media screen and (max-width: $galaxy-fold) {
     .heroImg {
        height: 200px; 
     }
