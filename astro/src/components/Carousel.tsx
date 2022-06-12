@@ -24,6 +24,10 @@ const Carousel = () => {
     const prevSlide = () => {
         setCurrent(current === 0 ? testArr.length - 1 : current - 1)
     }
+    function autoRotateSlides() {
+        setTimeout(nextSlide, 3000)
+    }
+    autoRotateSlides()
 
     const renderSlide = testArr.map((img, index) => {
         return (
