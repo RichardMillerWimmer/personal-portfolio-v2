@@ -1,18 +1,21 @@
 ---
-    import styles from '../styles/Thumbnail.module.scss'
-    interface ThumbnailProps {
-        src: string
-        title: string
-        description: string
-        url: string
-    }
+import styles from '../styles/Thumbnail.module.scss'
+interface ThumbnailProps {
+    src: string
+    title: string
+    description: string
+    url: string
+    position: number
+}
 
-    const { src, title, description, url } = Astro.props as ThumbnailProps
+const { src, title, description, url, position } = Astro.props as ThumbnailProps
+
+let direction = position % 2 === 0 ? "row" : "row-reverse"
 ---
 
 <div class={styles.container}>
     <a href={url}>
-        <div class={styles.flexContainer}>
+        <div class={`${styles.flexContainer} ${styles.direction}`}>
             <div class={styles.imageContainer}>
                 <img class={styles.workImg} src={src} />
                 <div class={styles.thumbnailContent}>

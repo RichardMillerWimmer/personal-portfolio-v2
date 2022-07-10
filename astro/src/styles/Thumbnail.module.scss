@@ -34,8 +34,15 @@
     }
 
     .flexContainer {
-        flex-flow: row;
         margin: 0 auto;
+        flex-flow: unset;
+    }
+
+    .row {
+        flex-flow: row;
+    }
+    .row-reverse {
+        flex-flow: row-reverse;
     }
 
     .imageContainer {

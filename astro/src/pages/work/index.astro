@@ -27,9 +27,9 @@ const publishDate = ''
 
 	<body>
 		<section>
-			{allWork.map((work) => (
+			{allWork.map((work, index) => (
 			<Thumbnail src={work.frontmatter.thumbnail} title={work.frontmatter.title}
-				description={work.frontmatter.description} url={work.url} />
+				description={work.frontmatter.description} url={work.url} position={index} />
 			))}
 		</section>
 	</body>
