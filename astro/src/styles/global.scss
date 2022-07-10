@@ -80,17 +80,6 @@ p, time {
   p, time, input, textarea {
     font-size: 1.1rem;
   }
-
-  .flexContainer {
-    margin: 0 auto;
-    flex-flow: unset;
-  }
-  .row {
-    flex-flow: row;
-  }
-  .row-reverse {
-    flex-flow: row-reverse;
-  }
 }
 
 @media screen and (min-width: $bp-tablet) {
@@ -108,5 +97,15 @@ p, time {
   }
   p, time, input, textarea {
     font-size: 1.2rem;
+  }
+  .flexContainer {
+    margin: 0 auto;
+    flex-flow: unset;
+  }
+  .row {
+    flex-flow: row;
+  }
+  .row-reverse {
+    flex-flow: row-reverse;
   }
 }
