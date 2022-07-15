@@ -1,0 +1,59 @@
+---
+
+interface ArticleSchema {
+    context: string
+    type: string
+    mainEntityOfPage: {
+        type: string
+        id: string
+    }
+    headline: string
+    image: string[]
+    datePublished: string
+    dateModified: string
+    author: {
+        type: string
+        name: string
+        url: string
+    }
+    publisher: {
+        type: string
+        name: string
+        logo: {
+            type: string
+            url: string
+        }
+    }
+}
+
+const { context, type, mainEntityOfPage, headline, image, datePublished, dateModified, author, publisher } = Astro.props as ArticleSchema
+
+---
+
+<script type="application/ld+json">
+    {
+        "@context": `${context}`,
+            "@type": `${type}`,
+                "mainEntityOfPage": {
+            "@type": `${mainEntityOfPage.type}`,
+                "@id": `${mainEntityOfPage.id}`
+        },
+        "headline": `${headline}`,
+            "image": `${image}`,
+                "datePublished": `${datePublished}`,
+                    "dateModified": `${dateModified}`,
+                        "author": {
+            "@type": `${author.type}`,
+                "name": `${author.name}`,
+                    "url": `${author.url}`
+        },
+        "publisher": {
+            "@type": `${publisher.type}`,
+                "name": `${publisher.name}`,
+                    "logo": {
+                "@type": `${publisher.logo.type}`,
+                    "url": `${publisher.logo.url}`
+            }
+        }
+    }
+</script>
