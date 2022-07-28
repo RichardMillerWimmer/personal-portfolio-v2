@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Img1 from '/assets/work/PolymathVisualsThumbnail.png'
 import Img2 from '/assets/work/TopTableGamesThumbnail.png'
 import Img3 from '/assets/work/ValeriePortfolioThumbnail.png'
@@ -8,6 +8,19 @@ const testArr = [Img1, Img2, Img3]
 
 const Carousel = () => {
     const [current, setCurrent] = useState<number>(0)
+    const timeoutRef = useRef(null)
+
+    const resetTimeout = () => {
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current)
+        }
+    }
+
+    useEffect(() => {
+        resetTimeout()
+        timeoutRef.current = setTimeout(() => nextSlide(), 3000)
+        return resetTimeout()
+    }, [current])
 
     const renderDotSet = (length) => {
         let dots = []
