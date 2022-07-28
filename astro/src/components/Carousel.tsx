@@ -19,7 +19,7 @@ const Carousel = () => {
     useEffect(() => {
         resetTimeout()
         timeoutRef.current = setTimeout(() => nextSlide(), 3000)
-        return resetTimeout()
+        return () => resetTimeout()
     }, [current])
 
     const renderDotSet = (length) => {
@@ -36,10 +36,6 @@ const Carousel = () => {
     const prevSlide = () => {
         setCurrent(current === 0 ? testArr.length - 1 : current - 1)
     }
-    function autoRotateSlides() {
-        setTimeout(nextSlide, 3000)
-    }
-    autoRotateSlides()
 
     const renderSlide = testArr.map((img, index) => {
         return (
