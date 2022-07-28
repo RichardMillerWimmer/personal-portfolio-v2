@@ -8,7 +8,6 @@ const testArr = [Img1, Img2, Img3]
 
 const Carousel = () => {
     const [current, setCurrent] = useState<number>(0)
-    const length = testArr.length
 
     const renderDotSet = (length) => {
         let dots = []
@@ -24,10 +23,10 @@ const Carousel = () => {
     const prevSlide = () => {
         setCurrent(current === 0 ? testArr.length - 1 : current - 1)
     }
-    // function autoRotateSlides() {
-    //     setTimeout(nextSlide, 3000)
-    // }
-    // autoRotateSlides()
+    function autoRotateSlides() {
+        setTimeout(nextSlide, 3000)
+    }
+    autoRotateSlides()
 
     const renderSlide = testArr.map((img, index) => {
         return (
