@@ -7,12 +7,13 @@ const { title, date, readTime, categories } = content
 const dateFormat = { year: 'numeric', month: 'long', day: '2-digit' } as Intl.DateTimeFormatOptions
 ---
 
-<BaseLayout>
+<BaseLayout title='Blog'>
     <main>
         <article>
             <h1>{title}</h1>
             <div>
-                <time datetime={date}>{new Intl.DateTimeFormat('en', dateFormat).format(new Date(date))}, {readTime} read</time>
+                <time datetime={date}>{new Intl.DateTimeFormat('en', dateFormat).format(new Date(date))}, {readTime}
+                    read</time>
             </div>
             <div>
                 <Tags tags={categories} />

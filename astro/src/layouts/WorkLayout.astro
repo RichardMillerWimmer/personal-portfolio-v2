@@ -15,7 +15,7 @@ interface WorkLayoutProps {
 const { title, technologies, url, repo } = Astro.props.content as WorkLayoutProps
 ---
 
-<BaseLayout>
+<BaseLayout title={`Work - ${title}`}>
     <main>
         <section>
             <h3>{title}</h3>
