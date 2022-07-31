@@ -2,6 +2,7 @@
 // Component Imports
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Thumbnail from '../../components/Thumbnail.astro';
+import WorkCard from '../../components/WorkCard'
 
 // Component Script:
 
@@ -20,7 +21,7 @@ const publishDate = ''
 	}
 </style>
 
-<BaseLayout title={title} wrapper={false}>
+<BaseLayout title={title} description={description} wrapper={false}>
 	<header>
 		<h1>Work</h1>
 	</header>
@@ -28,7 +29,7 @@ const publishDate = ''
 	<body>
 		<section>
 			{allWork.map((work, index) => (
-			<Thumbnail src={work.frontmatter.thumbnail} title={work.frontmatter.title}
+			<WorkCard client:load src={work.frontmatter.thumbnail} title={work.frontmatter.title}
 				description={work.frontmatter.description} url={work.url} position={index} />
 			))}
 		</section>
