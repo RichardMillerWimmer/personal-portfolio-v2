@@ -7,6 +7,16 @@
     // background-color: $color-white;
 }
 
+.slideAnimation {
+    transform: translateX(150%);
+    -webkit-transform: translateX(150%);
+    animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+    100% {transform: translateX(0);}
+}
+
 .flexContainer {
     display: flex;
     flex-flow: column nowrap;

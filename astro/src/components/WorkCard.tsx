@@ -18,7 +18,6 @@ const WorkCard = (props: WorkCardProps) => {
         const observer = new IntersectionObserver((entries) => {
             const entry = entries[0]
             setIsIntersecting(entry.isIntersecting)
-            console.log(entry)
         })
         observer.observe(animationRef.current)
     }, [])
@@ -26,7 +25,7 @@ const WorkCard = (props: WorkCardProps) => {
     let direction = position % 2 === 0 ? "row" : "row-reverse"
 
     return (
-        <div ref={animationRef} className={styles.container}>
+        <div ref={animationRef} className={`${styles.container} ${styles.slideAnimation}`}>
             <a href={url}>
                 <div className={`flexContainer ${direction}`}>
                     <div className={styles.imageContainer}>
