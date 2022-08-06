@@ -25,22 +25,24 @@ const WorkCard = (props: WorkCardProps) => {
     let direction = position % 2 === 0 ? "row" : "row-reverse"
 
     return (
-        <div ref={animationRef} className={`${styles.container} ${styles.slideAnimation}`}>
-            <a href={url}>
-                <div className={`flexContainer ${direction}`}>
-                    <div className={styles.imageContainer}>
-                        <img className={styles.workImg} src={src} />
-                        <div className={styles.thumbnailContent}>
-                            <p>{description}</p>
-                            <p className={styles.seeMoreCenter}>see more</p>
+        <div ref={animationRef}>
+            <div className={`${styles.container}`} >
+                <a href={url}>
+                    <div className={`flexContainer ${direction}`}>
+                        <div className={styles.imageContainer}>
+                            <img className={styles.workImg} src={src} />
+                            <div className={styles.thumbnailContent}>
+                                <p>{description}</p>
+                                <p className={styles.seeMoreCenter}>see more</p>
+                            </div>
+                        </div>
+                        <div className={styles.titleContainer}>
+                            <h3>{title}</h3>
                         </div>
                     </div>
-                    <div className={styles.titleContainer}>
-                        <h3>{title}</h3>
-                    </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
+        </div >
     )
 
 }
