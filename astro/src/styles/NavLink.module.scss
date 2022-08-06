@@ -1,20 +1,34 @@
 li {
+  position: relative;
   display: inline-block;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 a {
   text-decoration: none;
 }
 
-.navLink:hover {
-  text-decoration: overline;
+.navLink{
+  padding: 0 15px;
 }
 
-.isActive {
-  text-decoration: underline;
+.navLink:before {
+  left: 20%;
+  right: 20%;
+  top: 50%;
+  content: '';
+  border-left: 12px solid #000000;
+  border-right: 12px solid #000000;
+  height: 3px;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 
-.isActive:hover {
-  text-decoration: underline overline;
+.navLink:hover:before,
+.isActive:before {
+  left: 0;
+  right: 0;
+  opacity: 1;
 }
