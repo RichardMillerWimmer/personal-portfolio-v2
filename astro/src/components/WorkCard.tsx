@@ -30,7 +30,7 @@ const WorkCard = (props: WorkCardProps) => {
                 <a href={url}>
                     <div className={`flexContainer ${direction}`}>
                         <div className={styles.imageContainer}>
-                            <img className={styles.workImg} src={src} />
+                            <img className={styles.workImg} src={src} alt={title} />
                             <div className={styles.thumbnailContent}>
                                 <p>{description}</p>
                                 <p className={styles.seeMoreCenter}>see more</p>

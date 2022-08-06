@@ -40,7 +40,7 @@ const Carousel = () => {
     const renderSlide = testArr.map((img, index) => {
         return (
             <div className={index === current ? styles.active : styles.slides} key={index}>
-                <img className={styles.slideImg} src={img} />
+                <img className={styles.slideImg} src={img} alt='project example' />
             </div>
         )
     })
