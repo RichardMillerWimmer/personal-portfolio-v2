@@ -6,7 +6,7 @@ import WorkCard from '../../components/WorkCard'
 
 // Component Script:
 
-const allWork = (await Astro.glob('./*.md')).sort((a, b) => a.frontmatter.index - b.frontmatter.index)
+const allWork = (await Astro.glob('./*.mdx')).sort((a, b) => a.frontmatter.index - b.frontmatter.index)
 
 const title = 'Work - Richard';
 const description = 'Explore some of the work Richard has done.'
