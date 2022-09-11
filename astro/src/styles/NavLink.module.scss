@@ -1,7 +1,5 @@
 li {
-  position: relative;
   display: inline-block;
-  margin: 10px 0;
 }
 
 a {
@@ -9,7 +7,10 @@ a {
 }
 
 .navLink{
+  position: relative;
+  display: inline-block;
   padding: 0 15px;
+  margin: 10px 0;
 }
 
 .navLink:before {
