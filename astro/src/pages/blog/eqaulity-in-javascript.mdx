@@ -1,7 +1,7 @@
 ---
-setup: import Layout from '../../layouts/BlogLayout.astro';
+layout: "../../layouts/BlogLayout.astro"
 title: What is the difference between ‘==’ and ‘===’? And why you need to know.
-description: Loose equality and type coercion can get you into trouble sometimes. 
+description: Loose equality and type coercion can get you into trouble sometimes.
 date: 2022-5-18
 author: Richard Miller Wimmer
 readTime: "3 min"
@@ -16,6 +16,7 @@ We need to compare two values all the time, and well, we have a handful of ways 
 You can also consider ‘!=‘ and ‘!==‘ for everything we discuss here.
 
 #### Loose Equality
+
 First, let’s look at ‘==‘. You will hear this referred to as ‘loose equality’ operator.
 
 PICTURE NEEDED
@@ -29,6 +30,7 @@ Type coercion can be problematic for us Javascript developers. After all, that�
 If we are waiting for some value to determine a conditional case or conditional render we could very well get true or false when we are not expecting to, possibly breaking things or rending the wrong thing (or nothing).
 
 #### Strict Equality
+
 Now comes the ‘===‘ operator. This will now evaluate the two operands without type coercion.
 
 Operands of different types are considered to be different. It will only return true if both the value and the type match for both operands. This is important because we do not have to worry about Javascript’s type coercion giving us a false positive(or negative), thus making your code just a little more type-safe and explicit.
