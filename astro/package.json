@@ -9,14 +9,14 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/react": "^0.0.2",
     "@types/react": "^17.0.39",
     "@types/styled-components": "^5.1.24",
-    "astro": "^1.0.4",
+    "astro": "^1.2.1",
     "sass": "^1.49.9"
   },
   "dependencies": {
     "@astrojs/mdx": "^0.9.0",
+    "@astrojs/react": "^1.1.2",
     "@astrojs/sitemap": "^0.1.0",
     "react": "^17.0.2",
     "react-router-dom": "^6.2.2",
