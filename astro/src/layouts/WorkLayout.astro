@@ -15,16 +15,24 @@ interface WorkLayoutProps {
 const { title, technologies, url, repo } = Astro.props.content as WorkLayoutProps
 ---
 
+<style lang ='scss'>
+    @import '../styles/_variables.scss';
+    .marginBottom {
+        margin-bottom: 30px;
+    }
+
+</style>
+
 <BaseLayout title={`Work - ${title}`}>
     <main>
         <section>
-            <h3>{title}</h3>
+            <h3 class="marginBottom">{title}</h3>
             <Carousel client:load />
-            <div>
+            <div class="marginBottom">
                 <LinkButton href={url} rel="noreferrer" target='_blank'>Site</LinkButton>
                 <LinkButton href={repo} rel="noreferrer" target='_blank'>Repo</LinkButton>
             </div>
-            <div>
+            <div class="marginBottom">
                 <Tags tags={technologies} />
             </div>
             <slot />
