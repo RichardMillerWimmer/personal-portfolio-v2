@@ -7,15 +7,21 @@ const { title, date, readTime, categories } = content
 const dateFormat = { year: 'numeric', month: 'long', day: '2-digit' } as Intl.DateTimeFormatOptions
 ---
 
+<style lang='scss'>
+    .marginBottom {
+        margin-bottom: 20px;
+    }
+</style>
+
 <BaseLayout title='Blog'>
     <main>
         <article>
-            <h1>{title}</h1>
-            <div>
+            <h1 class="marginBottom">{title}</h1>
+            <div class="marginBottom">
                 <time datetime={date}>{new Intl.DateTimeFormat('en', dateFormat).format(new Date(date))}, {readTime}
                     read</time>
             </div>
-            <div>
+            <div class="marginBottom">
                 <Tags tags={categories} />
             </div>
             <slot />
