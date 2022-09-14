@@ -14,40 +14,42 @@ interface HeadProps {
 const { title, description, permalink, publishDate, ogImageUrl } = Astro.props as HeadProps; 
 ---
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-<link rel="icon" href="/favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-<style is:global>
-  @import "../styles/reset.scss";
-  @import "../styles/global.scss";
-</style>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style is:global>
+    @import "../styles/reset.scss";
+    @import "../styles/global.scss";
+  </style>
 
 
-<!-- Primary Meta Tags -->
-<title>{title}</title>
-<meta name="title" content={title || site.title} />
-<meta name="description" content={description || site.description} />
+  <!-- Primary Meta Tags -->
+  <title>{title}</title>
+  <meta name="title" content={title || site.title} />
+  <meta name="description" content={description || site.description} />
 
-<!-- Sitemap -->
-<!-- <link rel="sitemap" href="/sitemap.xml"> -->
+  <!-- Sitemap -->
+  <!-- <link rel="sitemap" href="/sitemap.xml"> -->
 
-<!-- RSS -->
-<!-- <link rel="alternate" type="application/rss+xml" title={`${site.name} Blog`} href={`${site.url}/feed/blog.xml`}/> -->
+  <!-- RSS -->
+  <!-- <link rel="alternate" type="application/rss+xml" title={`${site.name} Blog`} href={`${site.url}/feed/blog.xml`}/> -->
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={site.url} />
-<meta property="og:title" content={title || site.title} />
-<meta property="og:description" content={description || site.description} />
-<meta property="og:image" content={ogImageUrl ? `${ogImageUrl}` : `${site.url}/assets/img/social.jpg`} />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={site.url} />
+  <meta property="og:title" content={title || site.title} />
+  <meta property="og:description" content={description || site.description} />
+  <meta property="og:image" content={ogImageUrl ? `${ogImageUrl}` : `${site.url}/assets/img/social.jpg`} />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={site.url} />
-<meta property="twitter:title" content={title || site.title} />
-<meta property="twitter:description" content={description || site.description} />
-<meta property="twitter:image" content={ogImageUrl ? ogImageUrl : `${site.url}/assets/img/social.jpg`} />
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={site.url} />
+  <meta property="twitter:title" content={title || site.title} />
+  <meta property="twitter:description" content={description || site.description} />
+  <meta property="twitter:image" content={ogImageUrl ? ogImageUrl : `${site.url}/assets/img/social.jpg`} />
+</head>
