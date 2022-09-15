@@ -7,12 +7,18 @@ import LinkedIn from '/assets/linkedin-plain.svg'
 
 ---
 
-<style>
+<style lang='scss'>
+    @import '../styles/_variables.scss';
     footer {
         position: absolute;
         width: 100%;
         bottom: 0;
         left: 0;
+    }
+
+    p {
+        font-family: $font-header;
+        text-align: center;
     }
     img{
         margin: 5px;
@@ -25,7 +31,7 @@ import LinkedIn from '/assets/linkedin-plain.svg'
 </style>
 
 <footer>
-    	<h5>&copy; 2021 Richard Miller Wimmer</h5>
+    	<p>&copy; 2021 Richard Miller Wimmer</p>
         <div class="linkContainer">
             <a href="https://github.com/RichardMillerWimmer" target="_blank" rel="noreferrer">
                 <img src={GitHub} alt="github"/>
