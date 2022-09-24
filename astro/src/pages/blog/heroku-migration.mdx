@@ -49,6 +49,8 @@ From here we are going to be using two commands from postgresql. The first is pg
 and we will need to add a few options/flags. This is also the point where you will
 need your Heroku URI or connection_string.
 <br />
+PICTURE NEEDED
+<br />
 We need to pull our database from Heroku using the postgresql command: pg_dump.
 <br />
 You can find more about the postgresql command and flags here: pg_dump. I encourage
@@ -59,14 +61,21 @@ you to take a look to understand better what each flag is doing here.
 
 <br />
 
-You will now have a file in the directory you ran this with the title heroku_archive.dump. You can check this by runningls in the directory you ran the command.
+You will now have a file in the directory you ran this with the title heroku_archive.dump. You can check this by running `ls` in the directory you ran the command.
 
 ### Next
 
 <br />
 
-You will need your bit.io account and database up. So create that now, you can use GitHub to log in. Once logged in, create your database.  When your database is selected you will see a nav item titled “Connect”, this is how we are going to be getting things, well, connected. Much of the same information is here as was in the “Administration” and then “Credentials” in your Heroku Postgres account.
+You will need your bit.io account and database up. So create that now, you can use GitHub to log in. Once logged in, create your database.
 
+<br />
+When your database is selected you will see a nav item titled “Connect”, this is
+how we are going to be getting things, well, connected. Much of the same information
+is here as was in the “Administration” and then “Credentials” in your Heroku Postgres
+account.
+<br />
+PICTURE NEEDED
 <br />
 
 We will now be running another postgresql command: pg_restore.
