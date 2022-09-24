@@ -1,4 +1,14 @@
+.wrapper {
+    // top: 10%;
+    // left: 40%;
+    width: 100%;
+    height: 300px;
+    perspective: 900px;
+  }
+
 .card {
+    position: absolute;
+    top: 0%;
     height: 200px;
     width: 350px;
     border-radius: 20px;
@@ -8,6 +18,8 @@
 	-webkit-box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.2)  ; 
 	-moz-box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.2)  ; 
     transition: all 0.5s;
+    transform: rotateX(60deg) scale(0.7);
+    perspective: 900px;
 }
 
 .card:hover {
@@ -15,4 +27,12 @@
     box-shadow: 55px 45px 25px rgba(0, 0, 0, 0.2)  ; 
 	-webkit-box-shadow: 55px 45px 25px rgba(0, 0, 0, 0.2)  ; 
 	-moz-box-shadow: 55px 45px 25px rgba(0, 0, 0, 0.2)  ; 
+}
+
+@keyframes liftCard {
+    0% {}
+    25% {}
+    50% {}
+    75% {}
+    100% {}
 }
