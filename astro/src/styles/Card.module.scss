@@ -1,24 +1,22 @@
 .wrapper {
-    // top: 10%;
-    // left: 40%;
     width: 100%;
-    height: 300px;
+    height: 400px;
     perspective: 900px;
   }
 
 .card {
     position: absolute;
     top: 0%;
-    height: 200px;
+    height: 350px;
     width: 350px;
     border-radius: 20px;
     background-color: azure;
     text-align: center;
-    box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.2)  ; 
-	-webkit-box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.2)  ; 
-	-moz-box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.2)  ; 
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2)  ; 
+	-webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2)  ; 
+	-moz-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2)  ; 
     transition: all 0.5s;
-    transform: rotateX(60deg) scale(0.7);
+    transform: rotateX(30deg) scale(0.7);
     perspective: 900px;
 }
 
