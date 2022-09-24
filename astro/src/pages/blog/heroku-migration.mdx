@@ -25,12 +25,15 @@ to bit.io. The process was relatively easy and I actually used their live chat f
 a little help, which they were super helpful and friendly.
 
 <br />
-#### What you will need: 
+### What you will need: 
 <br />
-postgresql, I used version 14, this differs some from bit.io’s docs Your Heroku account
+postgresql, I used version 14, this differs some from bit.io’s docs
+<br />
+Your Heroku account
+<br />
 Your new bit.io account (or another service)
 
-#### Starting off
+### Starting off
 
 <br />
 Let’s install postgresql version 14. I am on Mac but you can do this on any operating
@@ -40,7 +43,7 @@ brew install postgresql
 <br />
 postgresql download guide
 <br />
-#### Now
+### Now
 <br />
 From here we are going to be using two commands from postgresql. The first is pg_dump,
 and we will need to add a few options/flags. This is also the point where you will
@@ -52,13 +55,13 @@ You can find more about the postgresql command and flags here: pg_dump. I encour
 you to take a look to understand better what each flag is doing here.
 <br />
 
-pg_dump --no-privileges --format=custom --file=heroku_archive.dump "your_heroku_uri_string"
+`pg_dump --no-privileges --format=custom --file=heroku_archive.dump "your_heroku_uri_string"`
 
 <br />
 
 You will now have a file in the directory you ran this with the title heroku_archive.dump. You can check this by runningls in the directory you ran the command.
 
-#### Next
+### Next
 
 <br />
 
@@ -70,14 +73,14 @@ We will now be running another postgresql command: pg_restore.
 
 <br />
 
-pg_restore --no-owner --port=5432 --dbname="your_bitio_postgres_connection" heroku_archive.dump
+`pg_restore --no-owner --port=5432 --dbname="your_bitio_postgres_connection" heroku_archive.dump`
 
 <br />
 Again, I encourage you to please take a look at this command and the flags here:
 pg_restore 
 <br />
 
-#### And Finally
+### And Finally
 
 <br />
 
