@@ -9,3 +9,4 @@ Please feel free to take a look around.
 
 <a href="https://iconscout.com/icons/github" target="_blank">Github Icon</a> by <a href="https://iconscout.com/contributors/unicons" target="_blank">Unicons Font</a>
 
+<a href="https://iconscout.com/icons/enter" target="_blank">Enter Icon</a> by <a href="https://iconscout.com/contributors/unicons" target="_blank">Unicons Font</a>

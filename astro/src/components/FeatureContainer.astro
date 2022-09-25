@@ -15,6 +15,6 @@ const featuredWork = (await Astro.glob('../pages/work/polymath-visuals-store.mdx
 </style>
 
 <section>
-    <Card title={featuredBlogPost[0].frontmatter.title} description={featuredBlogPost[0].frontmatter.description}/>
-    <Card title={featuredWork[0].frontmatter.title} description={featuredWork[0].frontmatter.description}/>
+    <Card title={featuredBlogPost[0].frontmatter.title} description={featuredBlogPost[0].frontmatter.description} thumbnail={featuredBlogPost[0].frontmatter.thumbnail}/>
+    <Card title={featuredWork[0].frontmatter.title} description={featuredWork[0].frontmatter.description} thumbnail={featuredWork[0].frontmatter.thumbnail}/>
 </section>
