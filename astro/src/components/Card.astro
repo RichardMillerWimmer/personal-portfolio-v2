@@ -1,10 +1,19 @@
 ---
 import WorkCard from "./WorkCard";
 import styles from '../styles/Card.module.scss'
+
+interface CardProps {
+    title: string
+    description: string
+}
+
+const { title, description,   } = Astro.props as CardProps
 ---
 <div class={styles.wrapper}>
-    <div class={styles.card}>
-        <h3>Title Placeholder</h3>
-        <p>placeholder text about this item</p>
-    </div>
+    <a class={styles.card} href=''>
+        <div class={styles.container}>
+            <h3>{title}</h3>
+            <p>{description}</p>
+        </div>
+    </a>
 </div>

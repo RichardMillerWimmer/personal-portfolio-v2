@@ -27,6 +27,13 @@
 	-moz-box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.2);
 }
 
+.container {
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;}
+
 @keyframes liftCard {
     0% {}
     25% {}
