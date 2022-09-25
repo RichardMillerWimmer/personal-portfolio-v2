@@ -12,9 +12,9 @@
     border-radius: 20px;
     background-color: azure;
     text-align: center;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2)  ; 
-	-webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2)  ; 
-	-moz-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2)  ; 
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.5s;
     transform: rotateX(5deg) scale(0.98); 
     perspective: 900px;
@@ -22,9 +22,9 @@
 
 .card:hover {
     transform: scale(1);
-    box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.2)  ; 
-	-webkit-box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.2)  ; 
-	-moz-box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.2)  ; 
+    box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes liftCard {
