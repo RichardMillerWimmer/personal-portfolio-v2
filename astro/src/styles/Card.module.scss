@@ -16,12 +16,12 @@
 	-webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.5s;
-    transform: rotateX(5deg) scale(0.98); 
+    transform: scale(1); 
     perspective: 900px;
 }
 
 .card:hover {
-    transform: scale(1);
+    transform: scale(1.02) rotateX(-5deg);
     box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.2);
 	-webkit-box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.2);
