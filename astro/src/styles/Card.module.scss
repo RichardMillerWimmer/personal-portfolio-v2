@@ -45,16 +45,16 @@
 
 .imageContainer {
     position: absolute;
-}
-
-.imageContainer img{
-    max-width: 100%;
-    max-height: 100%;
     opacity: 0;
     transition: all 1s;
 }
 
-.card:hover .imageContainer img {
+.imageContainer img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card:hover .imageContainer {
     opacity: 1;
 }
 
