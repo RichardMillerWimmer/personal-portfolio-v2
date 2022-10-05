@@ -5,12 +5,13 @@ interface CardProps {
     title: string
     description: string
     thumbnail: string
+    url: string
 }
 
-const { title, description, thumbnail  } = Astro.props as CardProps
+const { title, description, thumbnail, url  } = Astro.props as CardProps
 ---
 <div class={styles.wrapper}>
-    <a class={styles.card} href=''>
+    <a class={styles.card} href={url}>
         <div class={styles.container}>
             <div class={styles.textContainer}>
                 <h3>{title}</h3>
