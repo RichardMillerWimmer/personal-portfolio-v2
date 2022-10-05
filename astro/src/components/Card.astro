@@ -12,8 +12,10 @@ const { title, description, thumbnail  } = Astro.props as CardProps
 <div class={styles.wrapper}>
     <a class={styles.card} href=''>
         <div class={styles.container}>
-            <h3>{title}</h3>
-            <p>{description}</p>
+            <div class={styles.textContainer}>
+                <h3>{title}</h3>
+                <p>{description}</p>
+            </div>
             <div class={styles.imageContainer}>
                 <img src={thumbnail} alt={title}/>
                 <!-- svg enter -->
