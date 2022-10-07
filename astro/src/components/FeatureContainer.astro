@@ -6,12 +6,21 @@ const featuredWork = (await Astro.glob('../pages/work/polymath-visuals-store.mdx
 
 ---
 
-<style>
+<style lang="scss">
+    @import '../styles/_variables.scss';
     section {
         display: flex;
+        justify-content: space-between;
         position: relative;
         margin-top: 40px;
     }
+
+    @media screen and (max-width: $bp-tablet) {
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 </style>
 
 <section>
