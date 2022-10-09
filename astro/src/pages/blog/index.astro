@@ -1,10 +1,8 @@
 ---
 // Component Imports
-import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogCard from '../../components/BlogCard.astro';
 import styles from '../../styles/Blog.module.scss';
-import GitHub from '/assets/github-original.svg'
-import LinkedIn from '/assets/linkedin-plain.svg'
+import BlogLayout from '../../layouts/BlogLayout.astro';
 
 const posts = (await Astro.glob('./*.mdx')).sort(
   (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
@@ -20,7 +18,7 @@ const title = 'Blog'
   }
 </style>
 
-<BaseLayout title={`${title} - Richard`} wrapper={false}>
+<BlogLayout title={`${title} - Richard`} wrapper={false}>
   <div class={styles.blogWrapper}>
     <div class={styles.navWrapper}>
       <p>home</p>
@@ -58,4 +56,4 @@ const title = 'Blog'
       </aside>
     </div>
   </div>
-</BaseLayout>
+</BlogLayout>
