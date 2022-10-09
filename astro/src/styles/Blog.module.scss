@@ -3,3 +3,10 @@
 .blogWrapper {
     display: flex;
 }
+
+.asideWrapper {
+    min-width: 250px;
+    height: calc(100vh - 86px);
+    border: black 1px solid;
+    position: fixed;
+}

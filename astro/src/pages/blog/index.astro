@@ -19,19 +19,23 @@ const title = 'Blog'
 </style>
 
 <BaseLayout title={`${title} - Richard`} wrapper={false}>
-  <div>
-    <header>
-      <h1>{title}</h1>
-    </header>
-    <section class={styles.blogWrapper}>
-      <aside>
+  <div class={styles.blogWrapper}>
+    <div>
+      <header>
+        <h1>{title}</h1>
+      </header>
+      <section >
+        <div>
+          {posts.map((post) => (
+            <BlogCard post={post} />
+            ))}
+        </div>
+      </section>
+    </div>
+    <div>
+      <aside class={styles.asideWrapper}>
         <div>Aside</div>
       </aside>
-      <div>
-        {posts.map((post) => (
-          <BlogCard post={post} />
-        ))}
-      </div>
-    </section>
+    </div>
   </div>
 </BaseLayout>
