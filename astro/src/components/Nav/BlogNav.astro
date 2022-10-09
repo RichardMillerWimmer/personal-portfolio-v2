@@ -1,0 +1,13 @@
+---
+// Component Imports:
+import IconLink from './IconLink.tsx'
+import styles from  '../../styles/NavList.module.scss'
+
+// Component Script:
+const page = new URL(Astro.request.url).pathname;
+
+---
+
+<ul class={styles.navList}>
+    <IconLink></IconLink>
+</ul>
