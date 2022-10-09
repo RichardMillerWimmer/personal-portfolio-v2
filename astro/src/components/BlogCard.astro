@@ -12,6 +12,10 @@ const { post } = Astro.props
         text-align: left;
     }
 
+    .articleTitle {
+        text-align: left;
+    }
+
     time {
         font-size: 1rem;
         color: $color-medium;
@@ -44,7 +48,7 @@ const { post } = Astro.props
                 )}</time>
         </date>
         <a href={post.url}>
-            <h3>{post.frontmatter.title}</h3>
+            <h3 class="articleTitle">{post.frontmatter.title}</h3>
         </a>
         <p>{post.frontmatter.description}</p>
     </div>
