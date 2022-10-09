@@ -33,3 +33,20 @@
     transform: scale(1.05);
     filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.2));
 }
+
+.asideWrapper h2, h3 {
+    font-family: $font-body;
+}
+
+.asideWrapper h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.asideWrapper h3 {
+    font-size: 1rem;
+}
+
+.profileContainer {
+    margin: 30px 0;
+}

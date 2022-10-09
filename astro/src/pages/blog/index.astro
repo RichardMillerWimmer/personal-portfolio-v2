@@ -43,17 +43,21 @@ const title = 'Blog'
     </div>
     <div>
       <aside class={styles.asideWrapper}>
-        <p>filter</p>
-        <img src="/Richard_Profile.jpg" height="100px" width="100px" alt="Profile Picture"/>
-        <div class="linkContainer">
-          <a href="https://github.com/RichardMillerWimmer" target="_blank" rel="noreferrer">
-              <img width="40" height="40" src={GitHub} alt="github"/>
-          </a>
-          <a href="https://www.linkedin.com/in/richard-miller-wimmer/"
-              target="_blank" rel="noreferrer">
-              <img width="40" height="40" src={LinkedIn} alt="linkedin" />
-          </a>
-      </div>
+        <div>
+          <input type="text" placeholder="filter">
+        </div>
+        <div class={styles.profileContainer}>
+          <img src="/Richard_Profile.jpg" height="100px" width="100px" alt="Profile Picture"/>
+          <h2>Richard Miller Wimmer</h2>
+          <h3>
+            Software Engineer
+            <br/>            
+            Web Developer
+          </h3>
+        </div>
+        <div>
+          social share
+        </div>
       </aside>
     </div>
   </div>
