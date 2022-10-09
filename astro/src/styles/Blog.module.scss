@@ -4,9 +4,19 @@
     display: flex;
 }
 
-.asideWrapper {
-    min-width: 250px;
-    height: calc(100vh - 86px);
+.navWrapper {
+    width: 80px;
     border: black 1px solid;
-    position: fixed;
+    height: calc(100vh - 86px);
+    position: sticky;
+    top: 0;
+}
+
+.asideWrapper {
+    width: 280px;
+    height: calc(100vh - 86px);
+    padding: 0 24px;
+    border: black 1px solid;
+    position: sticky;
+    top: 0;
 }
