@@ -6,7 +6,8 @@ interface TagsProps {
 const { tags, class: styles } = Astro.props as TagsProps
 ---
 
-<style>
+<style lang="scss">
+  @import '../styles/_variables.scss';
   .tagContainter{
     display: inline-block;
   }
@@ -14,8 +15,9 @@ const { tags, class: styles } = Astro.props as TagsProps
     display: inline-block;
     padding: 2px 5px;
     margin-right: 5px;
-    border: 1px solid black;
+    border: 1px solid $color-medium;
     border-radius: 20px;
+    color: $color-medium;
   }
 </style>
 
