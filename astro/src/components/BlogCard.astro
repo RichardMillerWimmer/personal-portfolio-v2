@@ -8,8 +8,12 @@ const { post } = Astro.props
 <style lang="scss">
     @import '../styles/_variables.scss';
 
-    h4 {
+    h3 {
         text-align: left;
+    }
+
+    time {
+        font-size: 1rem;
     }
 
     .blogContainer {
@@ -32,14 +36,14 @@ const { post } = Astro.props
 
 <div class="blogContainer">
     <div>
-        <div datetime={post.frontmatter.publishedAt}>
+        <a href={post.url}>
+            <h3>{post.frontmatter.title}</h3>
+        </a>
+        <date datetime={post.frontmatter.publishedAt}>
             <time>{new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit' }).format(
                 new Date(post.frontmatter.date),
                 )}</time>
-        </div>
-        <a href={post.url}>
-            <h4>{post.frontmatter.title}</h4>
-        </a>
+        </date>
         <p>{post.frontmatter.description}</p>
     </div>
     <div>
