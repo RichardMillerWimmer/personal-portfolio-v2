@@ -3,6 +3,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogCard from '../../components/BlogCard.astro';
 import styles from '../../styles/Blog.module.scss';
+import GitHub from '/assets/github-original.svg'
+import LinkedIn from '/assets/linkedin-plain.svg'
 
 const posts = (await Astro.glob('./*.mdx')).sort(
   (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
@@ -21,7 +23,11 @@ const title = 'Blog'
 <BaseLayout title={`${title} - Richard`} wrapper={false}>
   <div class={styles.blogWrapper}>
     <div class={styles.navWrapper}>
-      Nav
+      <p>home</p>
+      <p>work</p>
+      <p>about</p>
+      <p>blog</p>
+      <p>contact</p>
     </div>
     <div>
       <header>
@@ -37,7 +43,17 @@ const title = 'Blog'
     </div>
     <div>
       <aside class={styles.asideWrapper}>
-        <div>Aside</div>
+        <p>filter</p>
+        <img src="/Richard_Profile.jpg" height="100px" width="100px" alt="Profile Picture"/>
+        <div class="linkContainer">
+          <a href="https://github.com/RichardMillerWimmer" target="_blank" rel="noreferrer">
+              <img width="40" height="40" src={GitHub} alt="github"/>
+          </a>
+          <a href="https://www.linkedin.com/in/richard-miller-wimmer/"
+              target="_blank" rel="noreferrer">
+              <img width="40" height="40" src={LinkedIn} alt="linkedin" />
+          </a>
+      </div>
       </aside>
     </div>
   </div>

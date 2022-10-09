@@ -19,4 +19,17 @@
     border: black 1px solid;
     position: sticky;
     top: 0;
+
+}
+
+.asideWrapper img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.asideWrapper img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.2));
 }
