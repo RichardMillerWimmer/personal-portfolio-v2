@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../../styles/IconLink.module.scss'
-import WorkIcon from './NavIcons/WorkIcon.astro'
+
 
 type IconLinkType = {
     text: string;
@@ -15,7 +15,12 @@ const NavLink = ({ text, href, page, child }: IconLinkType): JSX.Element => {
     }
 
     return (
-        <li><a className={`${page === `/${text}` ? `${styles.isActive} ${styles.navLink}` : styles.navLink}`} href={href}><WorkIcon /></a></li >)
+        <li>
+            <a href={href}>
+                <img src={child} alt={text} />
+            </a>
+        </li >
+    )
 }
 
 export default NavLink
