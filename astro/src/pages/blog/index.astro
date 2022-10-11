@@ -4,7 +4,6 @@ import BlogCard from '../../components/BlogCard.astro';
 import styles from '../../styles/Blog.module.scss';
 import BlogLayout from '../../layouts/BlogLayout.astro';
 import BlogNav from '../../components/Nav/BlogNav.astro';
-import HomeIcon from '../../components/Nav/NavIcons/HomeIcon.astro';
 
 const posts = (await Astro.glob('./*.mdx')).sort(
   (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
@@ -24,7 +23,6 @@ const title = 'Blog'
   <div class={styles.blogWrapper}>
     <div class={styles.navWrapper}>
       <BlogNav/> 
-      <!-- <HomeIcon/> -->
     </div>
     <div>
       <header>
