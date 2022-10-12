@@ -6,7 +6,7 @@ type IconLinkType = {
     text: string;
     href: string;
     page: string;
-    child: JSX.Element
+    child: string;
 }
 
 const NavLink = ({ text, href, page, child }: IconLinkType): JSX.Element => {
@@ -15,7 +15,7 @@ const NavLink = ({ text, href, page, child }: IconLinkType): JSX.Element => {
     }
 
     return (
-        <li>
+        <li className={styles.iconLink}>
             <a href={href}>
                 <img src={child} alt={text} />
             </a>

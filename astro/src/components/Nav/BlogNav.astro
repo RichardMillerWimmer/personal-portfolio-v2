@@ -1,7 +1,7 @@
 ---
 // Component Imports:
 import IconLink from './IconLink.tsx'
-import styles from  '../../styles/NavList.module.scss'
+// import styles from  '../../styles/NavList.module.scss'
 
 import HomeIcon from '/HomeIcon.svg'
 import WorkIcon from '/WorkIcon.svg'
@@ -14,7 +14,14 @@ const page = new URL(Astro.request.url).pathname;
 
 ---
 
-<ul class={styles.navList}>
+<style>
+    ul {
+        margin: 30px 0;
+        text-align: center;
+    }
+</style>
+
+<ul>
     <IconLink page={page} text='home' href='/' child={HomeIcon}/>
     <IconLink page={page} text='work' href='/work' child={WorkIcon}/>
     <IconLink page={page} text='about' href='/about' child={AboutIcon}/>
