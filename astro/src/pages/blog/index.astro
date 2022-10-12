@@ -17,6 +17,10 @@ const title = 'Blog'
   header {
     margin-bottom: 20px;
   }
+
+  .contentWrapper {
+    padding: 0 5vw;
+  }
 </style>
 
 <BlogLayout title={`${title} - Richard`} wrapper={false}>
@@ -24,7 +28,7 @@ const title = 'Blog'
     <div class={styles.navWrapper}>
       <BlogNav/> 
     </div>
-    <div>
+    <div class="contentWrapper">
       <header>
         <h1>{title}</h1>
       </header>
