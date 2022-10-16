@@ -26,9 +26,7 @@ const { title, description, permalink, publishDate, wrapper } = Astro.props as B
             <div class="contentWrapper">
                 <slot/>
             </div>
-            <div class='navWrapper'>
-                <BlogNav/> 
-            </div>
+            <BlogNav/> 
         </div>
         <div class="footerWrapper">
             <Footer />
@@ -49,13 +47,6 @@ const { title, description, permalink, publishDate, wrapper } = Astro.props as B
     }
     .blogWrapper {
         display: flex;
-    }
-    .navWrapper {
-        width: 80px;
-        border-left: black 1px solid;
-        height: calc(100vh - 86px);
-        position: sticky;
-        top: 30px;
     }
     .footerWrapper {
         margin-top: 80px;

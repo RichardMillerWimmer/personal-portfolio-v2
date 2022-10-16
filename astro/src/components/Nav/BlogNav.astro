@@ -19,12 +19,21 @@ const page = new URL(Astro.request.url).pathname;
         padding: 30px 0;
         text-align: center;
     }
+    .navWrapper {
+        width: 80px;
+        border-left: black 1px solid;
+        height: calc(100vh - 86px);
+        position: sticky;
+        top: 30px;
+    }
 </style>
 
-<ul>
-    <IconLink page={page} text='home' href='/' child={HomeIcon}/>
-    <IconLink page={page} text='work' href='/work' child={WorkIcon}/>
-    <IconLink page={page} text='about' href='/about' child={AboutIcon}/>
-    <IconLink page={page} text='blog' href='/blog' child={BlogIcon}/>
-    <IconLink page={page} text='contact' href='/contact' child={ContactIcon}/>
-</ul>
+<nav class="navWrapper">
+        <ul>
+            <IconLink page={page} text='home' href='/' child={HomeIcon}/>
+            <IconLink page={page} text='work' href='/work' child={WorkIcon}/>
+            <IconLink page={page} text='about' href='/about' child={AboutIcon}/>
+            <IconLink page={page} text='blog' href='/blog' child={BlogIcon}/>
+            <IconLink page={page} text='contact' href='/contact' child={ContactIcon}/>
+        </ul>
+</nav>
