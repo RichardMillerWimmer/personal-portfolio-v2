@@ -9,19 +9,17 @@ const dateFormat = { year: 'numeric', month: 'long', day: '2-digit' } as Intl.Da
 ---
 
 <BlogLayout title={`Blog - ${title}`}>
-    <main>
-        <article>
-            <h1 class="marginBottom">{title}</h1>
-            <div class="marginBottom">
-                <time datetime={date}>{new Intl.DateTimeFormat('en', dateFormat).format(new Date(date))}, {readTime}
-                    read</time>
-            </div>
-            <div class="marginBottom">
-                <Tags tags={categories} />
-            </div>
-            <slot />
-        </article>
-    </main>
+    <article>
+        <h1 class="marginBottom">{title}</h1>
+        <div class="marginBottom">
+            <time datetime={date}>{new Intl.DateTimeFormat('en', dateFormat).format(new Date(date))},{readTime}
+                read</time>
+        </div>
+        <div class="marginBottom">
+            <Tags tags={categories} />
+        </div>
+        <slot />
+    </article>
 </BlogLayout>
 
 <style lang='scss'>
