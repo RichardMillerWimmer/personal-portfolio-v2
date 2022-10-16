@@ -1,13 +1,15 @@
 @import './variables';
 
 .asideWrapper {
-    width: 280px;
     height: calc(100vh - 86px);
     padding: 30px 24px;
     border-right: black 1px solid;
     position: sticky;
     top: 30px;
+}
 
+.asideWrapper > div {
+    margin: 0 5px;
 }
 
 .asideWrapper img {
