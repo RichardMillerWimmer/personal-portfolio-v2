@@ -1,0 +1,40 @@
+@import './variables';
+
+.workCard {
+    // width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.contentWrapper {
+    grid-area: 1 / 1 / -1 / 8;
+}
+
+.contentWrapper h3 {
+    text-align: left;
+}
+
+.descriptionWrapper {
+    background-color: $color-subtle;
+    padding: 15px;
+}
+
+
+.imageWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    grid-area: 1 / 6 / -1 / -1;
+}
+
+.imageWrapper:hover {
+    z-index: unset;
+}
+
+.imageWrapper img {
+    width: auto;
+    max-width: 450px;
+}
+

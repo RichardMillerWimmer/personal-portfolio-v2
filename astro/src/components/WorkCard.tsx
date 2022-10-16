@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import styles from '../styles/Thumbnail.module.scss'
+import styles from '../styles/WorkCard.module.scss'
 
 interface WorkCardProps {
     src: string
@@ -26,21 +26,20 @@ const WorkCard = (props: WorkCardProps) => {
 
     return (
         <div ref={animationRef}>
-            <div className={`${styles.container}`} >
-                <a href={url}>
-                    <div className={`flexContainer ${direction}`}>
-                        <div className={styles.imageContainer}>
-                            <img className={styles.workImg} src={src} alt={title} />
-                            <div className={styles.thumbnailContent}>
-                                <p>{description}</p>
-                                <p className={styles.seeMoreCenter}>see more</p>
-                            </div>
-                        </div>
-                        <div className={styles.titleContainer}>
-                            <h3>{title}</h3>
-                        </div>
+            <div className={styles.workCard}>
+                <div className={styles.contentWrapper}>
+                    <h3>{title}</h3>
+                    <div className={styles.descriptionWrapper}>
+                        <p>{description}</p>
                     </div>
-                </a>
+                </div>
+                <div className={styles.imageWrapper}>
+                    <a href={url}>
+                        <div>
+                            <img src={src} alt={title} />
+                        </div>
+                    </a>
+                </div>
             </div>
         </div >
     )
