@@ -12,41 +12,4 @@
     top: 30px;
 }
 
-.asideWrapper {
-    width: 280px;
-    height: calc(100vh - 86px);
-    padding: 30px 24px;
-    border-right: black 1px solid;
-    position: sticky;
-    top: 30px;
 
-}
-
-.asideWrapper img {
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%;
-    transition: all 0.5s;
-}
-
-.asideWrapper img:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.2));
-}
-
-.asideWrapper h2, h3 {
-    font-family: $font-body;
-}
-
-.asideWrapper h2 {
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-
-.asideWrapper h3 {
-    font-size: 1rem;
-}
-
-.profileContainer {
-    // margin: 30px 0;
-}
