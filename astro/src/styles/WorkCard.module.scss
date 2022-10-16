@@ -10,6 +10,7 @@
 
 .contentWrapper {
     grid-area: 1 / 1 / -1 / 8;
+    z-index: 10;
 }
 
 .contentWrapper h3 {
@@ -30,7 +31,6 @@
 }
 
 .imageWrapper:hover {
-    z-index: unset;
 }
 
 .imageWrapper img {
