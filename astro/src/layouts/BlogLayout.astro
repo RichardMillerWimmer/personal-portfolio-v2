@@ -1,6 +1,8 @@
 ---
 import BaseHead from "../components/BaseHead.astro"
+import BlogAside from "../components/BlogAside.astro"
 import Footer from "../components/Footer.astro"
+import BlogNav from "../components/Nav/BlogNav.astro"
 
 
 
@@ -15,16 +17,19 @@ interface BlogLayoutProps {
 const { title, description, permalink, publishDate, wrapper } = Astro.props as BlogLayoutProps
 ---
 
-<style lang ='scss'>
-    @import '../styles/_variables.scss';
-
-</style>
-
 <html lang="en">
 <BaseHead title={title} description={description} permalink={permalink} publishDate={publishDate} />
 <body>
     <main class="content">
-        <slot/>
+        <div class='blogWrapper'>
+            <BlogAside />
+            <div class="contentWrapper">
+                <slot/>
+            </div>
+            <div class='navWrapper'>
+                <BlogNav/> 
+            </div>
+        </div>
         <div class="footerWrapper">
             <Footer />
         </div>
@@ -38,6 +43,19 @@ const { title, description, permalink, publishDate, wrapper } = Astro.props as B
         min-height: calc(100vh - 105px);
         margin: 5px auto 50px;
         padding: 20px 0;
+    }
+    .contentWrapper {
+        padding: 0 5vw;
+    }
+    .blogWrapper {
+        display: flex;
+    }
+    .navWrapper {
+        width: 80px;
+        border-left: black 1px solid;
+        height: calc(100vh - 86px);
+        position: sticky;
+        top: 30px;
     }
     .footerWrapper {
         margin-top: 80px;
