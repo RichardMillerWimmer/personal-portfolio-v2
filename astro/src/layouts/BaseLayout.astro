@@ -21,21 +21,21 @@ const { title, description, permalink, publishDate, wrapper } = Astro.props as B
 
 
 <html lang="en">
-<BaseHead title={title} description={description} permalink={permalink} publishDate={publishDate} />
-<body>
-    <NavList />
-    {wrapper ?
-    <Wrapper>
-        <slot />
-        <Footer />
-    </Wrapper>
-    :
-    <div class="content">
-        <slot />
-        <Footer />
-    </div>
-    }
-</body>
+    <BaseHead title={title} description={description} permalink={permalink} publishDate={publishDate} />
+    <body>
+        <NavList />
+        {wrapper ?
+        <Wrapper>
+            <slot />
+            <Footer />
+        </Wrapper>
+        :
+        <div class="content">
+            <slot />
+            <Footer />
+        </div>
+        }
+    </body>
 </html>
 
 <style lang='scss'>
