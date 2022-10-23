@@ -20,6 +20,16 @@
 .descriptionWrapper {
     background-color: $color-subtle;
     padding: 15px;
+    border-radius: 20px;
+}
+
+.linkContainer {
+    margin-top: 10px;
+}
+
+
+.linkContainer > a {
+    margin-right: 10px;
 }
 
 

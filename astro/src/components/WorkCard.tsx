@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styles from '../styles/WorkCard.module.scss'
+import github from '/github-outline.svg'
+import externalLink from '/external-link-outline.svg'
 
 interface WorkCardProps {
     src: string
@@ -31,6 +33,14 @@ const WorkCard = (props: WorkCardProps) => {
                     <h3>{title}</h3>
                     <div className={styles.descriptionWrapper}>
                         <p>{description}</p>
+                    </div>
+                    <div className={styles.linkContainer}>
+                        <a href='#'>
+                            <img src={github} alt='github' height='25px' width='25px' />
+                        </a>
+                        <a href='#'>
+                            <img src={externalLink} alt='external' height='25px' width='25px' />
+                        </a>
                     </div>
                 </div>
                 <div className={styles.imageWrapper}>
