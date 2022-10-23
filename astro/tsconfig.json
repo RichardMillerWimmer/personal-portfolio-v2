@@ -2,7 +2,7 @@
   "compilerOptions": {
     "jsx": "react",
     "moduleResolution": "node",
-    // "module": "system",
+    "module": "system",
     "noImplicitAny": false,
     "removeComments": true,
     "preserveConstEnums": true,
