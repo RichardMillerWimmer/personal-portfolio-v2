@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import styles from '../styles/WorkCard.module.scss'
 import github from '/github-outline.svg'
 import externalLink from '/external-link-outline.svg'
+import enter from '/enter.svg'
 
 interface WorkCardProps {
     src: string
@@ -49,6 +50,9 @@ const WorkCard = (props: WorkCardProps) => {
                     <a href={url}>
                         <div>
                             <img src={src} alt={title} />
+                            <div className={styles.enterBtn}>
+                                <img src={enter} alt="see more" height='100px' width='100px' />
+                            </div>
                         </div>
                     </a>
                 </div>

@@ -21,15 +21,25 @@
     background-color: $color-subtle;
     padding: 15px;
     border-radius: 20px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 .linkContainer {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 
 .linkContainer > a {
     margin-right: 10px;
+}
+
+.linkContainer > a > img {
+    transition: all 0.5s;
+} 
+
+.linkContainer > a > img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.2));
 }
 
 
@@ -38,9 +48,13 @@
     height: 100%;
     position: relative;
     grid-area: 1 / 6 / -1 / -1;
+    transition: all 0.5s;
 }
 
 .imageWrapper:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.2));
+    z-index: 20;
 }
 
 .imageWrapper img {
@@ -48,3 +62,30 @@
     max-width: 450px;
 }
 
+.enterBtn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.5s;
+    padding: 30px;
+    border-radius: 20px;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    background-color: $color-subtle;
+}
+
+.enterBtn > img {
+    
+}
+
+ .imageWrapper:hover .enterBtn {
+    opacity: 1;
+    transform: scale(1.05) translate(-50%, -50%);
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.2));
+ }
