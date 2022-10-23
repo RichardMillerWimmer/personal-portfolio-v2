@@ -33,7 +33,9 @@ const WorkCard = (props: WorkCardProps) => {
         <div ref={animationRef}>
             <div className={styles.workCard}>
                 <div className={styles.contentWrapper}>
-                    <h3>{title}</h3>
+                    <a href={url}>
+                        <h3>{title}</h3>
+                    </a>
                     <div className={styles.descriptionWrapper}>
                         <p>{description}</p>
                     </div>
