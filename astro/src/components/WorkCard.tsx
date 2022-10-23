@@ -9,10 +9,12 @@ interface WorkCardProps {
     description: string
     url: string
     position: number
+    site: string
+    repo: string
 }
 
 const WorkCard = (props: WorkCardProps) => {
-    const { src, title, description, url, position } = props
+    const { src, title, description, url, position, site, repo } = props
     const [isIntersecting, setIsIntersecting] = useState<boolean>(false)
     const animationRef = useRef()
 
@@ -35,10 +37,10 @@ const WorkCard = (props: WorkCardProps) => {
                         <p>{description}</p>
                     </div>
                     <div className={styles.linkContainer}>
-                        <a href='#'>
+                        <a href={repo} target='_blank' rel='noreferrer' >
                             <img src={github} alt='github' height='25px' width='25px' />
                         </a>
-                        <a href='#'>
+                        <a href={site} target='_blank' rel='noreferrer' >
                             <img src={externalLink} alt='external' height='25px' width='25px' />
                         </a>
                     </div>
