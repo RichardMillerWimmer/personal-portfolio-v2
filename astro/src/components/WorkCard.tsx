@@ -34,17 +34,17 @@ const WorkCard = (props: WorkCardProps) => {
             <div className={styles.workCard}>
                 <div className={styles.contentWrapper}>
                     <a href={url}>
-                        <h3>{title}</h3>
+                        <h2>{title}</h2>
                     </a>
                     <div className={styles.descriptionWrapper}>
                         <p>{description}</p>
                     </div>
                     <div className={styles.linkContainer}>
                         <a href={repo} target='_blank' rel='noreferrer' >
-                            <img src={github} alt='github' height='25px' width='25px' />
+                            <img src={github} alt={`${title} github repo`} height='25px' width='25px' />
                         </a>
                         <a href={site} target='_blank' rel='noreferrer' >
-                            <img src={externalLink} alt='external' height='25px' width='25px' />
+                            <img src={externalLink} alt={`${title} site link`} height='25px' width='25px' />
                         </a>
                     </div>
                 </div>
