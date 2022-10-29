@@ -86,3 +86,20 @@
     transform: scale(1.05) translate(-50%, -50%);
     filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.2));
  }
+
+@media screen and (max-width: $bp-tablet) {
+    .workCard {
+        // grid-template-columns: unset;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .contentWrapper {
+        grid-column: 1 / 12;
+        grid-row: 1 / 1;
+        z-index: 10;
+    }
+    .imageWrapper {
+        grid-column: 6 / 6;
+        grid-row: 2 / -1;
+    }
+
+}

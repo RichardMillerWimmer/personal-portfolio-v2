@@ -18,7 +18,7 @@ const StyledBurger = styled.div<StyledBurgerType>`
   transform: ${({ open }) => open ? 'translate(-35%, 0)' : 'translate(-46%)'};
   z-index: 20;
   display: none;
-  @media (max-width: 768px) {
+  @ (max-width: 768px) {
     display: flex;
   justify-content: space-around;
   flex-flow: column nowrap;
