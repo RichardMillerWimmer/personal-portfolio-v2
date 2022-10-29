@@ -21,16 +21,17 @@ const publishDate = ''
 </style>
 
 <BaseLayout title={title} description={description} wrapper={false}>
-	<header>
-		<h1>Work</h1>
-	</header>
-
-	<body>
-		<section>
-			{allWork.map((work, index) => (
-			<WorkCard client:load src={work.frontmatter.thumbnail} title={work.frontmatter.title}
-				description={work.frontmatter.description} url={work.url} position={index} site={work.frontmatter.site} repo={work.frontmatter.repo} />
-			))}
-		</section>
-	</body>
+	<main>
+		<header>
+			<h1>Work</h1>
+		</header>
+		<body>
+			<section>
+				{allWork.map((work, index) => (
+				<WorkCard client:load src={work.frontmatter.thumbnail} title={work.frontmatter.title}
+					description={work.frontmatter.description} url={work.url} position={index} site={work.frontmatter.site} repo={work.frontmatter.repo} />
+				))}
+			</section>
+		</body>
+	</main>
 </BaseLayout>
