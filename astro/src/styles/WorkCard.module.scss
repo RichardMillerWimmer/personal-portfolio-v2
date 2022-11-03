@@ -11,6 +11,7 @@
 .contentWrapper {
     grid-area: 1 / 1 / -1 / 8;
     z-index: 10;
+    position: relative;
 }
 
 .contentWrapper h2 {
@@ -101,5 +102,9 @@
         grid-column: 6 / 6;
         grid-row: 2 / -1;
     }
-
+    .linkContainer {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }
