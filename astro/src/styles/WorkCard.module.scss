@@ -102,6 +102,10 @@
         grid-column: 6 / 6;
         grid-row: 2 / -1;
     }
+    .imageWrapper img {
+        max-width: unset;
+        width: calc(100vw - 48px);
+    }
     .linkContainer {
         position: absolute;
         top: 0;

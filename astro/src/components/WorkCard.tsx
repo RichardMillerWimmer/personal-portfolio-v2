@@ -53,7 +53,7 @@ const WorkCard = (props: WorkCardProps) => {
                         <div>
                             <img src={src} alt={title} />
                             <div className={styles.enterBtn}>
-                                <img src={enter} alt="see more" height='100px' width='100px' />
+                                <img src={enter} alt="see more" />
                             </div>
                         </div>
                     </a>
