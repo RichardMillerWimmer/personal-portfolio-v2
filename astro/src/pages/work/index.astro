@@ -29,7 +29,7 @@ const publishDate = ''
 			<section>
 				{allWork.map((work, index) => (
 				<WorkCard client:load src={work.frontmatter.thumbnail} title={work.frontmatter.title}
-					description={work.frontmatter.description} url={work.url} position={index} site={work.frontmatter.site} repo={work.frontmatter.repo} />
+					description={work.frontmatter.description} url={work.url} site={work.frontmatter.site} repo={work.frontmatter.repo} />
 				))}
 			</section>
 		</body>

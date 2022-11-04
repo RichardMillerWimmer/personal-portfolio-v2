@@ -9,13 +9,13 @@ interface WorkCardProps {
     title: string
     description: string
     url: string
-    position: number
-    site: string
+    site?: string
     repo: string
 }
 
 const WorkCard = (props: WorkCardProps) => {
-    const { src, title, description, url, position, site, repo } = props
+    const { src, title, description, url, site, repo } = props
+
     const [isIntersecting, setIsIntersecting] = useState<boolean>(false)
     const animationRef = useRef()
 
@@ -26,8 +26,6 @@ const WorkCard = (props: WorkCardProps) => {
         })
         observer.observe(animationRef.current)
     }, [])
-
-    let direction = position % 2 === 0 ? "row" : "row-reverse"
 
     return (
         <div ref={animationRef}>
@@ -43,9 +41,12 @@ const WorkCard = (props: WorkCardProps) => {
                         <a href={repo} target='_blank' rel='noreferrer' >
                             <img src={github} alt={`${title} github repo`} height='25px' width='25px' />
                         </a>
-                        <a href={site} target='_blank' rel='noreferrer' >
-                            <img src={externalLink} alt={`${title} site link`} height='25px' width='25px' />
-                        </a>
+                        {site &&
+                            <a href={site} target='_blank' rel='noreferrer' >
+                                <img src={externalLink} alt={`${title} site link`} height='25px' width='25px' />
+                            </a>
+                        }
+
                     </div>
                 </div>
                 <div className={styles.imageWrapper}>
