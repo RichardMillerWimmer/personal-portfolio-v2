@@ -95,8 +95,8 @@
         display: flex;
         flex-flow: column nowrap;
     }
-    .contentWrapper {
-        
+    .contentWrapper h2 {
+        font-size: 1.6rem;
     }
     .imageWrapper {
         margin-top: 20px;
@@ -109,5 +109,11 @@
         position: absolute;
         bottom: -40px;
         right: 0;
+    }
+}
+
+@media screen and (max-width: $bp-mobile) {
+    .contentWrapper h2 {
+        font-size: 1.4rem;
     }
 }
