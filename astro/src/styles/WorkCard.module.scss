@@ -1,7 +1,7 @@
 @import './variables';
 
 .workCard {
-    // width: 80vw;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(11, 1fr);
     align-items: center;
@@ -11,7 +11,7 @@
 .contentWrapper {
     grid-area: 1 / 1 / -1 / 8;
     z-index: 10;
-    position: relative;
+    // position: relative;
 }
 
 .contentWrapper h2 {
@@ -90,25 +90,24 @@
 
 @media screen and (max-width: $bp-tablet) {
     .workCard {
-        // grid-template-columns: unset;
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: unset;
+        // grid-template-rows: repeat(2, 1fr);
+        display: flex;
+        flex-flow: column nowrap;
     }
     .contentWrapper {
-        grid-column: 1 / 12;
-        grid-row: 1 / 1;
-        z-index: 10;
+        
     }
     .imageWrapper {
-        grid-column: 6 / 6;
-        grid-row: 2 / -1;
+        margin-top: 20px;
     }
     .imageWrapper img {
         max-width: unset;
-        width: calc(100vw - 48px);
+        width: 100%;
     }
     .linkContainer {
         position: absolute;
-        top: 0;
+        bottom: -40px;
         right: 0;
     }
 }
