@@ -80,12 +80,13 @@
     height: 120px;
     margin: 0 auto;
     background-color: $color-subtle;
+    box-shadow: inset -2px -2px 10px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.2));
 }
 
  .imageWrapper:hover .enterBtn {
     opacity: 1;
     transform: scale(1.05) translate(-50%, -50%);
-    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.2));
  }
 
 @media screen and (max-width: $bp-tablet) {
@@ -109,6 +110,9 @@
         position: absolute;
         bottom: -40px;
         right: 0;
+    }
+    .enterBtn {
+        opacity: 1;
     }
 }
 
