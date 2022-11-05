@@ -2,6 +2,7 @@
 // Component Imports
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import WorkCard from '../../components/WorkCard'
+import LineDivider from '../../components/LineDivider.astro';
 
 // Component Script:
 
@@ -25,6 +26,7 @@ const publishDate = ''
 		<header>
 			<h1>Work</h1>
 		</header>
+		<LineDivider />
 		<body>
 			<section>
 				{allWork.map((work, index) => (
