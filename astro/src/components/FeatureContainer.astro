@@ -1,7 +1,7 @@
 ---
 import Card from "./Card.astro";
 
-const featuredBlogPost = (await Astro.glob('../pages/blog/heroku-migration.mdx'))
+const featuredBlogPost = (await Astro.glob('../pages/blog/github-tips.mdx'))
 const featuredWork = (await Astro.glob('../pages/work/polymath-visuals-store.mdx'))
 
 ---
@@ -24,6 +24,6 @@ const featuredWork = (await Astro.glob('../pages/work/polymath-visuals-store.mdx
 </style>
 
 <section>
-    <Card title={featuredBlogPost[0].frontmatter.title} description={featuredBlogPost[0].frontmatter.description} thumbnail={featuredBlogPost[0].frontmatter.thumbnail} url={featuredBlogPost[0].url}/>
+    <Card title={featuredBlogPost[0].frontmatter.title} description={featuredBlogPost[0].frontmatter.description} image={featuredBlogPost[0].frontmatter.images[2]} url={featuredBlogPost[0].url}/>
     <Card title={featuredWork[0].frontmatter.title} description={featuredWork[0].frontmatter.description} image={featuredWork[0].frontmatter.images[0]} url={featuredWork[0].url}/>
 </section>
