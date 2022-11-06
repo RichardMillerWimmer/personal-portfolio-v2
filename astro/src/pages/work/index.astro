@@ -32,7 +32,7 @@ const publishDate = ''
 		<body>
 			<section>
 				{allWork.map((work) => (
-				<WorkCard client:load src={work.frontmatter.thumbnail} title={work.frontmatter.title}
+				<WorkCard client:load src={work.frontmatter.images[0]} title={work.frontmatter.title}
 					description={work.frontmatter.description} url={work.url} site={work.frontmatter.site} repo={work.frontmatter.repo} images={work.frontmatter.images}/>
 				))}
 			</section>

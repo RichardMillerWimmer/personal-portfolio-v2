@@ -4,7 +4,6 @@ import styles from '../styles/Carousel.module.scss'
 const Carousel = ({ images }) => {
     const [current, setCurrent] = useState<number>(0)
     const timeoutRef = useRef(null)
-    console.log(images[0])
 
     const resetTimeout = () => {
         if (timeoutRef.current) {
