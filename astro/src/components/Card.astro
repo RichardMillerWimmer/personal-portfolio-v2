@@ -4,11 +4,11 @@ import styles from '../styles/Card.module.scss'
 interface CardProps {
     title: string
     description: string
-    thumbnail: string
+    image: string
     url: string
 }
 
-const { title, description, thumbnail, url  } = Astro.props as CardProps
+const { title, description, image, url  } = Astro.props as CardProps
 ---
 <div class={styles.wrapper}>
     <a class={styles.card} href={url}>
@@ -18,7 +18,7 @@ const { title, description, thumbnail, url  } = Astro.props as CardProps
                 <p>{description}</p>
             </div>
             <div class={styles.imageContainer}>
-                <img src={thumbnail} alt={title}/>
+                <img src={image} alt={title}/>
                 <!-- <object data='/enter.svg' height="50px" width="50px"/> -->
             </div>
         </div>
