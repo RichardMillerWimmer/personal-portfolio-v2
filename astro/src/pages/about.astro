@@ -2,6 +2,7 @@
 // Component Imports
 import BaseLayout from '../layouts/BaseLayout.astro'
 import styles from '../styles/About.module.scss'
+import heroImg from '/assets/Iceland_Pano.jpeg'
 
 // Component Script:
 
@@ -13,15 +14,20 @@ const publishDate = ''
 
 ---
 
-<style>
+<style lang='scss'>
   a {
     text-decoration: underline;
+  }
+  header img {
+    width: 100%;
+    margin-bottom: 20px;
   }
 </style>
 
 <BaseLayout title={title} description={description} permalink={permalink} publishDate={publishDate} wrapper>
   <header>
     <h1>About</h1>
+    <img src={heroImg} alt='Richard Hiking Southern Iceland' />
   </header>
 
   <body>
