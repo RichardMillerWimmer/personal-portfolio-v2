@@ -1,14 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react'
-import Img1 from '/assets/work/PolymathVisualsThumbnail.png'
-import Img2 from '/assets/work/TopTableGamesThumbnail.png'
-import Img3 from '/assets/work/ValeriePortfolioThumbnail.png'
 import styles from '../styles/Carousel.module.scss'
 
-const testArr = [Img1, Img2, Img3]
-
-const Carousel = () => {
+const Carousel = ({ images }) => {
     const [current, setCurrent] = useState<number>(0)
     const timeoutRef = useRef(null)
+    console.log(images[0])
 
     const resetTimeout = () => {
         if (timeoutRef.current) {
@@ -31,13 +27,13 @@ const Carousel = () => {
     }
 
     const nextSlide = () => {
-        setCurrent(current === testArr.length - 1 ? 0 : current + 1)
+        setCurrent(current === images.length - 1 ? 0 : current + 1)
     }
     const prevSlide = () => {
-        setCurrent(current === 0 ? testArr.length - 1 : current - 1)
+        setCurrent(current === 0 ? images.length - 1 : current - 1)
     }
 
-    const renderSlide = testArr.map((img, index) => {
+    const renderSlide = images.map((img, index) => {
         return (
             <div className={index === current ? styles.active : styles.slides} key={index}>
                 <img className={styles.slideImg} src={img} alt='project example' />
@@ -52,7 +48,7 @@ const Carousel = () => {
                 <button className={styles.prev} onClick={prevSlide}>&#10094;</button>
                 <button className={styles.next} onClick={nextSlide}>&#10095;</button>
                 <div className={styles.dotContainer}>
-                    {renderDotSet(testArr.length)}
+                    {renderDotSet(images.length)}
                 </div>
             </div>
             <br />

@@ -9,10 +9,13 @@ interface WorkLayoutProps {
     technologies: string[]
     url: string
     repo: string
+    images: string[]
 
 }
 
-const { title, technologies, url, repo } = Astro.props.content as WorkLayoutProps
+const { title, technologies, url, repo, images } = Astro.props.content as WorkLayoutProps
+
+console.log(images)
 ---
 
 <style lang ='scss'>
@@ -27,7 +30,7 @@ const { title, technologies, url, repo } = Astro.props.content as WorkLayoutProp
     <main>
         <section>
             <h3 class="marginBottom">{title}</h3>
-            <Carousel client:load />
+            <Carousel client:load images={images} />
             <div class="marginBottom">
                 <LinkButton href={url} rel="noreferrer" target='_blank'>Site</LinkButton>
                 <LinkButton href={repo} rel="noreferrer" target='_blank'>Repo</LinkButton>
