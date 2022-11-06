@@ -6,6 +6,7 @@ import enter from '/enter.svg'
 
 interface WorkCardProps {
     src: string
+    images: string[]
     title: string
     description: string
     url: string

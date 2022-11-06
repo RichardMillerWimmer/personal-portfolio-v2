@@ -13,6 +13,8 @@ const description = 'Explore some of the work Richard has done.'
 const permalink = ''
 const publishDate = ''
 
+// console.log(allWork[0].frontmatter.images[1])
+
 ---
 
 <style>
@@ -29,9 +31,9 @@ const publishDate = ''
 		<LineDivider />
 		<body>
 			<section>
-				{allWork.map((work, index) => (
+				{allWork.map((work) => (
 				<WorkCard client:load src={work.frontmatter.thumbnail} title={work.frontmatter.title}
-					description={work.frontmatter.description} url={work.url} site={work.frontmatter.site} repo={work.frontmatter.repo} />
+					description={work.frontmatter.description} url={work.url} site={work.frontmatter.site} repo={work.frontmatter.repo} images={work.frontmatter.images}/>
 				))}
 			</section>
 		</body>
