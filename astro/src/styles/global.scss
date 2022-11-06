@@ -58,6 +58,12 @@ p, time {
   font-size: 1rem;
 }
 
+code {
+  padding: 5px;
+  border-left: 2px $color-black solid;
+  background-color: $color-subtle;
+}
+
 .flexContainer {
   display: flex;
   flex-flow: column nowrap;
