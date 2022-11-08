@@ -14,7 +14,8 @@ const page = new URL(Astro.request.url).pathname;
 
 ---
 
-<style>
+<style lang="scss">
+    @import '../../styles/_variables.scss';
     ul {
         padding: 30px 0;
         text-align: center;
@@ -26,6 +27,23 @@ const page = new URL(Astro.request.url).pathname;
         position: sticky;
         top: 30px;
     }
+
+    @media screen and (max-width: $bp-tablet) {
+    .navWrapper {
+        position: relative;
+        height: unset;
+        top: unset;
+        border-left: unset;
+        width: auto;
+    }
+    .navWrapper > ul {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        padding: unset;
+    }
+
+}
 </style>
 
 <nav class="navWrapper">

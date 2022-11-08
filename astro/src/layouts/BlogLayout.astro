@@ -36,6 +36,7 @@ const { title, description, permalink, publishDate, wrapper } = Astro.props as B
 </html>
 
 <style lang='scss'>
+    @import '../styles/_variables.scss';
     .content {
         position: relative;
         min-height: calc(100vh - 105px);
@@ -51,5 +52,10 @@ const { title, description, permalink, publishDate, wrapper } = Astro.props as B
     }
     .footerWrapper {
         margin-top: 80px;
+    }
+    @media screen and (max-width: $bp-tablet) {
+        .blogWrapper {
+            flex-direction: column-reverse;
+        }
     }
 </style>

@@ -1,3 +1,11 @@
+@import '_variables.scss';
+
 .iconLink {
     margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: $bp-tablet) {
+      .iconLink {
+        margin: 0 20px;
+    }
   }
