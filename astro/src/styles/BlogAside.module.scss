@@ -46,6 +46,11 @@
 
 @media screen and (max-width: $bp-tablet) {
     .asideWrapper {
-        display: none;
+     order: 1;
+     height: unset;
+     padding: unset;
+     border-right: unset;
+     position: unset;
+     top: 30px;
     }
 }

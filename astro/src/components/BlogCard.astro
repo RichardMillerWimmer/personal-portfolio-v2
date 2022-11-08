@@ -35,12 +35,26 @@ const { post } = Astro.props
         margin: 15px 0;
         display: flex;
         justify-content: space-between;
-        align-items: baseline;
     }
 
     .detailsContainer span {
         margin-right: 5px;
         color: $color-medium;
+    }
+    // .detailsContainer .linkButton {
+    //     width: 150px;
+    // }
+
+    @media screen and (max-width: $bp-tablet) {
+    //     .detailsContainer .linkButton {
+    //     align-self: flex-end;
+    // }   
+        .detailsContainer {
+            flex-direction: column;
+        }
+        .categoriesContainer {
+            margin-bottom: 20px;
+        }
     }
 </style>
 
@@ -58,13 +72,13 @@ const { post } = Astro.props
     </div>
     <div>
         <div class='detailsContainer'>
-            <div>
+            <div class="categoriesContainer">
                 <span class='readTime'>{post.frontmatter.readTime}</span>
                 <Tags tags={post.frontmatter.categories} />
             </div>
-            <LinkButton href={post.url}>
-                Read more
-            </LinkButton>
+                <LinkButton href={post.url}>
+                    Read more
+                </LinkButton>
         </div>
     </div>
 </div>
