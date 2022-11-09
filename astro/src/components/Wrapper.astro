@@ -1,6 +1,6 @@
 ---
 // Component Imports:
-import '../styles/_variables.scss'
+
 // Component Script:
 
 ---
@@ -20,6 +20,11 @@ import '../styles/_variables.scss'
         margin: 0 auto;
         width: 100%;
         max-width: 700px;
+    }
+    @media screen and (max-width: $bp-mobile) {
+        .wrapperContent {
+            margin-top: 20px;
+        }
     }
 </style>
 
