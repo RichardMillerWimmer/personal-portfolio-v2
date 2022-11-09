@@ -46,15 +46,15 @@ type StyledBurgerType = {
 const Burger: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false)
 
-  const conditionalClass = open ? `${styles.open} ${styles.bar}` : styles.bar
+  const conditionalClass = open ? `${styles.open}` : ''
 
   return (
     <>
-      <div className={styles.menu}>
+      <div className={`${conditionalClass} ${styles.menu}`}>
         <div className={styles.burgerContainer} onClick={() => setOpen(!open)}>
-          <div className={`${conditionalClass} ${styles.bar1}`} />
-          <div className={`${conditionalClass} ${styles.bar2}`} />
-          <div className={`${conditionalClass} ${styles.bar3}`} />
+          <div className={`${conditionalClass} ${styles.bar} ${styles.bar1}`} />
+          <div className={`${conditionalClass} ${styles.bar} ${styles.bar2}`} />
+          <div className={`${conditionalClass} ${styles.bar} ${styles.bar3}`} />
         </div>
       </div>
       {/* <NavList open={open} setOpen={setOpen} /> */}

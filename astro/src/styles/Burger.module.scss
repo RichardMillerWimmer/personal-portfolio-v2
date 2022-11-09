@@ -11,21 +11,26 @@
     border-radius: 50%;
   }
 
-  .burgerContainer {  
+  .burgerContainer {
+    position: fixed;  
     width: 45px;
-    // height: 40px;
-    margin-top: 40px;
-    margin-left: 28px;
+    bottom: 25px;
+    right: 15px;
   }
 
   .bar {
-    // margin: 8px 0;
     height: 5px;
     width: 100%;
     background-color: $color-black;
     display: block;
     border-radius: 5px;
     transition: 0.3s ease;
+  }
+
+  .open.menu {
+    width: 320px;
+    height: 500px;
+    border-radius: 122px 122px 0px 30px / 114px 51px 0px 76px;  
   }
 
   .bar1 {
