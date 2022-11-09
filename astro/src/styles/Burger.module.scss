@@ -3,26 +3,47 @@
 .menu {
     background-color: #0d3052a6;
     position: fixed;
-    bottom: 0;
-    width: 100vw;
-    height: 100px;
+    right: -25px;
+    bottom: -30px;
+    width: 110px;
+    height: 110px;
     z-index: 20;
+    border-radius: 50%;
   }
 
   .burgerContainer {  
     width: 45px;
-    height: 40px;
-    margin: 30px auto;
+    // height: 40px;
+    margin-top: 40px;
+    margin-left: 28px;
   }
 
   .bar {
-    margin: 5px;
+    // margin: 8px 0;
     height: 5px;
     width: 100%;
     background-color: $color-black;
     display: block;
     border-radius: 5px;
     transition: 0.3s ease;
+  }
+
+  .bar1 {
+    transform: translateY(-6px);
+  }
+
+  .bar3 {
+    transform: translateY(6px);
+  }
+
+  .open.bar1 {
+    transform: translateY(4px) rotateZ(-45deg);
+  }
+  .open.bar2 {
+    opacity: 0;
+  }
+  .open.bar3 {
+    transform: translateY(-6px) rotateZ(45deg);
   }
 
 @media screen and (min-width: $bp-mobile) {
