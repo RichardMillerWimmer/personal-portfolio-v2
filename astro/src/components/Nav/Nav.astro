@@ -1,9 +1,33 @@
 ---
 import Burger from './Burger.tsx'
-import NavList from './NavList.astro';
+import NavList from './NavList.tsx';
 ---
 
-<nav>
-    <Burger client:load />
-    <NavList />
-</nav>
+<style lang='scss'>
+    @import '../../styles/_variables.scss';
+
+    .mobileNav {
+        display: none;
+    }
+    .desktopNav {
+        display: block;
+    }
+    @media screen and (max-width: $bp-mobile) {
+        .desktopNav {
+            display: none;
+        }
+        .mobileNav {
+            display: unset;
+        }
+    }
+
+</style>
+
+<div>
+    <div class="desktopNav">
+        <NavList client:only="react"/>
+    </div>
+    <div class="mobileNav">
+        <Burger client:only="react" />
+    </div>
+</div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components'
-// import NavList from './NavList.tsx';
+import NavList from './NavList.tsx';
 import styles from '../../styles/Burger.module.scss'
 
 
@@ -49,16 +49,18 @@ const Burger: React.FC = () => {
   const conditionalClass = open ? `${styles.open}` : ''
 
   return (
-    <>
+    <div className={styles.navContatiner}>
       <div className={`${conditionalClass} ${styles.menu}`}>
         <div className={styles.burgerContainer} onClick={() => setOpen(!open)}>
           <div className={`${conditionalClass} ${styles.bar} ${styles.bar1}`} />
           <div className={`${conditionalClass} ${styles.bar} ${styles.bar2}`} />
           <div className={`${conditionalClass} ${styles.bar} ${styles.bar3}`} />
         </div>
+        <NavList setOpen={setOpen} />
       </div>
-      {/* <NavList open={open} setOpen={setOpen} /> */}
-    </>
+      <div className={styles.navlistContainer}>
+      </div>
+    </div>
   )
 }
 
