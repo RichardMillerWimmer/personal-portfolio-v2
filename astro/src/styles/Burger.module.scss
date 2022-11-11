@@ -5,7 +5,7 @@
 }
 
 .menu {
-    background-color: #0d3052a6;
+    background-color: #0d3052CC;
     position: fixed;
     right: -25px;
     bottom: -30px;
@@ -25,15 +25,15 @@
   .bar {
     height: 5px;
     width: 100%;
-    background-color: $color-black;
+    background-color: $color-white;
     display: block;
     border-radius: 5px;
     transition: 0.3s ease;
   }
 
   .open.menu {
-    width: 320px;
-    height: 500px;
+    width: 280px;
+    height: 400px;
     border-radius: 122px 122px 0px 30px / 114px 51px 0px 76px;  
   }
 
@@ -53,6 +53,22 @@
   }
   .open.bar3 {
     transform: translateY(-6px) rotateZ(45deg);
+  }
+
+  .menu.open ul {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateY(-50%) translateX(50%);
+  }
+
+  .menu li {
+    display: none;
+  }
+
+  .menu.open li{
+    display: block;
+    color: $color-white;
   }
 
 @media screen and (min-width: $bp-mobile) {

@@ -1,3 +1,5 @@
+@import '_variables.scss';
+
 .navWrapper {
   display: inline-block;
 }
@@ -18,8 +20,8 @@ a {
   right: 20%;
   top: 50%;
   content: '';
-  border-left: 12px solid #000000;
-  border-right: 12px solid #000000;
+  border-left: 12px solid $color-black;
+  border-right: 12px solid $color-black;
   height: 3px;
   opacity: 0;
   position: absolute;
