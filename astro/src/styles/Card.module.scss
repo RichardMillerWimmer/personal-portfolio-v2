@@ -13,11 +13,14 @@
     height: 300px;
     width: 300px;
     border-radius: 20px;
-    background-color: $color-white;
     text-align: center;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
-	-webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow:  -20px -20px 60px #bebebe,
+            20px 20px 60px #ffffff;
+	-webkit-box-shadow: -20px -20px 60px #bebebe,
+            20px 20px 60px #ffffff;
+	-moz-box-shadow: -20px -20px 60px #bebebe,
+            20px 20px 60px #ffffff;
     transition: all 1s;
     transform: scale(1); 
     perspective: 900px;
