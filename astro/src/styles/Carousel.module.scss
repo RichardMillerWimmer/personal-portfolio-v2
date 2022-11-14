@@ -8,7 +8,7 @@
 
 .slides {
   display: none;
-//   animation-name: fadeOut;
+  // animation-name: fadeOut;
 //   animation-duration: 2s;
 }
 .active {
@@ -69,31 +69,34 @@
   background-color: #717171;
 }
 
-@keyframes fadeIn {
-  from {opacity: 0}
-  to {opacity: 1}
-}
+@media screen and (prefers-reduced-motion: no-preference) {
+  
+  // @keyframes fadeOut {
+  //   from {opacity: 1}
+  //   to {opacity: 0}
+  // }
+  @keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
 
-@keyframes fadeOut {
-  from {opacity: 1}
-  to {opacity: 2}
 }
 
 @media screen and (min-width: $bp-mobile) {
     .slideshowContainer {
         width: 410px; 
-     }
-     .slideImg {
-         width: 410px;
-     }
+    }
+    .slideImg {
+        width: 410px;
+    }
 }
 @media screen and (min-width: $bp-tablet) {
     .slideshowContainer {
         width: 630px; 
-     }
-     .slideImg {
-         width: 630px;
-     }
+    }
+    .slideImg {
+        width: 630px;
+    }
 }
 
   // accounts for galaxy fold
