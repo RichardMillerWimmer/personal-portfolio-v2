@@ -15,9 +15,6 @@ const publishDate = ''
 ---
 
 <style lang='scss'>
-  a {
-    text-decoration: underline;
-  }
   header img {
     width: 100%;
     margin-bottom: 20px;
@@ -32,7 +29,7 @@ const publishDate = ''
 
   <body>
     <main>
-      <article>
+      <article class={styles.aboutContainer}>
         <p>
           Allow me to introduce myself, My name is Richard, and I'm a software engineer/developer. The Cincinnati Northern
           Kentucky area is home to my family and I. Along with development I enjoy spending time with my family, going to
@@ -57,7 +54,7 @@ const publishDate = ''
             target='_blank' rel="noreferrer">LinkedIn</a> and shoot
           me a message. You can also <a href="/contact">contact</a> me.
         </p>
-        <p>Feel free to take a look at my <a class={styles.resumeLink}
+        <p>Feel free to take a look at my <a
             href='https://docs.google.com/document/d/1_gpG0nhrPrHhr04xQLNj1Yf3b2En5tP3-XkwiF19gP0/export?format=pdf'>résumé</a>.
         </p>
       </article>
