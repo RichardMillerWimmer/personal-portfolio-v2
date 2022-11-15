@@ -4,11 +4,11 @@ import Tags from '../components/Tags.astro'
 
 
 const { content } = Astro.props
-const { title, date, readTime, categories } = content
+const { title, description, date, readTime, categories } = content
 const dateFormat = { year: 'numeric', month: 'long', day: '2-digit' } as Intl.DateTimeFormatOptions
 ---
 
-<BlogLayout title={`Blog - ${title}`}>
+<BlogLayout title={title} description={description} publishDate={date}>
     <article>
         <h1 class="marginBottom">{title}</h1>
         <div class="marginBottom">

@@ -14,11 +14,11 @@ interface BlogLayoutProps {
     wrapper: boolean
 }
 
-const { title, description, permalink, publishDate, wrapper } = Astro.props as BlogLayoutProps
+const { title, description, publishDate, } = Astro.props as BlogLayoutProps
 ---
 
 <html lang="en">
-<BaseHead title={title} description={description} permalink={permalink} publishDate={publishDate} />
+<BaseHead title={title} description={description} publishDate={publishDate} />
 <body>
     <main class="content">
         <div class='blogWrapper'>

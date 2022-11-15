@@ -11,6 +11,7 @@ const posts = (await Astro.glob('./*.mdx')).sort(
 )
 
 const title = 'Blog - Richard'
+const description = 'Read more on the blog here with articles written about branding and development/engineering.'
 
 ---
 
@@ -20,7 +21,7 @@ const title = 'Blog - Richard'
   }
 </style>
 
-<BlogLayout title={title} wrapper={false}>
+<BlogLayout title={title} description={description} wrapper={false}>
       <header>
         <h1>{title}</h1>
       </header>

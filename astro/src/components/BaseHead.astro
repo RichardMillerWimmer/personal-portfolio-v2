@@ -33,6 +33,7 @@ const { title, description, permalink, publishDate, ogImageUrl } = Astro.props a
   <meta name="title" content={title || site.title} />
   <meta name="description" content={description || site.description} />
   <meta name="author" content="Richard Miller Wimmer">
+  <meta property="article:published_time" content={publishDate} />
 
   <!-- Sitemap -->
   <!-- <link rel="sitemap" href="/sitemap.xml"> -->

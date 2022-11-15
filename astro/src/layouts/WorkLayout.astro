@@ -10,10 +10,10 @@ interface WorkLayoutProps {
     url: string
     repo: string
     images: string[]
-
+    description: string
 }
 
-const { title, technologies, url, repo, images } = Astro.props.content as WorkLayoutProps
+const { title, technologies, url, repo, images, description } = Astro.props.content as WorkLayoutProps
 ---
 
 <style lang ='scss'>
@@ -24,7 +24,7 @@ const { title, technologies, url, repo, images } = Astro.props.content as WorkLa
 
 </style>
 
-<BaseLayout title={`Work - ${title}`}>
+<BaseLayout title={title} description={description} >
     <main>
         <section>
             <h3 class="marginBottom">{title}</h3>
