@@ -32,6 +32,7 @@ const { title, description, permalink, publishDate, ogImageUrl } = Astro.props a
   <title>{title}</title>
   <meta name="title" content={title || site.title} />
   <meta name="description" content={description || site.description} />
+  <meta name="author" content="Richard Miller Wimmer">
 
   <!-- Sitemap -->
   <!-- <link rel="sitemap" href="/sitemap.xml"> -->
@@ -39,17 +40,17 @@ const { title, description, permalink, publishDate, ogImageUrl } = Astro.props a
   <!-- RSS -->
   <!-- <link rel="alternate" type="application/rss+xml" title={`${site.name} Blog`} href={`${site.url}/feed/blog.xml`}/> -->
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph  -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content={site.url} />
   <meta property="og:title" content={title || site.title} />
   <meta property="og:description" content={description || site.description} />
-  <meta property="og:image" content={ogImageUrl ? `${ogImageUrl}` : `${site.url}/assets/img/social.jpg`} />
+  <meta property="og:image" content={ogImageUrl ? `${ogImageUrl}` : `${site.url}/assets/social.jpg`} />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content={site.url} />
   <meta property="twitter:title" content={title || site.title} />
   <meta property="twitter:description" content={description || site.description} />
-  <meta property="twitter:image" content={ogImageUrl ? ogImageUrl : `${site.url}/assets/img/social.jpg`} />
+  <meta property="twitter:image" content={ogImageUrl ? ogImageUrl : `${site.url}/assets/social.jpg`} />
 </head>
