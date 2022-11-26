@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import NavLink from './NavLink.tsx'
-// import styles from '../../styles/NavList.module.scss'
-import '../../styles/NavList.css'
+import styles from '../../styles/NavList.module.scss'
+// import '../../styles/NavList.css'
 
 
 const NavList = () => {
@@ -9,11 +9,11 @@ const NavList = () => {
 
     useEffect(() => {
         setPage(window.location.pathname)
-    })
+    }, [])
 
     return (
         <nav>
-            <ul className='navList'>
+            <ul className={styles.navList}>
                 <NavLink page={page} text='home' href='/' />
                 <NavLink page={page} text='work' href='/work' />
                 <NavLink page={page} text='about' href='/about' />
