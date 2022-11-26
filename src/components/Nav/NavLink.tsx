@@ -1,6 +1,6 @@
 import React from 'react'
 // import styles from '../../styles/NavLink.module.scss'
-// import '../../styles/NavLink.scss'
+import '../../styles/NavLink.css'
 
 type NavLinkType = {
     text: string;
