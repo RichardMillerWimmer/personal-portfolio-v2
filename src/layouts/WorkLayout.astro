@@ -7,13 +7,13 @@ import Carousel from '../components/Carousel';
 interface WorkLayoutProps {
     title: string
     technologies: string[]
-    url: string
+    site: string
     repo: string
     images: string[]
     description: string
 }
 
-const { title, technologies, url, repo, images, description } = Astro.props.content as WorkLayoutProps
+const { title, technologies, site, repo, images, description } = Astro.props.content as WorkLayoutProps
 ---
 
 <style lang ='scss'>
@@ -30,7 +30,7 @@ const { title, technologies, url, repo, images, description } = Astro.props.cont
             <h3 class="marginBottom">{title}</h3>
             <Carousel client:load images={images} />
             <div class="marginBottom">
-                <LinkButton href={url} rel="noreferrer" target='_blank'>Site</LinkButton>
+                <LinkButton href={site} rel="noreferrer" target='_blank'>Site</LinkButton>
                 <LinkButton href={repo} rel="noreferrer" target='_blank'>Repo</LinkButton>
             </div>
             <div class="marginBottom">
