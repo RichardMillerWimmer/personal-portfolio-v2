@@ -12,6 +12,7 @@ const NavLink = ({ text, href, page }: NavLinkType): JSX.Element => {
     if (page === '/') {
         page = '/home'
     }
+    console.log('in Navlink', page)
 
     return (
         <li className={styles.navWrapper}><a className={`${page === `/${text}` ? `${styles.isActive} ${styles.navLink}` : `${styles.navLink}`}`} href={href}>{text}</a></li >)
