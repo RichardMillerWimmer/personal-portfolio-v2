@@ -12,10 +12,12 @@ const NavLink = ({ text, href, page }: NavLinkType): JSX.Element => {
     if (page === '/') {
         page = '/home'
     }
-    console.log('in Navlink', page)
+
+    const regex = new RegExp(`/${text}`, 'g')
+    const regexCheck = regex.test(page)
 
     return (
-        <li className={styles.navWrapper}><a className={`${page === `/${text}` ? `${styles.isActive} ${styles.navLink}` : `${styles.navLink}`}`} href={href}>{text}</a></li >)
+        <li className={styles.navWrapper}><a className={regexCheck ? `${styles.isActive} ${styles.navLink}` : `${styles.navLink}`} href={href}>{text}</a></li >)
 }
 
 export default NavLink

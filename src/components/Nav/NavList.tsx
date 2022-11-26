@@ -10,8 +10,6 @@ const NavList = () => {
     useEffect(() => {
         setPage(window.location.pathname)
     }, [])
-    
-    console.log("NavList", page)
 
     return (
         <nav>
