@@ -1,7 +1,7 @@
 import React from 'react'
 import NavLink from './NavLink.tsx'
 // import styles from '../../styles/NavList.module.scss'
-import '../../styles/NavList.scss'
+// import '../../styles/NavList.scss'
 
 
 const NavList = () => {
