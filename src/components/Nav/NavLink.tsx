@@ -1,5 +1,6 @@
 import React from 'react'
-import styles from '../../styles/NavLink.module.scss'
+// import styles from '../../styles/NavLink.module.scss'
+import '../../styles/NavLink.scss'
 
 type NavLinkType = {
     text: string;
@@ -13,7 +14,7 @@ const NavLink = ({ text, href, page }: NavLinkType): JSX.Element => {
     }
 
     return (
-        <li className={styles.navWrapper}><a className={`${page === `/${text}` ? `${styles.isActive} ${styles.navLink}` : styles.navLink}`} href={href}>{text}</a></li >)
+        <li className='navWrapper'><a className={`${page === `/${text}` ? `isActive navLink` : `navLink`}`} href={href}>{text}</a></li >)
 }
 
 export default NavLink
