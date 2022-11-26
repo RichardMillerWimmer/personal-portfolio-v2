@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NavLink from './NavLink.tsx'
 // import styles from '../../styles/NavList.module.scss'
 import '../../styles/NavList.css'
 
 
 const NavList = () => {
-    const page = window.location.pathname
+    const [page, setPage] = useState('')
+
+    useEffect(() => {
+        setPage(window.location.pathname)
+    })
+
     return (
         <nav>
             <ul className='navList'>
