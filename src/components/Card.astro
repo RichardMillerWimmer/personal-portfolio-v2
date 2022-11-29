@@ -10,6 +10,12 @@ interface CardProps {
 
 const { title, description, image, url  } = Astro.props as CardProps
 ---
+<style>
+    h3 {
+        margin-bottom: 15px;
+    }
+</style>
+
 <div class={styles.wrapper}>
     <a class={styles.card} href={url}>
         <div class={styles.container}>
