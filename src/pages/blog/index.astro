@@ -7,7 +7,7 @@ const posts = (await Astro.glob('./*.mdx')).sort(
   (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
 )
 
-const title = 'Blog - Richard'
+const title = 'Blog'
 const description = 'Read more on the blog here with articles written about branding and development/engineering.'
 
 ---
@@ -18,7 +18,7 @@ const description = 'Read more on the blog here with articles written about bran
   }
 </style>
 
-<BlogLayout title={title} description={description} wrapper={false}>
+<BlogLayout title={`${title} - Richard`} description={description} wrapper={false}>
       <header>
         <h1>{title}</h1>
       </header>
