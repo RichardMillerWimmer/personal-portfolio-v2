@@ -26,8 +26,10 @@ const { title, technologies, site, repo, images, description } = Astro.props.con
 
 <BaseLayout title={title} description={description} >
     <main>
+        <header>
+			<h1 class="marginBottom">{title}</h1>
+		</header>
         <section>
-            <h3 class="marginBottom">{title}</h3>
             <Carousel client:load images={images} />
             <div class="marginBottom">
                 <LinkButton href={site} rel="noreferrer" target='_blank'>Site</LinkButton>
