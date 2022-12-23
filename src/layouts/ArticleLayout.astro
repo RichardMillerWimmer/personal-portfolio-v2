@@ -12,8 +12,8 @@ const dateFormat = { year: 'numeric', month: 'long', day: '2-digit' } as Intl.Da
     <article>
         <h1 class="marginBottom">{title}</h1>
         <div class="marginBottom">
-            <time datetime={date}>{new Intl.DateTimeFormat('en', dateFormat).format(new Date(date))},{readTime}
-                read</time>
+            <time datetime={date}>{new Intl.DateTimeFormat('en', dateFormat).format(new Date(date))}</time>
+            <p>{readTime} read</p>
         </div>
         <div class="marginBottom">
             <Tags tags={categories} />
