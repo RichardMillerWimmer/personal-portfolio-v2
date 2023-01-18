@@ -1,0 +1,86 @@
+---
+layout: "../../layouts/ArticleLayout.astro"
+title: How to use React’s useState hook with TypeScript examples
+description: let's take a look at what the useState hook is and what it does, including TypeScript examples.
+date: 2023-1-18
+author: Richard Miller Wimmer
+readTime: "4 min"
+categories:
+  - React
+  - TypeScript
+  - JavaScript
+  - Hooks
+images:
+---
+
+## Before we start there are a few important things to remember with React and State.
+
+<br />
+When state has updated the component and the children will rerender.
+<br />
+Do not directly mutate state. Components updating and rendering depend on a previous
+state and a new state.
+<br />
+State is contained locally. To use it elsewhere in your application you may pass
+it as props or use some type of state management that allows for components to update
+state and use state. If we are doing so then those values need to be treated slightly
+differently and we need to use the appropriate patterns for updating global state.
+<br />
+State updates asynchronously. You may have experienced a time when you console logged
+state after setting it and not seeing the updated state. This is something for a
+whole different article.
+<br />
+## What is the useState hook and what does it do?
+<br />
+This hook was a part of the React 16.8 release and allows you to use state without
+writing a class component.
+<br />
+State inside function components, awesome!
+<br />
+Ok, so this is kind of old news. But what we have now is a function to manage state
+in function components without all the boilerplate of a class component. Plus a handful
+of other benefits. ### How to use useState
+<br />
+We import useState from ‘react’ and call the function. useState returns an array
+with two values, a variable that is our state value and a setter much like setState
+but for this specific state value.
+<br />
+## Let’s take a look at some code examples with TypeScript
+<br />
+The naming convention is important but simple. Name your state value and then for
+the setter prefix ‘set’ to that name like so. IMAGE Here
+<br />
+We can, and should, provide the hook with an initial value of the expected type.
+We do that by passing that in as an argument to useState(). TypeScript will infer
+our type in this situation and knows what myState is of type string in the example.
+<br />
+IMAGE Here
+<br />
+Now, something happens in our app and state needs to be updated. Just use the setter
+with the new state value. Here, our input will set the new value.
+<br />
+IMAGE Here
+<br />
+What happens when we need state to be more than one type like a user object but it's
+null before the user signs in? TypeScript has generics available for us. We need
+to tell useState() that this can be an object or null. Below we are using a union
+type of User and null.
+<br />
+IMAGE Here
+<br />
+What about initializing state with an empty array because we don’t have items in
+our cart? We will use TypeScript generics again.
+<br />
+IMAGE Here
+<br />
+### Important rules with the useState hook:
+<br />
+Only call useState at the top level.
+<br />
+Only use hooks in React function components.
+<br />
+Initialize state with a value of the expected type.
+<br />
+Never mutate state directly, use the setter.
+<br />
+[Connect with me.](https://www.linkedin.com/in/richard-miller-wimmer/)
