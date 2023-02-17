@@ -28,10 +28,7 @@ interface ArticleSchema {
 
 const { context, type, mainEntityOfPage, headline, image, datePublished, dateModified, author, publisher } = Astro.props as ArticleSchema
 
----
-
-<script type="application/ld+json">
-    {
+const schema = JSON.stringify({
         "@context": `${context}`,
             "@type": `${type}`,
                 "mainEntityOfPage": {
@@ -55,5 +52,7 @@ const { context, type, mainEntityOfPage, headline, image, datePublished, dateMod
                     "url": `${publisher.logo.url}`
             }
         }
-    }
-</script>
+    })
+---
+
+<script type="application/ld+json" set:html={schema}></script>
