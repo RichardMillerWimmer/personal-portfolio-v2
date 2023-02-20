@@ -1,0 +1,22 @@
+---
+
+interface SocialShareProps {
+    
+}
+
+const {} = Astro.props as SocialShareProps
+
+const platforms = ['twitter', 'facebook', 'linkedin', 'email']
+
+---
+
+<section>
+    <ul>
+        {platforms.map((platform: string) => (
+            <ul>
+                <a></a>
+            </ul>
+        ))}
+        <li></li>
+    </ul>
+</section>
