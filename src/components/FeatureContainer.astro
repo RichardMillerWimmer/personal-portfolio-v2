@@ -1,29 +1,13 @@
 ---
 import Card from "./Card.astro";
+import styles from '../styles/FeatureContainer.module.scss'
 
 const featuredBlogPost = (await Astro.glob('../pages/blog/usestate-with-typescript.mdx'))
 const featuredWork = (await Astro.glob('../pages/work/house-3d-ecomm.mdx'))
 
 ---
 
-<style lang="scss">
-    @import '../styles/_variables.scss';
-    section {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        margin-top: 40px;
-    }
-
-    @media screen and (max-width: $bp-tablet) {
-    section {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-</style>
-
-<section>
+<section class={styles.featureContainer}>
     <Card title={featuredBlogPost[0].frontmatter.title} description={featuredBlogPost[0].frontmatter.description} image={featuredBlogPost[0].frontmatter.images[2]} url={featuredBlogPost[0].url}/>
     <Card title={featuredWork[0].frontmatter.title} description={featuredWork[0].frontmatter.description} image={featuredWork[0].frontmatter.images[0]} url={featuredWork[0].url}/>
 </section>
