@@ -8,7 +8,7 @@ const Burger: React.FC = () => {
   const conditionalClass = open ? `${styles.open}` : ''
 
   return (
-    <div className={styles.navContatiner}>
+    <div className={styles.navContainer}>
       <div className={`${conditionalClass} ${styles.menu}`}>
         <button className={styles.burgerContainer} onClick={() => setOpen(!open)} aria-expanded={open}>
           <div className={`${conditionalClass} ${styles.bar} ${styles.bar1}`} />
