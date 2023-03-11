@@ -51,11 +51,11 @@ const Burger: React.FC = () => {
   return (
     <div className={styles.navContatiner}>
       <div className={`${conditionalClass} ${styles.menu}`}>
-        <div className={styles.burgerContainer} onClick={() => setOpen(!open)}>
+        <button className={styles.burgerContainer} onClick={() => setOpen(!open)} aria-expanded={open}>
           <div className={`${conditionalClass} ${styles.bar} ${styles.bar1}`} />
           <div className={`${conditionalClass} ${styles.bar} ${styles.bar2}`} />
           <div className={`${conditionalClass} ${styles.bar} ${styles.bar3}`} />
-        </div>
+        </button>
         <NavList setOpen={setOpen} />
       </div>
       <div className={styles.navlistContainer}>
