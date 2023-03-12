@@ -10,7 +10,7 @@ const Burger: React.FC = () => {
   return (
     <div className={styles.navContainer}>
       <div className={`${conditionalClass} ${styles.menu}`}>
-        <button className={styles.burgerContainer} onClick={() => setOpen(!open)} aria-expanded={open}>
+        <button className={styles.burgerContainer} onClick={() => setOpen(!open)} aria-label='open main navigation' aria-expanded={open}>
           <div className={`${conditionalClass} ${styles.bar} ${styles.bar1}`} />
           <div className={`${conditionalClass} ${styles.bar} ${styles.bar2}`} />
           <div className={`${conditionalClass} ${styles.bar} ${styles.bar3}`} />
