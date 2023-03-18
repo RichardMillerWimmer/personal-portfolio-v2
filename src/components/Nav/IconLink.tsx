@@ -14,9 +14,12 @@ const NavLink = ({ text, href, page, child }: IconLinkType): JSX.Element => {
         page = '/home'
     }
 
+    const regex = new RegExp(`/${text}`, 'g')
+    const isCurrentPage = regex.test(page)
+
     return (
         <li className={styles.iconLink}>
-            <a href={href}>
+            <a aria-current={isCurrentPage ? 'page' : null} href={href}>
                 <img src={child} alt={text} />
             </a>
         </li >

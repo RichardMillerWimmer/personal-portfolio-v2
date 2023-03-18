@@ -14,10 +14,12 @@ const NavLink = ({ text, href, page }: NavLinkType): JSX.Element => {
     }
 
     const regex = new RegExp(`/${text}`, 'g')
-    const regexCheck = regex.test(page)
+    const isCurrentPage = regex.test(page)
 
     return (
-        <li className={styles.navWrapper}><a className={regexCheck ? `${styles.isActive} ${styles.navLink}` : `${styles.navLink}`} href={href}>{text}</a></li >)
+        <li className={styles.navWrapper}>
+            <a aria-current={isCurrentPage ? 'page' : null} className={isCurrentPage ? `${styles.isActive} ${styles.navLink}` : `${styles.navLink}`} href={href}>{text}</a>
+        </li >)
 }
 
 export default NavLink
