@@ -14,18 +14,18 @@ const NavLink = ({ text, href, page, child }: NavLinkType): JSX.Element => {
         page = '/home'
     }
 
+    const regex = new RegExp(`/${text}`, 'g')
+    const isCurrentPage = regex.test(page)
+
     const renderLink = () => {
         return child ? <img src={child} alt={text} /> : text
     }
 
-    const regex = new RegExp(`/${text}`, 'g')
-    const isCurrentPage = regex.test(page)
-
-
+    const navClasses = !child ? isCurrentPage ? `${styles.isActive} ${styles.navLink} ${styles.bars}` : `${styles.navLink} ${styles.bars}` : `${styles.navLink}`
 
     return (
         <li className={styles.navWrapper}>
-            <a aria-current={isCurrentPage ? 'page' : null} className={isCurrentPage && !child ? `${styles.isActive} ${styles.navLink}` : `${styles.navLink}`} href={href}>
+            <a aria-current={isCurrentPage ? 'page' : null} className={navClasses} href={href}>
                 {renderLink()}
             </a>
         </li >)
