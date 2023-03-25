@@ -15,7 +15,7 @@ a {
   margin: 10px 0;
 }
 
-.navLink:before {
+.bars:before {
   left: 20%;
   right: 20%;
   top: 50%;
@@ -29,7 +29,7 @@ a {
   transition: all 0.35s ease;
 }
 
-.navLink:hover:before,
+.bars:hover:before,
 .isActive:before {
   left: 0;
   right: 0;
