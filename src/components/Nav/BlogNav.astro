@@ -1,11 +1,11 @@
 ---
 // Component Imports:
-import IconLink from './IconLink.tsx'
 import HomeIcon from '/HomeIcon.svg'
 import WorkIcon from '/WorkIcon.svg'
 import AboutIcon from '/AboutIcon.svg'
 import BlogIcon from '/BlogIcon.svg'
 import ContactIcon from '/ContactIcon.svg'
+import NavLink from './IconLink'
 
 // Component Script:
 const page = new URL(Astro.request.url).pathname;
@@ -46,10 +46,10 @@ const page = new URL(Astro.request.url).pathname;
 
 <nav class="navWrapper">
         <ul>
-            <IconLink page={page} text='home' href='/' child={HomeIcon}/>
-            <IconLink page={page} text='work' href='/work' child={WorkIcon}/>
-            <IconLink page={page} text='about' href='/about' child={AboutIcon}/>
-            <IconLink page={page} text='blog' href='/blog' child={BlogIcon}/>
-            <IconLink page={page} text='contact' href='/contact' child={ContactIcon}/>
+            <NavLink page={page} text='home' href='/' child={HomeIcon}/>
+            <NavLink page={page} text='work' href='/work' child={WorkIcon}/>
+            <NavLink page={page} text='about' href='/about' child={AboutIcon}/>
+            <NavLink page={page} text='blog' href='/blog' child={BlogIcon}/>
+            <NavLink page={page} text='contact' href='/contact' child={ContactIcon}/>
         </ul>
 </nav>
