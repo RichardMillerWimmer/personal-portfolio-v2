@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /
+
+Sitemap: https://richardthe.dev/sitemap-index.xml
