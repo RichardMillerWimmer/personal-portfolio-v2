@@ -6,11 +6,12 @@ const featuredBlogPost = (await Astro.glob('../pages/blog/usestate-with-typescri
 const featuredWork = (await Astro.glob('../pages/work/house-3d-ecomm.mdx'))
 
 ---
-
-<section class={styles.featureContainer}>
-    <h3>Take a Look</h3>
-    <div class={styles.cardContainer}>
-        <Card title={featuredBlogPost[0].frontmatter.title} description={featuredBlogPost[0].frontmatter.description} image={featuredBlogPost[0].frontmatter.images[2]} url={featuredBlogPost[0].url}/>
-        <Card title={featuredWork[0].frontmatter.title} description={featuredWork[0].frontmatter.description} image={featuredWork[0].frontmatter.images[0]} url={featuredWork[0].url}/>
-    </div>
-</section>
+<div class={styles.featureWrapper}>
+    <section class={styles.featureContainer}>
+        <h3>Take a Look</h3>
+        <div class={styles.cardContainer}>
+            <Card title={featuredBlogPost[0].frontmatter.title} description={featuredBlogPost[0].frontmatter.description} image={featuredBlogPost[0].frontmatter.images[2]} url={featuredBlogPost[0].url}/>
+            <Card title={featuredWork[0].frontmatter.title} description={featuredWork[0].frontmatter.description} image={featuredWork[0].frontmatter.images[0]} url={featuredWork[0].url}/>
+        </div>
+    </section>
+</div>
