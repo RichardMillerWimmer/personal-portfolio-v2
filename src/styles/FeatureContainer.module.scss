@@ -1,7 +1,14 @@
 @import '../styles/_variables.scss';
 
+.featureWrapper {
+    height: 400px;
+}
+
 .featureContainer {
         margin-top: 40px;
+        background-color: $color-light;
+        padding: 20px;
+        border-radius: 20px;
     }
 
 .featureContainer > h3 {
@@ -13,6 +20,7 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+    margin-bottom: -200px;
 }
 
 @media screen and (max-width: $bp-tablet) {
