@@ -1,0 +1,35 @@
+---
+import BlogLayout from '../../../../layouts/BlogLayout.astro'
+import BlogCard from '../../../../components/BlogCard.astro'
+import { getCategorySet } from '../../../../utils/helpers.ts'
+
+const allPosts = await Astro.glob('../posts/*.md');
+const categorySet = getCategorySet(allPosts, "categories")
+
+export async function getStaticPaths() {
+
+}
+
+const title = "Blog Category"
+const description = "Browser this category"
+
+---
+
+<style lang='scss'>
+    header {
+      margin-bottom: 20px;
+    }
+  </style>
+  
+  <BlogLayout title={`${title} - Richard`} description={description} wrapper={false}>
+        <header>
+          <h1>{title}</h1>
+        </header>
+        <section >
+          <div>
+            {posts.map((post) => (
+              <BlogCard post={post} />
+              ))}
+          </div>
+        </section>
+  </BlogLayout>

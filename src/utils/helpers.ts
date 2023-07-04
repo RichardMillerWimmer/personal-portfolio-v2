@@ -24,3 +24,13 @@ export function generateCategoriesData(categories: string[]): slugObj[] {
     })
     return categoriesData
 }
+
+export function getCategorySet(array, key) {
+    let results: string[] = []
+    for(const element of array) {
+        if(element.hasOwnProperty(key) && Array.isArray(element[key])) {
+            results.push(...element[key])
+        }
+    }
+    return new Set(results)
+}
