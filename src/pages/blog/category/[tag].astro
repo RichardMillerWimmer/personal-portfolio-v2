@@ -1,13 +1,13 @@
 ---
-import BlogLayout from '../../../../layouts/BlogLayout.astro'
-import BlogCard from '../../../../components/BlogCard.astro'
-import { getCategorySet } from '../../../../utils/helpers.ts'
+import BlogLayout from '../../../layouts/BlogLayout.astro'
+import BlogCard from '../../../components/BlogCard.astro'
+import { getCategorySet, generateCategoriesData } from '../../../../utils/helpers.ts'
 
-const allPosts = await Astro.glob('../posts/*.md');
-const categorySet = getCategorySet(allPosts, "categories")
 
 export async function getStaticPaths() {
-
+  const allPosts = await Astro.glob('../posts/*.md');
+  const categorySet = getCategorySet(allPosts, "categories")
+  generateCategoriesData(categorySet)
 }
 
 const title = "Blog Category"
