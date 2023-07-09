@@ -30,7 +30,7 @@ export function generateCategoriesData(categories: string[]): slugObj[] {
 export function getCategorySet(array, key) {
     let results: string[] = []
     for(const element of array) {
-        if(element.hasOwnProperty(key)) {
+        if(element.hasOwnProperty(key) && !results.includes(element[key])) {
             if(Array.isArray(element[key])){
                 results.push(...element[key])
             } else results.push(element[key])
