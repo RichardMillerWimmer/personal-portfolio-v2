@@ -1,6 +1,7 @@
 type slugObj = {
-    name: string;
-    slug: string;
+    params: {
+        tag: string;
+    }
 }
 
 export function generateSlug(category: string): string {
@@ -18,8 +19,9 @@ export function generateSlug(category: string): string {
 export function generateCategoriesData(categories: string[]): slugObj[] {
     let categoriesData = categories.map((tag) => {
         return {
-            name: tag,
-            slug: `${generateSlug(tag)}` 
+            params: {
+                tag: `${generateSlug(tag)}` 
+            }
         }
     })
     return categoriesData

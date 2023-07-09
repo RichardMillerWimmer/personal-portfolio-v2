@@ -7,12 +7,9 @@ import { getCategorySet, generateCategoriesData } from '../../../utils/helpers'
 export async function getStaticPaths() {
   const allPosts = await Astro.glob('../*.mdx');
   const frontmatterArray = getCategorySet(allPosts, "frontmatter")
-  // console.log(frontmatterArray)
   const categorySet = getCategorySet(frontmatterArray, "categories")
-  // console.log(categorySet)
   const paths = generateCategoriesData(categorySet)
-  console.log(paths)
-  return
+  return paths
 }
 
 const title = "Blog Category"
