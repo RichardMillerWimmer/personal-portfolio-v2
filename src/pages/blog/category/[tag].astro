@@ -1,13 +1,18 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro'
 import BlogCard from '../../../components/BlogCard.astro'
-import { getCategorySet, generateCategoriesData } from '../../../../utils/helpers.ts'
+import { getCategorySet, generateCategoriesData } from '../../../utils/helpers'
 
 
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob('../posts/*.md');
-  const categorySet = getCategorySet(allPosts, "categories")
-  generateCategoriesData(categorySet)
+  const allPosts = await Astro.glob('../*.mdx');
+  const frontmatterArray = getCategorySet(allPosts, "frontmatter")
+  // console.log(frontmatterArray)
+  const categorySet = getCategorySet(frontmatterArray, "categories")
+  // console.log(categorySet)
+  const paths = generateCategoriesData(categorySet)
+  console.log(paths)
+  return
 }
 
 const title = "Blog Category"
@@ -26,10 +31,6 @@ const description = "Browser this category"
           <h1>{title}</h1>
         </header>
         <section >
-          <div>
-            {posts.map((post) => (
-              <BlogCard post={post} />
-              ))}
-          </div>
+          <h2>Tag Pages</h2>
         </section>
   </BlogLayout>

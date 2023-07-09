@@ -16,10 +16,10 @@ export function generateSlug(category: string): string {
 }
 
 export function generateCategoriesData(categories: string[]): slugObj[] {
-    let categoriesData = categories.map((elem) => {
+    let categoriesData = categories.map((tag) => {
         return {
-            name: elem,
-            slug: `${generateSlug(elem)}` 
+            name: tag,
+            slug: `${generateSlug(tag)}` 
         }
     })
     return categoriesData
@@ -28,9 +28,11 @@ export function generateCategoriesData(categories: string[]): slugObj[] {
 export function getCategorySet(array, key) {
     let results: string[] = []
     for(const element of array) {
-        if(element.hasOwnProperty(key) && Array.isArray(element[key])) {
-            results.push(...element[key])
+        if(element.hasOwnProperty(key)) {
+            if(Array.isArray(element[key])){
+                results.push(...element[key])
+            } else results.push(element[key])
         }
     }
-    return new Set(results)
+    return results
 }
