@@ -12,6 +12,8 @@ export async function getStaticPaths() {
   return paths
 }
 
+const { tag } = Astro.params
+
 const title = "Blog Category"
 const description = "Browser this category"
 
@@ -23,7 +25,7 @@ const description = "Browser this category"
     }
   </style>
   
-  <BlogLayout title={`${title} - Richard`} description={description} wrapper={false}>
+  <BlogLayout title={`Category: ${tag} - Richard`} description={description} wrapper={false}>
         <header>
           <h1>{title}</h1>
         </header>
