@@ -2,6 +2,7 @@ type slugObj = {
     params: {
         tag: string;
     }
+    props: any
 }
 
 export function generateSlug(category: string): string {
@@ -16,18 +17,19 @@ export function generateSlug(category: string): string {
     .replace(/-+$/, '');
 }
 
-export function generateCategoriesData(categories: string[]): slugObj[] {
+export function generateCategoriesData(categories: string[], allPosts): slugObj[] {
     let categoriesData = categories.map((tag) => {
         return {
             params: {
                 tag: `${generateSlug(tag)}` 
-            }
+            },
+            props: allPosts
         }
     })
     return categoriesData
 }
 
-export function getCategorySet(array, key) {
+export function getDynamicSet(array, key) {
     let results: string[] = []
     for(const element of array) {
         if(element.hasOwnProperty(key) && !results.includes(element[key])) {

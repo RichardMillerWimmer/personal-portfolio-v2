@@ -1,14 +1,14 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro'
 import BlogCard from '../../../components/BlogCard.astro'
-import { getCategorySet, generateCategoriesData } from '../../../utils/helpers'
+import { getDynamicSet, generateCategoriesData } from '../../../utils/helpers'
 
 
 export async function getStaticPaths() {
   const allPosts = await Astro.glob('../*.mdx');
-  const frontmatterArray = getCategorySet(allPosts, "frontmatter")
-  const categorySet = getCategorySet(frontmatterArray, "categories")
-  const paths = generateCategoriesData(categorySet)
+  const frontmatterArray = getDynamicSet(allPosts, "frontmatter")
+  const categorySet = getDynamicSet(frontmatterArray, "categories")
+  const paths = generateCategoriesData(categorySet, allPosts)
   return paths
 }
 
