@@ -12,10 +12,10 @@ export async function getStaticPaths() {
   return paths
 }
 
-const { tag } = Astro.params
-const { posts } = Astro.props
+const { slug } = Astro.params
+const { post, tag } = Astro.props
 
-const title = "Blog Category"
+const title = `Blog Category - ${tag}`
 const description = "Browser this category"
 
 ---
@@ -31,6 +31,5 @@ const description = "Browser this category"
           <h1>{title}</h1>
         </header>
         <section >
-          <h2>Tag Pages</h2>
         </section>
   </BlogLayout>

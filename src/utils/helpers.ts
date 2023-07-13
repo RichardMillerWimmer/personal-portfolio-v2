@@ -1,9 +1,10 @@
 type slugObj = {
     params: {
-        tag: string;
+        slug: string;
     }
     props: {
-        posts: any
+        posts: any;
+        tag: string;
     }
 }
 
@@ -24,10 +25,11 @@ export function generateCategoriesData(categories: string[], allPosts): slugObj[
         let filteredPosts = allPosts.filter(post => post.frontmatter.categories.includes(tag))
         return {
             params: {
-                tag: `${generateSlug(tag)}` 
+                slug: `${generateSlug(tag)}` 
             },
             props: {
-                posts: filteredPosts
+                posts: filteredPosts,
+                tag: tag
             }
         }
     })
