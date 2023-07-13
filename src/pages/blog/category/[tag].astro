@@ -13,6 +13,7 @@ export async function getStaticPaths() {
 }
 
 const { tag } = Astro.params
+const { posts } = Astro.props
 
 const title = "Blog Category"
 const description = "Browser this category"
