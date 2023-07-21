@@ -39,7 +39,7 @@ export function generateCategoriesData(categories: string[], allPosts): slugObj[
 export function getDynamicSet(array, key) {
     let results: string[] = []
     for(const element of array) {
-        if(element.hasOwnProperty(key) && !results.includes(element[key])) {
+        if(Object.hasOwn(element, key) && !results.includes(element[key])) {
             if(Array.isArray(element[key])){
                 results.push(...element[key])
             } else results.push(element[key])
