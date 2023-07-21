@@ -1,0 +1,40 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro'
+import BlogCard from '../../../components/BlogCard.astro'
+import { getDynamicSet, generateCategoriesData } from '../../../utils/helpers'
+
+
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob('../*.mdx');
+  const frontmatterArray = getDynamicSet(allPosts, "frontmatter")
+  const categorySet = getDynamicSet(frontmatterArray, "categories")
+  const paths = generateCategoriesData(categorySet, allPosts)
+  return paths
+}
+
+const { slug } = Astro.params
+const { posts, tag } = Astro.props
+
+const title = `Blog Category - ${tag}`
+const description = `Browser Richard's articles related to ${tag}`
+
+---
+
+<style lang='scss'>
+    header {
+      margin-bottom: 20px;
+    }
+  </style>
+  
+  <BlogLayout title={`Category: ${tag} - Richard`} description={description} wrapper={false}>
+        <header>
+          <h1>{title}</h1>
+        </header>
+        <section>
+          <div>
+            {posts.map((post) => (
+              <BlogCard post={post} />
+              ))}
+          </div>
+        </section>
+  </BlogLayout>
