@@ -20,9 +20,9 @@ export function generateSlug(category: string): string {
     .replace(/-+$/, '');
 }
 
-export function generateCategoriesData(categories: string[], allPosts): slugObj[] {
+export function generateCategoriesData(categories: string[], key: string, allPosts): slugObj[] {
     let categoriesData = categories.map((tag) => {
-        let filteredPosts = allPosts.filter(post => post.frontmatter.categories.includes(tag))
+        let filteredPosts = allPosts.filter(post => post.frontmatter[key].includes(tag))
         return {
             params: {
                 slug: `${generateSlug(tag)}` 
