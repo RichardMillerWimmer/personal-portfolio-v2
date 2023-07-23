@@ -8,11 +8,10 @@ export async function getStaticPaths() {
   const allPosts = await Astro.glob('../*.mdx');
   const frontmatterArray = getDynamicSet(allPosts, "frontmatter")
   const categorySet = getDynamicSet(frontmatterArray, "categories")
-  const paths = generateCategoriesData(categorySet, allPosts)
+  const paths = generateCategoriesData(categorySet, "categories", allPosts)
   return paths
 }
 
-const { slug } = Astro.params
 const { posts, tag } = Astro.props
 
 const title = `Blog Category - ${tag}`
