@@ -1,0 +1,48 @@
+---
+// Component Imports
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import WorkCard from '../../../components/WorkCard'
+import LineDivider from '../../../components/LineDivider.astro';
+import { getDynamicSet, generateCategoriesData } from '../../../utils/helpers'
+
+// Component Script:
+
+
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob('../*.mdx');
+  const frontmatterArray = getDynamicSet(allPosts, "frontmatter")
+  const categorySet = getDynamicSet(frontmatterArray, "technologies")
+  const paths = generateCategoriesData(categorySet, "technologies", allPosts)
+
+  return paths
+}
+
+const { posts, tag } = Astro.props
+const title = `Work - Category ${tag}`;
+const description = `Explore some of the work Richard has done related to ${tag}.`
+
+
+---
+
+<style>
+	header {
+		margin-bottom: 20px;
+	}
+</style>
+
+<BaseLayout title={title} description={description} wrapper={false}>
+	<main>
+		<header>
+			<h1>Category</h1>
+		</header>
+		<LineDivider />
+		<body>
+			<section>
+				{posts.map((work) => (
+				<WorkCard client:load src={work.frontmatter.images[0]} title={work.frontmatter.title}
+					description={work.frontmatter.description} url={work.url} site={work.frontmatter.site} repo={work.frontmatter.repo} images={work.frontmatter.images}/>
+				))}
+			</section>
+		</body>
+	</main>
+</BaseLayout>
