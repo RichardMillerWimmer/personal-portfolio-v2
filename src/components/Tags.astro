@@ -6,6 +6,7 @@ interface TagsProps {
   class?: string;
 }
 const { tags, class: styles } = Astro.props as TagsProps;
+
 ---
 
 <style lang="scss">
@@ -27,7 +28,7 @@ const { tags, class: styles } = Astro.props as TagsProps;
 <div class="tagContainter">
   {
     tags.map((keyword: string) => (
-      <a href={`category/${generateSlug(keyword)}`} class="tag">
+      <a href={keyword} class="tag">
         {keyword}
       </a>
     ))
