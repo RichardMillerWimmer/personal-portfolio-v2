@@ -1,89 +1,93 @@
 ---
 import LinkButton from "./LinkButton.astro";
-import Tags from './Tags.astro'
+import Tags from "./Tags.astro";
 
-const { post } = Astro.props
+const { post } = Astro.props;
 ---
 
 <style lang="scss">
-    @import '../styles/_variables.scss';
+  @import "../styles/_variables.scss";
 
-    .blogContainer h2 {
-        font-family: $font-body;
-        font-size: 2rem;
-    }
+  .blogContainer h2 {
+    font-family: $font-body;
+    font-size: 2rem;
+  }
 
-    .articleTitle {
-        text-align: left;
-    }
+  .articleTitle {
+    text-align: left;
+  }
 
-    time {
-        font-size: 1rem;
-        color: $color-medium;
-    }
+  time {
+    font-size: 1rem;
+    color: $color-medium;
+  }
 
-    .blogContainer {
-        margin: 0 0 50px 0;
-        padding: 20px;
-        background-color: $color-white;
-    }
+  .blogContainer {
+    margin: 0 0 50px 0;
+    padding: 20px;
+    background-color: $color-white;
+  }
 
-    .blogContainer a {
-        text-decoration: none;
-    }
+  .blogContainer a {
+    text-decoration: none;
+  }
 
-    .detailsContainer {
-        margin: 15px 0;
-        display: flex;
-        justify-content: space-between;
-    }
+  .detailsContainer {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+  }
 
-    .detailsContainer span {
-        margin-right: 5px;
-        color: $color-medium;
-    }
-    // .detailsContainer .linkButton {
-    //     width: 150px;
-    // }
+  .detailsContainer span {
+    margin-right: 5px;
+    color: $color-medium;
+  }
+  // .detailsContainer .linkButton {
+  //     width: 150px;
+  // }
 
-    @media screen and (max-width: $bp-tablet) {
+  @media screen and (max-width: $bp-tablet) {
     //     .detailsContainer .linkButton {
     //     align-self: flex-end;
-    // }   
-        .detailsContainer {
-            flex-direction: column;
-        }
-        .categoriesContainer {
-            margin-bottom: 20px;
-        }
-        .blogContainer h2 {
-            font-family: $font-body;
-            font-size: 1.8rem;
+    // }
+    .detailsContainer {
+      flex-direction: column;
     }
+    .categoriesContainer {
+      margin-bottom: 20px;
     }
+    .blogContainer h2 {
+      font-family: $font-body;
+      font-size: 1.8rem;
+    }
+  }
 </style>
 
 <div class="blogContainer">
-    <div>
-        <date datetime={post.frontmatter.publishedAt}>
-            <time>{new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit' }).format(
-                new Date(post.frontmatter.date),
-                )}</time>
-        </date>
-        <a href={post.url}>
-            <h2 class="articleTitle">{post.frontmatter.title}</h2>
-        </a>
-        <p>{post.frontmatter.description}</p>
+  <div>
+    <date datetime={post.frontmatter.publishedAt}>
+      <time
+        >{
+          new Intl.DateTimeFormat("en", {
+            year: "numeric",
+            month: "long",
+            day: "2-digit",
+          }).format(new Date(post.frontmatter.date))
+        }</time
+      >
+    </date>
+    <a href={post.url}>
+      <h2 class="articleTitle">{post.frontmatter.title}</h2>
+    </a>
+    <p>{post.frontmatter.description}</p>
+  </div>
+  <div>
+    <div class="detailsContainer">
+      <div class="categoriesContainer">
+        <span class="readTime">{post.frontmatter.readTime}</span>
+        <Tags tags={post.frontmatter.categories} basePath="/blog/category" />
+      </div>
+      <LinkButton href={post.url}>Read more</LinkButton>
     </div>
-    <div>
-        <div class='detailsContainer'>
-            <div class="categoriesContainer">
-                <span class='readTime'>{post.frontmatter.readTime}</span>
-                <Tags tags={post.frontmatter.categories} />
-            </div>
-                <LinkButton href={post.url}>
-                    Read more
-                </LinkButton>
-        </div>
-    </div>
+  </div>
 </div>

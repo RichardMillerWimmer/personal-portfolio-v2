@@ -4,9 +4,9 @@ import { generateSlug } from "../utils/helpers.ts";
 interface TagsProps {
   tags: string[];
   class?: string;
+  basePath: string;
 }
-const { tags, class: styles } = Astro.props as TagsProps;
-
+const { tags, class: styles, basePath } = Astro.props as TagsProps;
 ---
 
 <style lang="scss">
@@ -28,7 +28,7 @@ const { tags, class: styles } = Astro.props as TagsProps;
 <div class="tagContainter">
   {
     tags.map((keyword: string) => (
-      <a href={keyword} class="tag">
+      <a href={`${basePath}/${generateSlug(keyword)}`} class="tag">
         {keyword}
       </a>
     ))

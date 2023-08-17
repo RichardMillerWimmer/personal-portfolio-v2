@@ -1,44 +1,48 @@
 ---
-import BaseLayout from './BaseLayout.astro'
-import Tags from '../components/Tags.astro'
-import LinkButton from '../components/LinkButton.astro';
-import Carousel from '../components/Carousel';
+import BaseLayout from "./BaseLayout.astro";
+import Tags from "../components/Tags.astro";
+import LinkButton from "../components/LinkButton.astro";
+import Carousel from "../components/Carousel";
 
 interface WorkLayoutProps {
-    title: string
-    technologies: string[]
-    site: string
-    repo: string
-    images: string[]
-    description: string
+  title: string;
+  technologies: string[];
+  site: string;
+  repo: string;
+  images: string[];
+  description: string;
 }
 
-const { title, technologies, site, repo, images, description } = Astro.props.content as WorkLayoutProps
+const { title, technologies, site, repo, images, description } = Astro.props
+  .content as WorkLayoutProps;
 ---
 
-<style lang ='scss'>
-    @import '../styles/_variables.scss';
-    .marginBottom {
-        margin-bottom: 30px;
-    }
-
+<style lang="scss">
+  @import "../styles/_variables.scss";
+  .marginBottom {
+    margin-bottom: 30px;
+  }
 </style>
 
-<BaseLayout title={title} description={description} >
-    <main>
-        <header>
-			<h1 class="marginBottom">{title}</h1>
-		</header>
-        <section>
-            <Carousel client:load images={images} />
-            <div class="marginBottom">
-                <LinkButton href={site} rel="noreferrer" target='_blank'>Site</LinkButton>
-                <LinkButton href={repo} rel="noreferrer" target='_blank'>Repo</LinkButton>
-            </div>
-            <div class="marginBottom">
-                <Tags tags={technologies} />
-            </div>
-            <slot />
-        </section>
-    </main>
+<BaseLayout title={title} description={description}>
+  <main>
+    <header>
+      <h1 class="marginBottom">{title}</h1>
+    </header>
+    <section>
+      <Carousel client:load images={images} />
+      <div class="marginBottom">
+        <LinkButton href={site} rel="noreferrer" target="_blank"
+          >Site</LinkButton
+        >
+        <LinkButton href={repo} rel="noreferrer" target="_blank"
+          >Repo</LinkButton
+        >
+      </div>
+      <div class="marginBottom">
+        <Tags tags={technologies} basePath="/work/category" />
+      </div>
+      <slot />
+    </section>
+  </main>
 </BaseLayout>
