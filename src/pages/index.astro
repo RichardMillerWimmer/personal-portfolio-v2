@@ -4,10 +4,15 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import Hero from '../components/Hero.astro'
 import FeatureContainer from '../components/FeatureContainer.astro'
 import styles from '../styles/Home.module.scss'
+import Card from '../components/Card.astro'
 
 // Component Script:
 
 const title = 'Home - Richard'
+
+const featuredBlogPost = (await Astro.glob('./blog/usestate-with-typescript.mdx'))
+const featuredWork = (await Astro.glob('./work/house-3d-ecomm.mdx'))
+
 
 ---
 
@@ -27,7 +32,9 @@ const title = 'Home - Richard'
 					frontend technologies to provide the best possible user experience. I love speaking at conferences and sharing knowledge with bootcampers. 
 				</p>
 			</article>
-			<FeatureContainer />
+			<FeatureContainer header={"Featured"}>
+				<Card title={featuredBlogPost[0].frontmatter.title} description={featuredBlogPost[0].frontmatter.description} image={featuredBlogPost[0].frontmatter.images[2]} url={featuredBlogPost[0].url}/><Card title={featuredWork[0].frontmatter.title} description={featuredWork[0].frontmatter.description} image={featuredWork[0].frontmatter.images[0]} url={featuredWork[0].url}/>
+			</FeatureContainer>
 		</main>
 	</body>
 </BaseLayout>
