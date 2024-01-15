@@ -21,7 +21,7 @@
     justify-content: space-between;
     position: relative;
     gap: 20px;
-    margin-bottom: -200px;
+    margin-bottom: -160px;
 }
 
 @media screen and (max-width: $bp-tablet) {
@@ -31,6 +31,6 @@
     }
     .featureWrapper {
         height: unset;
-        margin-bottom: 150px;
+        margin-bottom: 190px;
     }
 }
