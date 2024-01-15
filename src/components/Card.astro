@@ -5,10 +5,12 @@ interface CardProps {
     title: string
     description: string
     image: string
-    url: string
+    url?: string
 }
 
 const { title, description, image, url  } = Astro.props as CardProps
+
+const RenderTag = url ? 'a' : 'div'
 ---
 <style>
     h3 {
@@ -17,7 +19,7 @@ const { title, description, image, url  } = Astro.props as CardProps
 </style>
 
 <div class={styles.wrapper}>
-    <a class={styles.card} href={url}>
+    <RenderTag class={styles.card} href={url}>
         <div class={styles.container}>
             <div class={styles.textContainer}>
                 <h3>{title}</h3>
@@ -25,8 +27,7 @@ const { title, description, image, url  } = Astro.props as CardProps
             </div>
             <div class={styles.imageContainer}>
                 <img src={image} alt={title}/>
-                <!-- <object data='/enter.svg' height="50px" width="50px"/> -->
             </div>
         </div>
-    </a>
+    </RenderTag>
 </div>
