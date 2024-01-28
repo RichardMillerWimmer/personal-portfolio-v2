@@ -2,13 +2,16 @@
 import styles from '../styles/LinkButton.module.scss'
 
 interface LinkButtonProps {
-  href: string
+  href?: string
   noreferrer?: string
   target?: string
+  type?: "submit" | "reset" | "button";
 }
 
-const {href, noreferrer, target} = Astro.props as LinkButtonProps
+const {href, noreferrer, target, type} = Astro.props as LinkButtonProps
 
+const buttonProps = {type}
+const linkProps = {href, noreferrer, target}
 ---
 
 <style>
@@ -25,7 +28,7 @@ const {href, noreferrer, target} = Astro.props as LinkButtonProps
     stroke-dasharray: 422, 0;
     transition: all 0.35s linear;
   }
-  a {
+  a, button {
     line-height: 1.4;
     padding: .25em;
     text-align: center;
@@ -33,8 +36,18 @@ const {href, noreferrer, target} = Astro.props as LinkButtonProps
 
 </style>
 
-<a class={styles.btn} href={href} rel={noreferrer} target={target}>
+{ href ? 
+  <a class={styles.btn} {...linkProps}>
     <svg class="">
       <rect x="0" y="0" fill="none" width="100%" height="100%" />
-    </svg> <slot />
-</a>  
+   </svg>  
+    <slot />
+  </a>  
+:
+<button class={styles.btn} {...buttonProps}>
+  <svg class="">
+      <rect x="0" y="0" fill="none" width="100%" height="100%" />
+   </svg>
+  <slot />
+</button>
+}
