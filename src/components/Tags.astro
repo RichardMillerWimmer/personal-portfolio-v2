@@ -1,5 +1,5 @@
 ---
-import { generateSlug } from "../utils/helpers.ts";
+import { generateSlug } from "../utils/helpers";
 
 interface TagsProps {
   tags: string[];
@@ -22,15 +22,18 @@ const { tags, class: styles, basePath } = Astro.props as TagsProps;
     border-radius: 20px;
     color: $color-black;
     background-color: rgb(244, 244, 244);
+    font-size: 1rem;
   }
 </style>
 
-<div class="tagContainter">
+<ul class="tagContainter">
   {
     tags.map((keyword: string) => (
-      <a href={`${basePath}/${generateSlug(keyword)}`} class="tag">
-        {keyword}
-      </a>
+      <li class="tag">
+        <a href={`${basePath}/${generateSlug(keyword)}`} >
+          {keyword}
+        </a>
+      </li>
     ))
   }
-</div>
+</ul>
