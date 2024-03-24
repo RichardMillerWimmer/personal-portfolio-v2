@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styles from '../styles/WorkCard.module.scss'
+import { generateSlug } from '../utils/helpers'
 import github from '/github-outline.svg'
 import externalLink from '/external-link-outline.svg'
 import enter from '/enter.svg'
@@ -19,6 +20,7 @@ const WorkCard = (props: WorkCardProps) => {
 
     const [isIntersecting, setIsIntersecting] = useState<boolean>(false)
     const animationRef = useRef()
+    const titleId = generateSlug(title)
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -30,10 +32,10 @@ const WorkCard = (props: WorkCardProps) => {
 
     return (
         <div ref={animationRef}>
-            <div className={styles.workCard}>
+            <section aria-labelledby={titleId} className={styles.workCard}>
                 <div className={styles.contentWrapper}>
                     <a href={url}>
-                        <h2>{title}</h2>
+                        <h2 id={titleId}>{title}</h2>
                     </a>
                     <div className={styles.descriptionWrapper}>
                         <p>{description}</p>
@@ -60,7 +62,7 @@ const WorkCard = (props: WorkCardProps) => {
                         </div>
                     </a>
                 </div>
-            </div>
+            </section>
         </div >
     )
 
