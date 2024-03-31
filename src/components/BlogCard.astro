@@ -1,8 +1,10 @@
 ---
+import { generateSlug } from "../utils/helpers";
 import LinkButton from "./LinkButton.astro";
 import Tags from "./Tags.astro";
 
 const { post } = Astro.props;
+const titleId = generateSlug(post.frontmatter.title)
 ---
 
 <style lang="scss">
@@ -63,7 +65,7 @@ const { post } = Astro.props;
   }
 </style>
 
-<div class="blogContainer">
+<section aria-labelledby={titleId} class="blogContainer">
   <div>
     <date datetime={post.frontmatter.publishedAt}>
       <time
@@ -77,7 +79,7 @@ const { post } = Astro.props;
       >
     </date>
     <a href={post.url}>
-      <h2 class="articleTitle">{post.frontmatter.title}</h2>
+      <h2 class="articleTitle" id={titleId}>{post.frontmatter.title}</h2>
     </a>
     <p>{post.frontmatter.description}</p>
   </div>
@@ -90,4 +92,4 @@ const { post } = Astro.props;
       <LinkButton href={post.url}>Read more</LinkButton>
     </div>
   </div>
-</div>
+</section>
