@@ -6,11 +6,15 @@ interface CardProps {
     description: string
     image: string
     url?: string
+    isExternal?: boolean
 }
 
-const { title, description, image, url  } = Astro.props as CardProps
+const { title, description, image, url, isExternal  } = Astro.props as CardProps
 
 const RenderTag = url ? 'a' : 'div'
+
+const externalLinkAttr = isExternal ? { target: "_blank", rel: "noreferrer"} : null
+
 ---
 <style>
     h3 {
@@ -19,7 +23,7 @@ const RenderTag = url ? 'a' : 'div'
 </style>
 
 <div class={styles.wrapper}>
-    <RenderTag class={styles.card} href={url}>
+    <RenderTag class={styles.card} href={url} {...externalLinkAttr}>
         <div class={styles.container}>
             <div class={styles.textContainer}>
                 <h3>{title}</h3>
