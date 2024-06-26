@@ -1,6 +1,6 @@
 Thank you for taking a look at my Personal Portfolio.
 
-This was built using Astro a static site generator. This was done to use almost no Javascript to provide a super fast static site with the developer experience that modern frameworks provide.
+This was built using Astro a static site generator. This was done to use as little Javascript as possible to provide a super fast static site with the developer experience that modern frameworks provide.
 
 Please feel free to take a look around. You will find articles I have written and my personal projects I have built.
 
