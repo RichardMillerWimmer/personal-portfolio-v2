@@ -36,7 +36,7 @@ const featuredWork = (await Astro.glob('./work/house-3d-ecomm.mdx'))
 				<Card title={featuredBlogPost[0].frontmatter.title} description={featuredBlogPost[0].frontmatter.description} image={featuredBlogPost[0].frontmatter.images[2]} url={featuredBlogPost[0].url}/>
 				<Card title={featuredWork[0].frontmatter.title} description={featuredWork[0].frontmatter.description} image={featuredWork[0].frontmatter.images[0]} url={featuredWork[0].url}/>
 			</FeatureContainer>
-			<FeatureContainer header={"Talks"}>
+			<FeatureContainer header={"Speaking"}>
 				<Card title={"Built It, Deliver It, Your Professional Brand"} description={'Branding can feel fake, phony, and even disingenuous. The reality is everyone has a brand whether they realize it or not.'} image={'/assets/work/Speaking_1.jpg'} url={"https://sessionize.com/richard-miller-wimmer/"} isExternal/>
 				<Card title={"Talking Tech With Non-Techies"} description={"Effectively communicating technical ideas can be hard, but also extremely important. We have to get good at talking tech with non-technical roles."} image={"/assets/work/Speaking_2.jpg"} url={"https://sessionize.com/richard-miller-wimmer/"} isExternal/>
 			</FeatureContainer>
