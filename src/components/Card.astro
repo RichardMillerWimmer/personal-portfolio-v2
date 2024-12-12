@@ -17,8 +17,9 @@ const externalLinkAttr = isExternal ? { target: "_blank", rel: "noreferrer"} : n
 
 ---
 <style>
-    h3 {
+    h4 {
         margin-bottom: 15px;
+        font-size: 2rem;
     }
 </style>
 
@@ -26,7 +27,7 @@ const externalLinkAttr = isExternal ? { target: "_blank", rel: "noreferrer"} : n
     <RenderTag class={styles.card} href={url} {...externalLinkAttr}>
         <div class={styles.container}>
             <div class={styles.textContainer}>
-                <h3>{title}</h3>
+                <h4>{title}</h4>
                 <p>{description}</p>
             </div>
             <div class={styles.imageContainer}>
