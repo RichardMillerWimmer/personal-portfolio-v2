@@ -19,14 +19,16 @@ const description = 'Read more on the blog here with articles written about bran
 </style>
 
 <BlogLayout title={`${title} - Richard`} description={description} wrapper={false}>
-      <header>
-        <h1>Blog</h1>
-      </header>
-      <section >
-        <div>
-          {posts.map((post) => (
-            <BlogCard post={post} />
-            ))}
-        </div>
-      </section>
+  <header>
+    <h1>Blog</h1>
+  </header>
+  <main>
+    <section >
+      <div>
+        {posts.map((post) => (
+          <BlogCard post={post} />
+          ))}
+      </div>
+    </section>
+  </main>
 </BlogLayout>
