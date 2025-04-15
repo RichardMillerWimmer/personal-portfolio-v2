@@ -4,8 +4,6 @@ import BlogAside from "../components/BlogAside.astro"
 import Footer from "../components/Footer.astro"
 import BlogNav from "../components/Nav/BlogNav.astro"
 
-
-
 interface BlogLayoutProps {
     title: string
     description?: string
@@ -18,21 +16,21 @@ const { title, description, publishDate, } = Astro.props as BlogLayoutProps
 ---
 
 <html lang="en">
-<BaseHead title={title} description={description} publishDate={publishDate} />
-<body>
-    <main class="content">
-        <div class='blogWrapper'>
-            <BlogAside />
-            <div class="contentWrapper">
-                <slot/>
+    <BaseHead title={title} description={description} publishDate={publishDate} />
+    <body>
+        <div class="content">
+            <div class='blogWrapper'>
+             <BlogAside />
+                <div class="contentWrapper">
+                    <slot/>
+                </div>
+                <BlogNav/> 
             </div>
-            <BlogNav/> 
+            <div class="footerWrapper">
+                <Footer />
+            </div>
         </div>
-        <div class="footerWrapper">
-            <Footer />
-        </div>
-    </main>
-</body>
+    </body>
 </html>
 
 <style lang='scss'>
