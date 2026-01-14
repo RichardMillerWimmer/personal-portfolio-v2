@@ -20,18 +20,16 @@ const description = 'Explore some of the work Richard has done.'
 </style>
 
 <BaseLayout title={title} description={description} wrapper={false}>
+	<header>
+		<h1>Work</h1>
+	</header>
+	<LineDivider />
 	<main>
-		<header>
-			<h1>Work</h1>
-		</header>
-		<LineDivider />
-		<body>
-			<section>
-				{allWork.map((work) => (
-				<WorkCard client:load src={work.frontmatter.images[0]} title={work.frontmatter.title}
-					description={work.frontmatter.description} url={work.url} site={work.frontmatter.site} repo={work.frontmatter.repo} images={work.frontmatter.images}/>
-				))}
-			</section>
-		</body>
+		<section>
+			{allWork.map((work) => (
+			<WorkCard client:load src={work.frontmatter.images[0]} title={work.frontmatter.title}
+				description={work.frontmatter.description} url={work.url} site={work.frontmatter.site} repo={work.frontmatter.repo} images={work.frontmatter.images}/>
+			))}
+		</section>
 	</main>
 </BaseLayout>
