@@ -24,7 +24,7 @@ const description = 'Explore some of the work Richard has done.'
 		<h1>Work</h1>
 	</header>
 	<LineDivider />
-	<main>
+	<main id='main-content'>
 		<section>
 			{allWork.map((work) => (
 			<WorkCard client:load src={work.frontmatter.images[0]} title={work.frontmatter.title}

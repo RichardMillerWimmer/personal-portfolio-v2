@@ -27,7 +27,7 @@ const page = new URL(Astro.request.url).pathname;
 <html lang="en">
     <BaseHead title={title} description={description} permalink={permalink} publishDate={publishDate} />
     <body>
-        {page === '/' && <SkipToMain />}
+        <SkipToMain />
         <Nav />
         {wrapper ?
         <Wrapper>
