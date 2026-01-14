@@ -18,7 +18,6 @@ const featuredWork = (await Astro.glob('./work/house-3d-ecomm.mdx'))
 
 <BaseLayout title={title} wrapper>
 	<Hero />
-	<body>
 		<main>
 			<article class={styles.mainContent} id='main-content'>
 				<p>Thanks for visiting my site.</p>
@@ -41,5 +40,4 @@ const featuredWork = (await Astro.glob('./work/house-3d-ecomm.mdx'))
 				<Card title={"Talking Tech With Non-Techies"} description={"Effectively communicating technical ideas can be hard, but also extremely important. We have to get good at talking tech with non-technical roles."} image={"/assets/work/Speaking_2.jpg"} url={"https://sessionize.com/richard-miller-wimmer/"} isExternal/>
 			</FeatureContainer>
 		</main>
-	</body>
 </BaseLayout>
