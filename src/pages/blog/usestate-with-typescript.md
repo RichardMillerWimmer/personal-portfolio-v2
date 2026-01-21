@@ -1,22 +1,22 @@
 ---
 layout: "../../layouts/ArticleLayout.astro"
-title: How to use React’s useState hook with TypeScript examples
-description: let's take a look at what the useState hook is and what it does, including TypeScript examples.
-date: 2023-1-18
-author: Richard Miller Wimmer
+title: "How to use React’s useState hook with TypeScript examples"
+description: "let's take a look at what the useState hook is and what it does, including TypeScript examples."
+date: "2023-1-18"
+author: "Richard Miller Wimmer"
 readTime: "4 min"
 categories:
-  - React
-  - TypeScript
-  - JavaScript
-  - Hooks
-  - Web Development
+  - "React"
+  - "TypeScript"
+  - "JavaScript"
+  - "Hooks"
+  - "Web Development"
 images:
-  - /assets/work/useState_1.jpg
-  - /assets/work/useState_2.jpg
-  - /assets/work/useState_3.jpg
-  - /assets/work/useState_4.jpg
-  - /assets/work/useState_5.jpg
+  - "/assets/work/useState_1.jpg"
+  - "/assets/work/useState_2.jpg"
+  - "/assets/work/useState_3.jpg"
+  - "/assets/work/useState_4.jpg"
+  - "/assets/work/useState_5.jpg"
 ---
 
 ## Before we start there are a few important things to remember with React and State.
