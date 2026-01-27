@@ -2,7 +2,7 @@
 // Component Imports
 import BaseLayout from '../layouts/BaseLayout.astro'
 import styles from '../styles/About.module.scss'
-import heroImg from '/assets/Iceland_Pano.jpeg'
+import heroImg from '@assets/Iceland_Pano.jpeg'
 
 // Component Script:
 
@@ -21,7 +21,7 @@ const description = "Learn more about Richard's experience, both professional an
 <BaseLayout title={title} description={description} wrapper>
   <header>
     <h1>About</h1>
-    <img src={heroImg} alt='Richard Hiking Southern Iceland' />
+    <img src={heroImg.src} alt='Richard Hiking Southern Iceland' />
   </header>
     <main>
       <article id='main-content' class={styles.aboutContainer}>
