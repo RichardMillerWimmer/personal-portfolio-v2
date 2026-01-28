@@ -3,7 +3,7 @@
 import BlogCard from '../../components/BlogCard.astro';
 import BlogLayout from '../../layouts/BlogLayout.astro';
 
-const posts = (await Astro.glob('./*.mdx')).sort(
+const posts = (await Astro.glob('./*.md')).sort(
   (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
 )
 
