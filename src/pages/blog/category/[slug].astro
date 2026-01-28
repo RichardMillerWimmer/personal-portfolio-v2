@@ -5,7 +5,7 @@ import { getDynamicSet, generateCategoriesData } from '../../../utils/helpers'
 
 
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob('../*.mdx');
+  const allPosts = await Astro.glob('../*.md');
   const frontmatterArray = getDynamicSet(allPosts, "frontmatter")
   const categorySet = getDynamicSet(frontmatterArray, "categories")
   const paths = generateCategoriesData(categorySet, "categories", allPosts)
