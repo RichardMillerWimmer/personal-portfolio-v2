@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styles from '../styles/WorkCard.module.scss'
 import { generateSlug } from '../utils/helpers'
-import github from '/github-outline.svg'
-import externalLink from '/external-link-outline.svg'
-import enter from '/enter.svg'
+import github from '@assets/github-original.svg'
+import externalLink from '@assets/external-link-outline.svg'
+import enter from '@assets/enter.svg'
 
 interface WorkCardProps {
     src: string
@@ -42,11 +42,11 @@ const WorkCard = (props: WorkCardProps) => {
                     </div>
                     <div className={styles.linkContainer}>
                         <a href={repo} target='_blank' rel='noreferrer' >
-                            <img src={github} alt={`${title} github repo`} height='25px' width='25px' />
+                            <img src={github.src} alt={`${title} github repository`} height='25px' width='25px' />
                         </a>
                         {site &&
                             <a href={site} target='_blank' rel='noreferrer' >
-                                <img src={externalLink} alt={`${title} site link`} height='25px' width='25px' />
+                                <img src={externalLink.src} alt={`${title}`} height='25px' width='25px' />
                             </a>
                         }
 
@@ -57,7 +57,7 @@ const WorkCard = (props: WorkCardProps) => {
                         <div>
                             <img src={src} alt={title} />
                             <div className={styles.enterBtn}>
-                                <img src={enter} alt="see more" />
+                                <img src={enter.src} alt="see more" />
                             </div>
                         </div>
                     </a>
