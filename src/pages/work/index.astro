@@ -6,7 +6,7 @@ import LineDivider from '../../components/LineDivider.astro';
 
 // Component Script:
 
-const allWork = (await Astro.glob('./*.mdx')).sort((a, b) => a.frontmatter.index - b.frontmatter.index)
+const allWork = (await Astro.glob('./*.md')).sort((a, b) => a.frontmatter.index - b.frontmatter.index)
 
 const title = 'Work | Richard the Dev';
 const description = 'Explore some of the work Richard has done.'
