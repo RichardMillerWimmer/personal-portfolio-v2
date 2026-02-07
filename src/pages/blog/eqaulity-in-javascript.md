@@ -10,8 +10,8 @@ categories:
   - Fundamentals
   - Web Development
 images:
-  - /assets/work/Equality_2.jpg
-  - /assets/work/Equality_3.jpg
+  - "src/assets/work/Equality_2.jpg"
+  - "src/assets/work/Equality_3.jpg"
 ---
 
 Have you ever been comparing two values in some kind of conditional statement in your Javascript (I think we all do all the time), and you weren’t getting what you expected?
@@ -27,7 +27,7 @@ You can also consider ‘!=‘ and ‘!==‘ for everything we discuss here.
 <br />
 First, let’s look at ‘==‘. You will hear this referred to as ‘loose equality’ operator.
 <br />
-![Loose Equality Example](../../assets/work/Equality_2.jpg)
+![Loose Equality Example](@assets/work/Equality_2.jpg)
 <br />
 Wait, what? Why are all these true?
 <br />
@@ -55,7 +55,7 @@ negative), thus making your code just a little more type-safe and explicit.
 Let’s take a look at these console.logs comparing the same values as before, but
 now with strict equality checks.
 <br />
-![Strict Equality Example](../../assets/work/Equality_3.jpg)
+![Strict Equality Example](@assets/work/Equality_3.jpg)
 <br />
 As we can see these evaluations are much more explicit and leave less wiggle room
 with Javascript’s type coercion. If we stay aware of this we can avoid errors in

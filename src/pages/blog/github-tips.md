@@ -10,9 +10,9 @@ categories:
   - Branding
   - Career Development
 images:
-  - /assets/work/GitHub_Branding_2.jpg
-  - /assets/work/GitHub_Branding_3.jpg
-  - /assets/work/GitHub_Branding_4.jpg
+  - "src/assets/work/GitHub_Branding_2.jpg"
+  - "src/assets/work/GitHub_Branding_3.jpg"
+  - "src/assets/work/GitHub_Branding_4.jpg"
 ---
 
 The word branding can feel flakey or like someone is putting up a front and being fake. When I talk about branding I am never advocating for being someone you are not.
@@ -55,13 +55,13 @@ don’t make them search through repos of unfinished projects and half-completed
 (I’ll be the first to admit I have more than enough of that). You will want to add
 the “about” on those repos you pin, this fills out the container giving a brief description.
 <br />
-![GitHub Pinned Repos](../../assets/work/GitHub_Branding_2.jpg)
+![GitHub Pinned Repos](@assets/work/GitHub_Branding_2.jpg)
 <br />
 **Show Private Contributions:** This will show the contributions to private repos
 in your nice little green block graph we have all grown to love. It does not expose
 those private repos, they will stay private. Get credit for those commits!
 <br />
-![GitHub Contributions Graph](../../assets/work/GitHub_Branding_3.jpg)
+![GitHub Contributions Graph](@assets/work/GitHub_Branding_3.jpg)
 <br />
 ### And Finally “Nice to Haves”
 <br />
@@ -73,7 +73,7 @@ a repo with the same name as your username, make it public and add the REAMDME.m
 <br />
 [Great GitHub README.md walk through.](https://dev.to/github/how-to-create-a-github-profile-readme-jha)
 <br />
-![GitHub Profile README.md](../../assets/work/GitHub_Branding_4.jpg)
+![GitHub Profile README.md](@assets/work/GitHub_Branding_4.jpg)
 <br />
 **Profile Details:** And of course the details section. This is self-explanatory,
 but just fill it out. It is easy enough to do and shows you have taken the time and

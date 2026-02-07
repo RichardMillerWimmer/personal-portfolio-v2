@@ -10,8 +10,8 @@ categories:
   - PostgreSQL
   - Web Development
 images:
-  - /assets/work/DB_Migration_2.jpg
-  - /assets/work/DB_Migration_3.jpg
+  - "src/assets/work/DB_Migration_2.jpg"
+  - "src/assets/work/DB_Migration_3.jpg"
 ---
 
 With Heroku planning on cutting their free tier of services very soon, its time to migrate. This is my documented migration away from Heroku Postgres in hopes of helping other developers make the transition.
@@ -51,7 +51,7 @@ From here we are going to be using two commands from postgresql. The first is pg
 and we will need to add a few options/flags. This is also the point where you will
 need your Heroku URI or connection_string.
 <br />
-![Heroku Credentials](../../assets/work/DB_Migration_2.jpg)
+![Heroku Credentials](@assets/work/DB_Migration_2.jpg)
 <br />
 We need to pull our database from Heroku using the postgresql command: pg_dump.
 <br />
@@ -77,7 +77,7 @@ how we are going to be getting things, well, connected. Much of the same informa
 is here as was in the “Administration” and then “Credentials” in your Heroku Postgres
 account.
 <br />
-![Connecting to bit.io](../../assets/work/DB_Migration_3.jpg)
+![Connecting to bit.io](@assets/work/DB_Migration_3.jpg)
 <br />
 
 We will now be running another postgresql command: pg_restore.

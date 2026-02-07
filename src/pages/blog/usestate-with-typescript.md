@@ -12,11 +12,11 @@ categories:
   - "Hooks"
   - "Web Development"
 images:
-  - "/assets/work/useState_1.jpg"
-  - "/assets/work/useState_2.jpg"
-  - "/assets/work/useState_3.jpg"
-  - "/assets/work/useState_4.jpg"
-  - "/assets/work/useState_5.jpg"
+  - "src/assets/work/useState_1.jpg"
+  - "src/assets/work/useState_2.jpg"
+  - "src/assets/work/useState_3.jpg"
+  - "src/assets/work/useState_4.jpg"
+  - "src/assets/work/useState_5.jpg"
 ---
 
 ## Before we start there are a few important things to remember with React and State.
@@ -56,30 +56,30 @@ but for this specific state value.
 The naming convention is important but simple. Name your state value and then for
 the setter prefix ‘set’ to that name like so.
 <br />
-![useState naming convention myState and setMyState](../../assets/work/useState_1.jpg)
+![useState naming convention myState and setMyState](@assets/work/useState_1.jpg)
 <br />
 We can, and should, provide the hook with an initial value of the expected type.
 We do that by passing that in as an argument to useState(). TypeScript will infer
 our type in this situation and knows what myState is of type string in the example.
 <br />
-![initialize state with expected data type](../../assets/work/useState_2.jpg)
+![initialize state with expected data type](@assets/work/useState_2.jpg)
 <br />
 Now, something happens in our app and state needs to be updated. Just use the setter
 with the new state value. Here, our input will set the new value.
 <br />
-![use the setter to update state](../../assets/work/useState_3.jpg)
+![use the setter to update state](@assets/work/useState_3.jpg)
 <br />
 What happens when we need state to be more than one type like a user object but it's
 null before the user signs in? TypeScript has generics available for us. We need
 to tell useState() that this can be an object or null. Below we are using a union
 type of User and null.
 <br />
-![use typescript generic and union type](../../assets/work/useState_4.jpg)
+![use typescript generic and union type](@assets/work/useState_4.jpg)
 <br />
 What about initializing state with an empty array because we don’t have items in
 our cart? We will use TypeScript generics again.
 <br />
-![use typescript generic to tell useState what data type will be in the array](../../assets/work/useState_5.jpg)
+![use typescript generic to tell useState what data type will be in the array](@assets/work/useState_5.jpg)
 <br />
 ### Important rules with the useState hook:
 <br />
